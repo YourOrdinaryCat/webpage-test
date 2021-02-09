@@ -1,0 +1,30 @@
+/* Reduced motion */
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Wrap if there's 700px or less available for the body */
+@media only screen and (max-width: 700px) {  
+  .hstack-wrap {
+    grid-template-columns: 100%;
+    row-gap: 8px;
+  }
+
+  .hstack-wrap > div img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Make horizontal stacks fill the screen if there's more than 700px available */
+@media only screen and (min-width: 700px) {
+  .hstack-wrap {
+    grid-auto-flow: column;
+    overflow-x: auto;
+    grid-gap: 8px;
+  }
+}
