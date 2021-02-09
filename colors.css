@@ -1,7 +1,11 @@
-/* Light mode colors */
+/* Declare color schemes */
 :root {
-    color-scheme: light dark;
-  
+  color-scheme: light dark;
+}
+
+/* Light mode colors */
+@media (prefers-color-scheme: light) {
+  :root {
     /* Background */
     --background: #F2F2F7;
     --elevated1: #FFFFFF;
@@ -26,32 +30,33 @@
     /* Visited links */
     --visited: #AF52DE;
   }
+}
   
-  /* Dark mode colors */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      /* Background */
-      --background: #1C1C1E;
-      --elevated1: #2C2C2E;
-      --elevated2: #3C3C3E;
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background */
+    --background: #1C1C1E;
+    --elevated1: #2C2C2E;
+    --elevated2: #3C3C3E;
   
-      /* Text */
-      --primary: #FFFFFF;
-      --secondary: #EBEBF599;
-      --tertiary: #EBEBF54D;
-      --quaternary: #EBEBF52E;
+    /* Text */
+    --primary: #FFFFFF;
+    --secondary: #EBEBF599;
+    --tertiary: #EBEBF54D;
+    --quaternary: #EBEBF52E;
   
-      /* Accent related */
-      --accent: #FF9F0A;
-      --onAccent: #FFFFFF;
+    /* Accent related */
+    --accent: #FF9F0A;
+    --onAccent: #FFFFFF;
   
-      /* Dividers */
-      --divider: #54545899;
+    /* Dividers */
+    --divider: #54545899;
   
-      /* Hover */
-      --hover: #3A3A3C;
+    /* Hover */
+    --hover: #3A3A3C;
 
-      /* Visited links */
-      --visited: #BF5AF2;
-    }
+    /* Visited links */
+    --visited: #BF5AF2;
   }
+}
