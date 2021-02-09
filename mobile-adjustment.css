@@ -1,23 +1,19 @@
 /* Wrap if there's 700px or less available for the body */
 @media only screen and (max-width: 700px) {  
   .hstack-wrap {
-    flex-wrap: wrap;
-  }
-
-  .hstack-wrap-item {
-    min-width: 100%;
-    margin-bottom: 8px;
-  }
-
-  .hstack-wrap img {
-    width: 100%;
-    border: 0px;
+    grid-template-columns: auto;
   }
 }
 
-/* Add margin to horizontal stacks that can wrap */
+/* Make horizontal stacks fill the screen if there's more than 700px available */
 @media only screen and (min-width: 700px) {
-  .hstack-wrap-item:not(:last-child) {
-    margin-inline-end: 8px;
+  .hstack-wrap {
+    grid-auto-flow: column;
+    overflow-x: auto;
+  }
+
+  .hstack-wrap img {
+    height: 10px;
+    width: auto;
   }
 }
