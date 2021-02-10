@@ -71,7 +71,7 @@ These are elevated sections, using `h4` for the title is recommended. They're li
 
 Here's how it looks:
 
-![elevated-stack](screenshots/elevated-stack.png)
+![elevated-section](screenshots/elevated-section.png)
 
 ### elevated-section-expandable
 These are elevated sections, with the difference being that you can initially see the header only. When hovered, you can see the full content.
@@ -85,11 +85,11 @@ These are elevated sections, with the difference being that you can initially se
 
 Here's how it looks collapsed:
 
-![elevated-stack-collapsed](screenshots/elevated-stack-collapsed.png)
+![elevated-section-collapsed](screenshots/elevated-section-collapsed.png)
 
 And here's how it looks expanded/hovered:
 
-![elevated-stack-expanded](screenshots/elevated-stack-expanded.png)
+![elevated-section-expanded](screenshots/elevated-section-expanded.png)
 
 The initial height is 1.25em, on hover it can take as much space as it needs.
 
