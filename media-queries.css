@@ -7,8 +7,8 @@
   }
 }
 
-/* Wrap if there's 700px or less available for the body */
-@media only screen and (max-width: 700px) {  
+/* Wrap hstacks on phone screens */
+@media only screen and (max-width: 671px) {
   .hstack-wrap {
     grid-template-columns: 100%;
     row-gap: 8px;
@@ -18,13 +18,18 @@
     height: auto;
     width: 100%;
   }
+
+  .hstack-wrap > div video {
+    height: auto;
+    width: 100%;
+  }
 }
 
-/* Make horizontal stacks fill the screen if there's more than 700px available */
-@media only screen and (min-width: 700px) {
+/* Make hstacks fill the screen on tablet screens */
+@media only screen and (min-width: 672px) {
   .hstack-wrap {
     grid-auto-flow: column;
-    overflow-x: auto;
     grid-gap: 8px;
+    overflow-x: auto;
   }
 }

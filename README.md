@@ -1,13 +1,101 @@
-# What is this?
-Great question, random GitHub dude that I just made up! The answer is, in fact, nothing.
+# Welcome
+Hi GitHub user! This is a test webpage, where I put some stuff I do with HTML/CSS. You'll see updates pretty often while I improve this website.
 
-I might upload randomly from time to time but this is just a test. Now you could:
+## Project structure
+The project has one main HTML file, with 4 CSS files and an assets folder with different images, videos and other files that may be needed.
 
-- Go away
-- Look at nothing
-- Vomit because my CSS is crap and I never get anything done
+### HTML
+The HTML is mostly just to show what the CSS can do. No custom styling is there, it just contains the information.
 
-idk man I spent more time making this readme than perfecting my css so yeah messy af
+### CSS Files
+There are 4 CSS files: `colors`, `general`, `media-queries` and `style`. `colors` contains the colors, including light and dark modes. `general` has styling for HTML elements, mostly applying the colors and changing default padding values. `media-queries` contains different media queries that help make the website more accessible and usable on small screens. Lastly, `style` contains my custom divs that help simplify stuff like stacking items, making elevated sections, you know the deal.
 
-## n
-shoutout to simpleflips
+## Custom styling
+Here I'll explain what my custom styling is capable of. Everything in this section can be found in the styles.css file.
+
+### hstack-nw
+Shorthand for Horizontal Stack - No Wrap. It allows for horizontal item stacking, and it doesn't wrap on any screen size. When overflowed, it allows for scrolling without making the whole page scrollable.
+
+```
+<div class="hstack-nw"> /* Container */
+  <div> /* Item #1 */
+    /* Your stuff */
+  </div>
+
+  <div> /* Item #2 */
+    /* Your stuff */
+  </div>
+</div>
+```
+
+Here's how it looks:
+
+![hstack-nw](screenshots/hstack-nw.png)
+
+This stays consistent on small screens, and in case of overflow it becomes scrollable.
+
+### hstack-wrap
+Shorthand for Horizontal Stack - Wrap. It allows for horizontal item stacking, and it wraps on phone screens by making every item occupy one column. When overflowed, it allows for scrolling without making the whole page scrollable, and if it's on a phone screen, it makes every item occupy one row.
+
+```
+<div class="hstack-wrap"> /* Container */
+  <div> /* Item #1 */
+    /* Your stuff */
+  </div>
+
+  <div> /* Item #2 */
+    /* Your stuff */
+  </div>
+</div>
+```
+
+Here's how it looks on a small screen:
+
+![hstack-wrap-small](screenshots/hstack-wrap-small.png)
+
+And here's how it looks on a big screen:
+
+![hstack-wrap-big](screenshots/hstack-wrap-big.png)
+
+On small screens (671px width or less), it wraps, and every item uses 100% of the screen width. On big screens (672px width or more), it has the same behaviour that `hstack-nw` does.
+
+### elevated-section
+These are elevated sections, using `h4` for the title is recommended. They're like cards.
+
+```
+<div class="elevated-section">
+  <h4>Heading</h4>
+  /* Your stuff */
+</div>
+```
+
+Here's how it looks:
+
+![elevated-stack](screenshots/elevated-stack.png)
+
+### elevated-section-expandable
+These are elevated sections, with the difference being that you can initially see the header only. When hovered, you can see the full content.
+
+```
+<div class="elevated-section-expandable">
+  <h4>Heading</h4>
+  /* Your stuff */
+</div>
+```
+
+Here's how it looks collapsed:
+
+![elevated-stack-collapsed](screenshots/elevated-stack-collapsed.png)
+
+And here's how it looks expanded/hovered:
+
+![elevated-stack-expanded](screenshots/elevated-stack-expanded.png)
+
+The initial height is 1.25em, on hover it can take as much space as it needs.
+
+## Questions that no one asked
+### Why are you doing this?
+This is mostly just a template with some things I'll need for future projects. You can use it as well, no questions asked. However, it isn't perfect. If you ever find anything you think you can improve, feel free to make a pull request! If I think the change is good, I'll accept it. Remember that anyone can use this, so if you find improvements, they can benefit everyone!
+
+### Can I reach out to you?
+Absolutely! Find me on [Telegram](t.me/YourOrdinaryCat) if you need anything.

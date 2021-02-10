@@ -1,18 +1,16 @@
 /* Horizontal stack container (never wrap) */
 .hstack-nw {
-  display: grid;
+  display: inline-grid;
   grid-auto-flow: column;
   grid-gap: 8px;
+  max-width: 100%;
   overflow-x: auto;
 }
 
 /* Horizontal stack container (wrap on small screens) */
 .hstack-wrap {
-  display: grid;
-}
-
-.hstack-wrap > div {
-  width: 100%;
+  display: inline-grid;
+  max-width: 100%;
 }
 
 /* Control image size on horizontal stacks */
@@ -26,24 +24,78 @@
   width: auto;
 }
 
+/* Control video size on horizontal stacks */
+.hstack-nw video {
+  height: 192px;
+  width: auto;
+}
+
+.hstack-wrap video {
+  height: 192px;
+  width: auto;
+}
+
 /* Elevated section */
 .elevated-section {
-  border-radius: 8px;
-  border: 0px;
-  text-align: left;
   background-color: var(--elevated1);
-  padding: 8px;
+  border: 0;
+  border-radius: 8px;
   min-width: 192px;
-  max-height: 1.75em;
   overflow: hidden;
   overflow-wrap: normal;
-
-  /* Transitions */
+  padding: 12px 8px 12px 8px;
   transition: background-color, max-height;
+  transition-duration: 0.6s;
+  text-align: left;
+}
+
+.elevated-section figcaption {
+  padding: 8px 0 0 0;
+}
+
+.elevated-section h4 {
+  color: var(--accent);
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+/* Elevated section (expandable on hover) */
+.elevated-section-expandable {
+  background-color: var(--elevated1);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  max-height: 1.25em;
+  min-width: 192px;
+  overflow: hidden;
+  overflow-wrap: normal;
+  padding: 12px 8px 12px 8px;
+  transition: all;
+  transition-duration: 0.6s;
+  text-align: left;
+}
+
+.elevated-section-expandable figcaption {
+  padding: 0;
+}
+
+.elevated-section-expandable h4 {
+  color: var(--accent);
+  margin-bottom: 1em;
+  margin-top: 0;
+  transition: all;
   transition-duration: 0.6s;
 }
 
-.elevated-section:hover {
+/* Display contents on click */
+.elevated-section-expandable:hover {
   background-color: var(--elevated2);
   max-height: 100%;
+}
+
+/* Remove margin between heading and content on click */
+.elevated-section-expandable:hover h4 {
+  margin: 0 0 4px 0;
+  transition: all;
+  transition-duration: 0.6s;
 }
