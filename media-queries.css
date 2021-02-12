@@ -7,8 +7,28 @@
   }
 }
 
-/* Wrap hstacks on phone screens */
 @media only screen and (max-width: 671px) {
+  .content {
+    margin-inline-start: 0px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 672px) {
+  .content {
+    margin-inline-start: 291px;
+  }
+
+  .sidebar {
+    display: block;
+  }
+}
+
+/* Wrap hstacks on phone screens */
+@media only screen and (max-width: 962px) {
   .hstack-wrap {
     grid-template-columns: 100%;
     row-gap: 8px;
@@ -26,7 +46,7 @@
 }
 
 /* Make hstacks fill the screen on tablet screens */
-@media only screen and (min-width: 672px) {
+@media only screen and (min-width: 963px) {
   .hstack-wrap {
     grid-auto-flow: column;
     grid-gap: 8px;

@@ -4,36 +4,40 @@ body {
   background-color: var(--background);
   color: var(--primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: medium;
-  font-weight: normal;
-  padding: 8px;
+  margin: 0;
+  text-align: start;
+}
+
+/* Applies to the content */
+.content {
+  padding: 12px;
 }
 
 /* Heading 1 */
 h1 {
-  font-size: xx-large;
-  margin-top: 4px;
+  margin-block-end: 12px;
+  margin-block-start: 32px;
 }
 
 /* Heading 2 */
 h2 {
   font-size: x-large;
-  margin-bottom: 12px;
-  margin-top: 24px;
+  margin-block-end: 12px;
+  margin-block-start: 24px;
 }
 
 /* Heading 3 */
 h3 {
   font-size: large;
-  margin-bottom: 12px;
-  margin-top: 16px;
+  margin-block-end: 12px;
+  margin-block-start: 16px;
 }
 
 /* Heading 4 */
 h4 {
   font-size: medium;
-  margin-bottom: 12px;
-  margin-top: 12px;
+  margin-block-end: 12px;
+  margin-block-start: 8px;
 }
 
 /* Links */
@@ -47,6 +51,16 @@ a:hover {
   text-decoration: underline;
 }
 
+details {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+/* Details/summary bullet */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 /* Captions */
 figcaption {
   box-sizing: content-box;
@@ -58,26 +72,25 @@ figcaption {
 /* Paragraphs */
 p {
   color: var(--primary);
-  margin-bottom: 8px;
-  margin-top: 0;
+  margin-block-end: 8px;
+  margin-block-start: 0;
 }
 
 /* Lists */
 ul {
   list-style: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 8px;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 8px;
 }
 
 /* Style bullets */
 ul li::before {
-  color: var(--secondary);
-  content: "\2022";
+  color: var(--primary);
+  content: "•";
   display: inline-block;
-  font-weight: bold;
-  margin-left: 0;
-  width: 12px;
+  margin-inline-end: 0.5em;
+  margin-inline-start: 0;
 }
 
 /* Images */
