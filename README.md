@@ -73,25 +73,21 @@ Here's how it looks:
 
 ![elevated-section](screenshots/elevated-section.png)
 
-### elevated-section-expandable
-These are elevated sections, with the difference being that you can initially see the header only. When hovered, you can see the full content.
+### elevated-section-fixed
+These are elevated sections, with the difference being that it's a fixed size. It reveals its contents on scroll.
 
 ```
-<div class="elevated-section-expandable">
+<div class="elevated-section-fixed">
   <h4>Heading</h4>
   /* Your stuff */
 </div>
 ```
 
-Here's how it looks collapsed:
+Here's how it looks:
 
-![elevated-section-collapsed](screenshots/elevated-section-collapsed.png)
+![elevated-section-fixed](screenshots/elevated-section-fixed.png)
 
-And here's how it looks expanded/hovered:
-
-![elevated-section-expanded](screenshots/elevated-section-expanded.png)
-
-The initial height is 1.25em, on hover it can take as much space as it needs.
+The initial height is 6em.
 
 ## Questions that no one asked
 ### Why are you doing this?
