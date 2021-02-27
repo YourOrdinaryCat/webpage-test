@@ -30,7 +30,7 @@ h1 {
 /* Windows */
 .win h1 {
   font-size: x-large;
-  font-weight: 450;
+  font-weight: bold;
 }
 
 /* Heading 2 */
@@ -49,7 +49,7 @@ h2 {
 /* Windows */
 .win h2 {
   font-size: large;
-  font-weight: 450;
+  font-weight: bold;
 }
 
 /* Heading 3 */
