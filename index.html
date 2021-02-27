@@ -4,11 +4,14 @@
     <meta charset="utf-8"/>
     <title>Project Dough</title>
     <meta name="viewport" content="width=device-width"/>
+    <meta name="apple-itunes-app" content="app-id=1512938504"/>
 
     <link rel="stylesheet" href="colors.css"/>
     <link rel="stylesheet" href="general.css"/>
     <link rel="stylesheet" href="media-queries.css"/>
     <link rel="stylesheet" href="style.css"/>
+
+    <script src="js/css_browser_selector.js"></script>
     
     <link rel="icon" type="image/png" href="assets/icon.png"/>
   </head>
@@ -21,8 +24,8 @@
           <h3><a href="#1">Bread</a></h3>
         </summary>
         <ul>
-          <div class="sidebar-link" onclick="location.href='#11';"><li><a href="#11">Quotes</a></li></div>
-          <div class="sidebar-link" onclick="location.href='#12';"><li><a href="#12">Fun Facts</a></li></div>
+          <li><div class="sidebar-link" onclick="location.href='#11';"><a href="#11">Quotes</a></div></li>
+          <li><div class="sidebar-link" onclick="location.href='#12';"><a href="#12">Fun Facts</a></div></li>
         </ul>
       </details>
 
@@ -31,9 +34,13 @@
           <h3><a href="#2">Our Plans</a></h3>
         </summary>
         <ul>
-          <div class="sidebar-link" onclick="location.href='#21';"><li><a href="#21">Video Plans</a></li></div>
+          <li><div class="sidebar-link" onclick="location.href='#21';"><a href="#21">Video Plans</a></div></li>
         </ul>
       </details>
+
+      <ul>
+        <li><div class="sidebar-link" onclick="location.href='#3';"><a href="#3">Special Thanks</a></div></li>
+      </ul>
     </div>
 
     <div class="content">
@@ -52,59 +59,41 @@
         you know the deal.
       </p>
 
-      <!-- Contents table -->
-      <div class="elevated-section">
-        <h4>Contents</h4>
-        <ul>
-          <li><a href="#1">Bread</a>
-            <ul>
-              <li><a href="#11">Quotes</a></li>
-              <li><a href="#12">Fun Facts</a></li>
-            </ul>
-          </li>
-          <li><a href="#2">Our plans</a>
-            <ul>
-              <li><a href="#21">Video Plans</a></li>
-            </ul>
-          </li>
-        </ul>    
-      </div>
-
       <hr class="divider"/>
 
       <!-- Pictures that change with dark/light mode -->
       <div class="hstack-nw">
         <div>
           <picture>
-            <img src="assets/photos/arepa.jpeg"/>
+            <img src="assets/photos/arepa.jpeg" alt="Arepa, a south american dish."/>
             <figcaption>Arepa, a south american dish.</figcaption>
           </picture>
         </div>
 
         <div>
           <picture>
-            <img src="assets/photos/bagel.jpeg"/>
+            <img src="assets/photos/bagel.jpeg" alt="A very trustworthy bagel."/>
             <figcaption>A very trustworthy bagel.</figcaption>
           </picture>
         </div>
 
         <div>
           <picture>
-            <img src="assets/photos/crepes.jpeg"/>
+            <img src="assets/photos/crepes.jpeg" alt="Crepes deserve more recognition."/>
             <figcaption>Crepes deserve more recognition.</figcaption>
           </picture>
         </div>
 
         <div>
           <picture>
-            <img src="assets/photos/pretzel.jpeg"/>
+            <img src="assets/photos/pretzel.jpeg" alt="Just a pretzel."/>
             <figcaption>Just a pretzel.</figcaption>
           </picture>
         </div>
 
         <div>
           <picture>
-            <img src="assets/photos/white.jpeg"/>
+            <img src="assets/photos/white.jpeg" alt="Good ol' white bread. It doesn't bite."/>
             <figcaption>Good ol' white bread. It doesn't bite.</figcaption>
           </picture>
         </div>
@@ -142,7 +131,7 @@
   		  <!-- Bread best -->
     	  <div>
           <picture>
-            <img src="assets/photos/white.jpeg"/>
+            <img src="assets/photos/white.jpeg" alt="Bread is best food."/>
             <figcaption>Bread is best food.</figcaption>
           </picture>
         </div>
@@ -216,6 +205,21 @@
         	  <source src="assets/videos/boxing.mp4"/>
           </video>
           <figcaption>red me not 8 in boxing, by omar</figcaption>
+        </div>
+      </div>
+
+      <h2 id="3">Special Thanks</h2>
+      <div class="hstack-wrap">
+        <div class="elevated-section">
+          <h4>CSS Browser Selector</h4>
+          <p>"CSS Browser Selector is a very small javascript which empowers CSS
+            selectors. You can now write code for: browser, browser version, platform,
+            platform version, device, device version. Best part: no more hacks; all
+            compliant code."</p>
+          <figcaption><a href="https://creativecommons.org/licenses/by/2.5/">License</a>
+            and <a href="https://github.com/rafaelp/css_browser_selector/">source code</a>,
+            thanks to <a href="https://github.com/rafaelp/">rafaelp</a> and
+            <a href="https://github.com/verbatim/">verbatim</a>.</figcaption>
         </div>
       </div>
 

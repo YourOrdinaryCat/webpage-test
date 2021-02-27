@@ -3,13 +3,87 @@
   color-scheme: light dark;
 }
 
-/* Light mode colors */
+/* Light mode colors (default) */
 @media (prefers-color-scheme: light) {
   :root {
+    /* Background */
+    --background: #FAFAFA;
+    --elevated1: #FFFFFF;
+    --elevated2: #FFFFFF;
+
+    /* Sidebar */
+    --sidebar: #FAFAFA;
+  
+    /* Text */
+    --primary: #000000DE;
+    --secondary: #00000099;
+    --tertiary: #00000061;
+    --quaternary: #00000061;
+  
+    /* Accent related */
+    --accent: #1A73E8;
+    --onAccent: #FFFFFF;
+  
+    /* Dividers */
+    --divider: #0000001C;
+  
+    /* Hover */
+    --hover: #D8D8D8;
+
+    /* Shadows */
+    --shadow: #00000033;
+
+    /* Visited links */
+    --visited: #881798;
+  }
+}
+  
+/* Dark mode colors (default) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background */
+    --background: #121212;
+    --elevated1: #FFFFFF0D;
+    --elevated2: #333333;
+
+    /* Sidebar */
+    --sidebar: #121212;
+  
+    /* Text */
+    --primary: #FFFFFFDE;
+    --secondary: #FFFFFF99;
+    --tertiary: #FFFFFF61;
+    --quaternary: #FFFFFF61;
+  
+    /* Accent related */
+    --accent: #89B4F8;
+    --onAccent: #FFFFFF;
+  
+    /* Dividers */
+    --divider: #FFFFFF1C;
+  
+    /* Hover */
+    --hover: #ffffff1A;
+
+    /* Shadows */
+    --shadow: #00000033;
+
+    /* Visited links */
+    --visited: #881798;
+  }
+}
+
+/* iOS devices */
+/* Light mode colors */
+@media (prefers-color-scheme: light) {
+  .ipad:root, .iphone:root, .ipod:root{
     /* Background */
     --background: #F2F2F7;
     --elevated1: #FFFFFF;
     --elevated2: #FFFFFF;
+
+    /* Sidebar */
+    --sidebar: #E2E2E7;
   
     /* Text */
     --primary: #000000;
@@ -18,7 +92,7 @@
     --quaternary: #3C3C432E;
   
     /* Accent related */
-    --accent: #FF9500;
+    --accent: #007AFF;
     --onAccent: #FFFFFF;
   
     /* Dividers */
@@ -27,18 +101,24 @@
     /* Hover */
     --hover: #D1D1D6;
 
+    /* Shadows */
+    --shadow: #0000004D;
+
     /* Visited links */
     --visited: #AF52DE;
   }
 }
   
-/* Dark mode colors */
+/* Dark mode colors (iOS) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  .ipad:root, .iphone:root, .ipod:root {
     /* Background */
-    --background: #1C1C1E;
-    --elevated1: #2C2C2E;
-    --elevated2: #3C3C3E;
+    --background: #000000;
+    --elevated1: #1C1C1E;
+    --elevated2: #2C2C2E;
+
+    /* Sidebar */
+    --sidebar: #1C1C1E;
   
     /* Text */
     --primary: #FFFFFF;
@@ -47,7 +127,7 @@
     --quaternary: #EBEBF52E;
   
     /* Accent related */
-    --accent: #FF9F0A;
+    --accent: #0A84FF;
     --onAccent: #FFFFFF;
   
     /* Dividers */
@@ -56,7 +136,81 @@
     /* Hover */
     --hover: #3A3A3C;
 
+    /* Shadows */
+    --shadow: #0000004D;
+
     /* Visited links */
     --visited: #BF5AF2;
+  }
+}
+
+/* Windows */
+/* Light mode colors (Windows) */
+@media (prefers-color-scheme: light) {
+  .win:root {
+    /* Background */
+    --background: #F2F2F2;
+    --elevated1: #FFFFFF;
+    --elevated2: #F2F2F2;
+
+    /* Sidebar */
+    --sidebar: #EFEFEF;
+  
+    /* Text */
+    --primary: #000000;
+    --secondary: #00000099;
+    --tertiary: #00000061;
+    --quaternary: #00000061;
+  
+    /* Accent related */
+    --accent: #0078D4;
+    --onAccent: #FFFFFF;
+  
+    /* Dividers */
+    --divider: #F2F2F2;
+  
+    /* Hover */
+    --hover: #D8D8D8;
+
+    /* Shadows */
+    --shadow: #0000004D;
+
+    /* Visited links */
+    --visited: #881798;
+  }
+}
+
+/* Dark mode colors (Windows) */
+@media (prefers-color-scheme: dark) {
+  .win:root {
+    /* Background */
+    --background: #1F1F1F;
+    --elevated1: #2B2B2B;
+    --elevated2: #333333;
+
+    /* Sidebar */
+    --sidebar: #2D2D2D;
+  
+    /* Text */
+    --primary: #FFFFFF;
+    --secondary: #FFFFFF99;
+    --tertiary: #FFFFFF61;
+    --quaternary: #FFFFFF61;
+  
+    /* Accent related */
+    --accent: #0078D4;
+    --onAccent: #FFFFFF;
+  
+    /* Dividers */
+    --divider: #1F1F1F;
+  
+    /* Hover */
+    --hover: #424242;
+
+    /* Shadows */
+    --shadow: #0000004D;
+
+    /* Visited links */
+    --visited: #881798;
   }
 }

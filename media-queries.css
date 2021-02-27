@@ -13,7 +13,9 @@
   }
 
   .sidebar {
-    display: none;
+    border-bottom: 1px solid var(--divider);
+    height: auto;
+    width: auto;
   }
 }
 
@@ -23,7 +25,11 @@
   }
 
   .sidebar {
-    display: block;
+    border-right: 1px solid var(--divider);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 267px;
   }
 }
 
