@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="media-queries.css"/>
     <link rel="stylesheet" href="style.css"/>
 
-    <script src="js/css_browser_selector.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/detectizr.min.js"></script>
     
     <link rel="icon" type="image/png" href="assets/icon.png"/>
   </head>
@@ -22,6 +23,7 @@
       <details>
         <summary>
           <h3><a href="#1">Bread</a></h3>
+          <hr class="divider"/>
         </summary>
         <ul>
           <li><div class="sidebar-link" onclick="location.href='#11';"><a href="#11">Quotes</a></div></li>
@@ -32,6 +34,7 @@
       <details>
         <summary>
           <h3><a href="#2">Our Plans</a></h3>
+          <hr class="divider"/>
         </summary>
         <ul>
           <li><div class="sidebar-link" onclick="location.href='#21';"><a href="#21">Video Plans</a></div></li>
@@ -211,15 +214,21 @@
       <h2 id="3">Special Thanks</h2>
       <div class="hstack-wrap">
         <div class="elevated-section">
-          <h4>CSS Browser Selector</h4>
-          <p>"CSS Browser Selector is a very small javascript which empowers CSS
-            selectors. You can now write code for: browser, browser version, platform,
-            platform version, device, device version. Best part: no more hacks; all
-            compliant code."</p>
-          <figcaption><a href="https://creativecommons.org/licenses/by/2.5/">License</a>
-            and <a href="https://github.com/rafaelp/css_browser_selector/">source code</a>,
-            thanks to <a href="https://github.com/rafaelp/">rafaelp</a> and
-            <a href="https://github.com/verbatim/">verbatim</a>.</figcaption>
+          <h4>Detectizr</h4>
+          <p>"A Modernizr extension to detect device, device model, screen size, operating
+            system, and browser details."</p>
+          <figcaption><a href="https://mit-license.org/">License</a> and
+            <a href="https://github.com/barisaydinoglu/Detectizr">source code</a>, thanks
+            to <a href="https://github.com/barisaydinoglu">Baris Aydinoglu</a>.</figcaption>
+        </div>
+
+        <div class="elevated-section">
+          <h4>Detectizr</h4>
+          <p>"Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the
+            user’s browser."</p>
+          <figcaption><a href="https://mit-license.org/">License</a>
+            and <a href="https://github.com/Modernizr/Modernizr">source code</a>,
+            thanks to all its contributors.</figcaption>
         </div>
       </div>
 

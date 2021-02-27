@@ -76,7 +76,7 @@
 /* iOS devices */
 /* Light mode colors */
 @media (prefers-color-scheme: light) {
-  .webkit:root {
+  .ios:root, .mac:root {
     /* Background */
     --background: #FFFFFF;
     --elevated1: #FFFFFF;
@@ -111,7 +111,7 @@
   
 /* Dark mode colors (iOS) */
 @media (prefers-color-scheme: dark) {
-  .webkit:root {
+  .ios:root, .mac:root {
     /* Background */
     --background: #000000;
     --elevated1: #1C1C1E;
@@ -147,7 +147,7 @@
 /* Windows */
 /* Light mode colors (Windows) */
 @media (prefers-color-scheme: light) {
-  .win:root {
+  .windows:root {
     /* Background */
     --background: #F2F2F2;
     --elevated1: #FFFFFF;
@@ -182,7 +182,7 @@
 
 /* Dark mode colors (Windows) */
 @media (prefers-color-scheme: dark) {
-  .win:root {
+  .windows:root {
     /* Background */
     --background: #1F1F1F;
     --elevated1: #2B2B2B;
@@ -198,7 +198,7 @@
     --quaternary: #FFFFFF61;
   
     /* Accent related */
-    --accent: #0078D4;
+    --accent: #86BFEB;
     --onAccent: #FFFFFF;
   
     /* Dividers */

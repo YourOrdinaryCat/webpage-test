@@ -23,14 +23,13 @@ h1 {
 }
 
 /* iOS devices */
-.webkit h1 {
+.ios h1, .mac h1, .windows h1 {
   font-weight: bold;
 }
 
 /* Windows */
-.win h1 {
+.windows h1 {
   font-size: x-large;
-  font-weight: bold;
 }
 
 /* Heading 2 */
@@ -42,14 +41,13 @@ h2 {
 }
 
 /* iOS devices */
-.webkit h2 {
+.ios h2, .mac h2, .windows h2 {
   font-weight: bold;
 }
 
 /* Windows */
-.win h2 {
+.windows h2 {
   font-size: large;
-  font-weight: bold;
 }
 
 /* Heading 3 */
@@ -61,14 +59,13 @@ h3 {
 }
 
 /* iOS devices */
-.webkit h3 {
+.ios h3, .mac h3, .windows h3 {
   font-weight: bold;
 }
 
 /* Windows */
-.win h3 {
+.windows h3 {
   font-size: medium;
-  font-weight: bold;
 }
 
 /* Heading 4 */
@@ -82,7 +79,6 @@ h4 {
 /* Links */
 a {
   color: var(--accent);
-  font-weight: 600;
   text-decoration: none;
 }
 
@@ -96,7 +92,11 @@ details {
   margin-block-start: 0;
 }
 
-/* Details/summary bullet */
+details[open] hr.divider {
+  display: none;
+}
+
+/* Remove details/summary bullet */
 details summary::-webkit-details-marker {
   display: none;
 }
