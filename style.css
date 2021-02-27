@@ -12,7 +12,7 @@
 }
 
 /* iOS devices */
-.ipad .elevated-section, .iphone .elevated-section, .ipod .elevated-section {
+.webkit .elevated-section {
   border-radius: 12px;
   box-shadow: 0px 2px 8px var(--shadow);
   margin: 8px;
@@ -59,7 +59,7 @@
 }
 
 /* iOS devices */
-.ipad .elevated-section-fixed, .iphone .elevated-section-fixed, .ipod .elevated-section-fixed {
+.webkit .elevated-section-fixed {
   border-radius: 12px;
   box-shadow: 0px 2px 8px var(--shadow);
   margin: 8px;

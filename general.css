@@ -23,7 +23,7 @@ h1 {
 }
 
 /* iOS devices */
-.ipad h1, .iphone h1, .ipod h1 {
+.webkit h1 {
   font-weight: bold;
 }
 
@@ -42,7 +42,7 @@ h2 {
 }
 
 /* iOS devices */
-.ipad h2, .iphone h2, .ipod h2 {
+.webkit h2 {
   font-weight: bold;
 }
 
@@ -61,7 +61,7 @@ h3 {
 }
 
 /* iOS devices */
-.ipad h3, .iphone h3, .ipod h3 {
+.webkit h3 {
   font-weight: bold;
 }
 

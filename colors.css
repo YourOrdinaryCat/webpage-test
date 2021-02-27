@@ -76,14 +76,14 @@
 /* iOS devices */
 /* Light mode colors */
 @media (prefers-color-scheme: light) {
-  .ipad:root, .iphone:root, .ipod:root{
+  .webkit:root {
     /* Background */
-    --background: #F2F2F7;
+    --background: #FFFFFF;
     --elevated1: #FFFFFF;
     --elevated2: #FFFFFF;
 
     /* Sidebar */
-    --sidebar: #E2E2E7;
+    --sidebar: #F2F2F7;
   
     /* Text */
     --primary: #000000;
@@ -111,7 +111,7 @@
   
 /* Dark mode colors (iOS) */
 @media (prefers-color-scheme: dark) {
-  .ipad:root, .iphone:root, .ipod:root {
+  .webkit:root {
     /* Background */
     --background: #000000;
     --elevated1: #1C1C1E;
