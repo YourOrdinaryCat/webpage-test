@@ -171,5 +171,7 @@ button:hover {
 
 /* Dividers */
 hr.divider {
-  border: 1px solid var(--divider);
+  border-color: var(--divider);
+  border-style: solid;
+  border-width: 1px 0 0 0;
 }

@@ -216,7 +216,7 @@
 /* Style bullets */
 ul li .sidebar-link a::before {
   color: var(--accent);
-  content: "↪";
+  content: "•";
   display: inline-block;
   margin-inline-end: 0.5em;
   margin-inline-start: 0;
