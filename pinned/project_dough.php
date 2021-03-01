@@ -1,25 +1,21 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>Project Dough</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-itunes-app" content="app-id=1512938504"/>
+<!-- Title goes here -->
+<?php $title = "Project Dough" ?>
 
-    <link rel="stylesheet" href="colors.css"/>
-    <link rel="stylesheet" href="general.css"/>
-    <link rel="stylesheet" href="media-queries.css"/>
-    <link rel="stylesheet" href="style.css"/>
+<!-- Intro paragraph -->
+<?php $intro = "Hey fellow bread lover. I think we can agree on the fact that bread deserves
+  more recognition. It's truly a versatile food, and it stood the test of time
+  really well. You may not like some variants, and that's okay! But bread is
+  undeniably great. That's why I made Project Dough! With your help, we'll be
+  able to establish a fully functional bread kingdom." ?>
 
-    <script src="js/modernizr-custom.js"></script>
-    <script src="js/detectizr.min.js"></script>
-    
-    <link rel="icon" type="image/png" href="assets/icon.png"/>
-  </head>
+<!-- Author of the article, date -->
+<?php $author = "Omar, 2021" ?>
 
-  <body>
-    <div class="sidebar">
-      <h1><a href="#0">Outline</a></h1>
+<?php echo file_get_contents("parts/part1.html"); ?>
+<title><?php echo $title; ?></title>
+
+<?php echo file_get_contents("parts/part2.html"); ?>
+      <!-- Sidebar items go here -->
       <details>
         <summary>
           <h3><a href="#1">Bread</a></h3>
@@ -41,30 +37,16 @@
         </ul>
       </details>
 
-      <ul>
-        <li><div class="sidebar-link" onclick="location.href='#3';"><a href="#3">Special Thanks</a></div></li>
-      </ul>
-    </div>
-
-    <div class="content">
+<?php echo file_get_contents("parts/part3.html"); ?>
       <!-- Title -->
-      <h1>Project Dough</h1>
-      
-      <!-- Intro paragraph -->
-      <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves
-        more recognition. It's truly a versatile food, and it stood the test of time
-        really well. You may not like some variants, and that's okay! But bread is
-        undeniably great. That's why I made Project Dough! With your help, we'll be
-        able to establish a fully functional bread kingdom.
-      </p>
+      <h1 id="0"><?php echo $title; ?></h1>
 
-      <p>Down below we'll take a look at the history of bread, the different variants,
-        you know the deal.
-      </p>
+      <!-- Intro paragraph -->
+      <p><?php echo($intro) ?></p>
 
       <hr class="divider"/>
 
-      <!-- Pictures that change with dark/light mode -->
+      <!-- Pictures -->
       <div class="hstack-nw">
         <div>
           <picture>
@@ -211,27 +193,4 @@
         </div>
       </div>
 
-      <h2 id="3">Special Thanks</h2>
-      <div class="hstack-wrap">
-        <div class="elevated-section">
-          <h4>Detectizr</h4>
-          <p>"A Modernizr extension to detect device, device model, screen size, operating
-            system, and browser details."</p>
-          <figcaption><a href="https://mit-license.org/">License</a> and
-            <a href="https://github.com/barisaydinoglu/Detectizr">source code</a>, thanks
-            to <a href="https://github.com/barisaydinoglu">Baris Aydinoglu</a>.</figcaption>
-        </div>
-
-        <div class="elevated-section">
-          <h4>Modernizr</h4>
-          <p>"Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the
-            user’s browser."</p>
-          <figcaption><a href="https://mit-license.org/">License</a>
-            and <a href="https://github.com/Modernizr/Modernizr">source code</a>,
-            thanks to all its contributors.</figcaption>
-        </div>
-      </div>
-
-    </div>
-  </body>
-</html>
+<?php echo file_get_contents("parts/part4.html"); ?>
