@@ -1,3 +1,10 @@
+/* Comments */
+.comments {
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-strong);
+  height: 391px;
+}
+
 /* Elevated section */
 .elevated-section {
   background-color: var(--elevated1);

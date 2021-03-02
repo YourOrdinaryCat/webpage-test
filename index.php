@@ -1,17 +1,24 @@
 <?php
   session_start();
 
+  $cookie_comments = "CommentsCookie";
   $cookie_mode = "ModeCookie";
   $cookie_theme = "ThemeCookie";
 
   if(isset($_POST['genCookie'])) {
+    setcookie($cookie_comments, $_SESSION["comments"], time() + (86400 * 30));
     setcookie($cookie_mode, $_SESSION["mode"], time() + (86400 * 30));
     setcookie($cookie_theme, $_SESSION["theme"], time() + (86400 * 30));
   }
 
   if(isset($_POST['delCookie'])) {
+    setcookie($cookie_comments, " ", 1);
     setcookie($cookie_mode, " ", 1);
     setcookie($cookie_theme, " ", 1);
+  }
+
+  if(isset($_POST['changeComments'])) {
+    $_SESSION["comments"] = $_POST['commentsMode'];
   }
 
   if(isset($_POST['changeMode'])) {
@@ -26,12 +33,20 @@
     $gen_cookie = "Make a cookie";
   } else {
     $gen_cookie = "Manage this cookie";
+    $_SESSION["comments"] = $_COOKIE[$cookie_comments];
     $_SESSION["mode"] = $_COOKIE[$cookie_mode];
     $_SESSION["theme"] = $_COOKIE[$cookie_theme];
   }
 
-  if(!isset($_SESSION["theme"])) {
+  if(!isset($_SESSION["comments"])) {
+    $_SESSION["comments"] = "off";
+  }
+
+  if(!isset($_SESSION["mode"])) {
     $_SESSION["mode"] = "auto";
+  }
+
+  if(!isset($_SESSION["theme"])) {
     $_SESSION["theme"] = "material";
   }
 ?>
@@ -187,7 +202,7 @@
             <select name="themeName" type="text">
               <optgroup label="Material">
                 <option value="material">Default Material</option>
-                <option value="material_themed">Material Theming (BETA)</option>
+                <option value="material_themed">Material Theming</option>
               </optgroup>
               <optgroup label="iOS">
                 <option value="ios">iOS</option>
@@ -196,8 +211,9 @@
                 <option value="fluent">Fluent (Windows 10)</option>
               </optgroup>
             </select>
-            <input name="changeTheme" type="submit" value="Apply theme"/>
+            <input name="changeTheme" type="submit" value="Apply"/>
           </form>
+          <figcaption>Theme settings.</figcaption>
 
           <form method="post">
             <select name="themeMode" type="text">
@@ -205,9 +221,22 @@
               <option value="dark">Dark</option>
               <option value="light">Light</option>
             </select>
-            <input name="changeMode" type="submit" value="Apply mode"/>
+            <input name="changeMode" type="submit" value="Apply"/>
           </form>
+          <figcaption>Toggle dark/light mode.</figcaption>
           
+          <form method="post">
+            <select name="commentsMode" type="text">
+              <option value="off">Disable</option>
+              <optgroup label="Enable">
+                <option value="dark">Dark mode</option>
+                <option value="light">Light mode</option>
+              </optgroup>
+            </select>
+            <input name="changeComments" type="submit" value="Apply"/>
+          </form>
+          <figcaption>Toggle comments.</figcaption>
+
           <h3 id="21">Cookies</h3>
           <p>You can make a cookie to save your settings! This cookie will last 30 days, so
             you have to renew it before that if you want it to stay alive. It only
@@ -224,5 +253,12 @@
             </form>');
         }
       ?>
+
+      <h2 id="3">About</h2>
+      <h3 id="31">Comments</h3>
+      <p>These are thanks to Telegram. It'll store some cookies if they're enabled.
+        This is a Telegram thing, so best you can do about it is disabling comments if
+        you don't want that.
+      </p>
 
 <?php echo file_get_contents("articles/parts/part5.html"); ?>

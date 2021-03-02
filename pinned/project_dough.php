@@ -15,13 +15,13 @@
 <!-- Author of the article, date -->
 <?php $author = "Omar, 2021" ?>
 
-<?php echo file_get_contents("../articles/parts/part1.html"); ?>
+<?php include("../articles/parts/part1.html"); ?>
 <title><?php echo $title; ?></title>
 
-<?php echo file_get_contents("../articles/parts/part2.html"); ?>
+<?php include("../articles/parts/part2.html"); ?>
 <link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
 
-<?php echo file_get_contents("../articles/parts/part3.html"); ?>
+<?php include("../articles/parts/part3.html"); ?>
       <!-- Sidebar items go here -->
       <details>
         <summary>
@@ -44,7 +44,7 @@
         </ul>
       </details>
 
-<?php echo file_get_contents("../articles/parts/part4.html"); ?>
+<?php include("../articles/parts/part4.html"); ?>
       <!-- Title -->
       <h1 id="0"><?php echo $title; ?></h1>
 
@@ -199,5 +199,11 @@
           <figcaption>red me not 8 in boxing, by omar</figcaption>
         </div>
       </div>
+
+      <?php
+        if($_SESSION["comments"] != "off") {
+          include("../articles/parts/comments.php");
+        }
+      ?>
 
 <?php echo file_get_contents("../articles/parts/part5.html"); ?>

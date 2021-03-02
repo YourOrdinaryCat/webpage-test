@@ -1,3 +1,6 @@
+# WARNING: Outdated documentation ahead!
+This documentation is severely outdated. Whenever I get time, I'll update it. DO NOT get guidance from this documentation.
+
 # Welcome
 Hi GitHub user! This is a test webpage, where I put some stuff I do with HTML/CSS. You'll see updates pretty often while I improve this website.
 

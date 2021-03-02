@@ -80,7 +80,7 @@ figcaption {
   box-sizing: content-box;
   color: var(--secondary);
   font-size: small;
-  padding: 0 8px 0 8px;
+  padding: 0 var(--radius) 1em var(--radius);
 }
 
 figcaption a {
@@ -145,10 +145,6 @@ button:hover {
 }
 
 /* Forms */
-form {
-  margin-block-end: 4px;
-}
-
 input {
   background-color: var(--accent);
   border: 2px solid var(--accent);
@@ -182,6 +178,7 @@ select {
   font-weight: bold;
   min-height: 36px;
   padding: 8px;
+  width: 200px;
 }
 
 /* Dividers */
