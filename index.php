@@ -87,6 +87,8 @@
         <li><div class="sidebar-link" onclick="location.href='#1';"><a href="#1">Articles</a></div></li>
       </ul>
 
+      <br>
+
       <details>
         <summary>
           <h3><a href="#2">Settings</a></h3>
