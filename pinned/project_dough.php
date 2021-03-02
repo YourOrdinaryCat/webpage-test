@@ -200,8 +200,11 @@
         </div>
       </div>
 
+      <h2>Comments</h2>
       <?php
-        if($_SESSION["comments"] != "off") {
+        if($_SESSION["comments"] = "off") {
+          echo("Comments are off");
+        } else {
           include("../articles/parts/comments.php");
         }
       ?>
