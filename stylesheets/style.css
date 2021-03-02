@@ -3,6 +3,8 @@
   border: 1px solid var(--divider);
   border-radius: var(--radius-strong);
   height: 391px;
+  overflow: hidden;
+  width: auto;
 }
 
 /* Elevated section */
