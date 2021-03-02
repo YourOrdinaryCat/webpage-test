@@ -10,6 +10,10 @@ body {
   transition-duration: 0.6s;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 /* Applies to the content */
 .content {
   padding: 12px;
@@ -17,61 +21,31 @@ body {
 
 /* Heading 1 */
 h1 {
-  font-weight: normal;
+  font-weight: bold;
   margin-block-end: 12px;
   margin-block-start: 32px;
-}
-
-/* iOS devices */
-.ios h1, .mac h1, .windows h1 {
-  font-weight: bold;
-}
-
-/* Windows */
-.windows h1 {
-  font-size: x-large;
 }
 
 /* Heading 2 */
 h2 {
   font-size: x-large;
-  font-weight: normal;
+  font-weight: bold;
   margin-block-end: 12px;
   margin-block-start: 24px;
-}
-
-/* iOS devices */
-.ios h2, .mac h2, .windows h2 {
-  font-weight: bold;
-}
-
-/* Windows */
-.windows h2 {
-  font-size: large;
 }
 
 /* Heading 3 */
 h3 {
   font-size: large;
-  font-weight: normal;
+  font-weight: bold;
   margin-block-end: 12px;
   margin-block-start: 16px;
-}
-
-/* iOS devices */
-.ios h3, .mac h3, .windows h3 {
-  font-weight: bold;
-}
-
-/* Windows */
-.windows h3 {
-  font-size: medium;
 }
 
 /* Heading 4 */
 h4 {
   font-size: medium;
-  font-weight: 600;
+  font-weight: bold;
   margin-block-end: 12px;
   margin-block-start: 8px;
 }
@@ -88,8 +62,8 @@ a:hover {
 }
 
 details {
-  margin-block-end: 16px;
-  margin-block-start: 0;
+  margin-block-end: 8px;
+  margin-block-start: 8px;
 }
 
 details[open] hr.divider {
@@ -141,7 +115,7 @@ ul li::before {
 img {
   background-color: var(--elevated1);
   border: 1px solid var(--quaternary);
-  border-radius: 8px;
+  border-radius: var(--radius);
 }
 
 /* Videos */
@@ -155,18 +129,59 @@ video {
 
 /* Buttons */
 button {
-  background-color: var(--elevated1);
-  border: 2px solid var(--elevated1);
-  border-radius: 8px;
-  color: var(--accent);
-  margin-left: 0;
-  min-height: 32px;
+  background-color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--onAccent);
+  font-weight: bold;
+  margin: 6px;
+  min-height: 36px;
+  padding: 8px;
 }
 
 /* Change color on hover */
 button:hover {
+  background-color: var(--hover-transparent);
+}
+
+/* Forms */
+form {
+  margin-block-end: 4px;
+}
+
+input {
+  background-color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--onAccent);
+  font-weight: bold;
+  min-height: 36px;
+  padding: 8px;
+}
+
+optgroup {
+  background-color: var(--elevated2);
+  font-weight: bold;
+}
+
+option {
+  background-color: var(--elevated2);
+  border-radius: var(--radius);
+  color: var(--primary);
+}
+
+option:hover {
   background-color: var(--hover);
-  border: 2px solid var(--hover);
+}
+
+select {
+  background-color: var(--elevated1);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius);
+  color: var(--primary);
+  font-weight: bold;
+  min-height: 36px;
+  padding: 8px;
 }
 
 /* Dividers */

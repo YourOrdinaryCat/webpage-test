@@ -1,0 +1,82 @@
+/* iOS devices */
+/* Light mode colors */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Background */
+    --background: #FFFFFF;
+    --elevated1: #FFFFFF;
+    --elevated2: #FFFFFF;
+
+    /* Sidebar */
+    --sidebar: #F2F2F7;
+  
+    /* Text */
+    --primary: #000000;
+    --secondary: #3C3C4399;
+    --tertiary: #3C3C434D;
+    --quaternary: #3C3C432E;
+  
+    /* Accent related */
+    --accent: #007AFF;
+    --onAccent: #FFFFFF;
+  
+    /* Dividers */
+    --divider: #3C3C434A;
+  
+    /* Hover */
+    --hover: #D1D1D6;
+    --hover-transparent: #3C3C434D;
+
+    /* Shadows */
+    --shadow: #0000004D;
+    --shadow-size: 0px 2px 8px var(--shadow);
+
+    /* Visited links */
+    --visited: #AF52DE;
+
+    /* Corner radius */
+    --radius: 8px;
+    --radius-strong: 12px;
+  }
+}
+  
+/* Dark mode colors (iOS) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background */
+    --background: #000000;
+    --elevated1: #1C1C1E;
+    --elevated2: #2C2C2E;
+
+    /* Sidebar */
+    --sidebar: #1C1C1E;
+  
+    /* Text */
+    --primary: #FFFFFF;
+    --secondary: #EBEBF599;
+    --tertiary: #EBEBF54D;
+    --quaternary: #EBEBF52E;
+  
+    /* Accent related */
+    --accent: #0A84FF;
+    --onAccent: #FFFFFF;
+  
+    /* Dividers */
+    --divider: #54545899;
+  
+    /* Hover */
+    --hover: #3A3A3C;
+    --hover-transparent: #3C3C434D;
+
+    /* Shadows */
+    --shadow: #0000004D;
+    --shadow-size: 0px 2px 8px var(--shadow);
+
+    /* Visited links */
+    --visited: #BF5AF2;
+
+    /* Corner radius */
+    --radius: 8px;
+    --radius-strong: 12px;
+  }
+}

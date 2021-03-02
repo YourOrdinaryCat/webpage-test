@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!-- Title goes here -->
 <?php $title = "Project Dough" ?>
 
@@ -15,6 +19,9 @@
 <title><?php echo $title; ?></title>
 
 <?php echo file_get_contents("../articles/parts/part2.html"); ?>
+<link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
+
+<?php echo file_get_contents("../articles/parts/part3.html"); ?>
       <!-- Sidebar items go here -->
       <details>
         <summary>
@@ -37,7 +44,7 @@
         </ul>
       </details>
 
-<?php echo file_get_contents("../articles/parts/part3.html"); ?>
+<?php echo file_get_contents("../articles/parts/part4.html"); ?>
       <!-- Title -->
       <h1 id="0"><?php echo $title; ?></h1>
 
@@ -193,4 +200,4 @@
         </div>
       </div>
 
-<?php echo file_get_contents("../articles/parts/part4.html"); ?>
+<?php echo file_get_contents("../articles/parts/part5.html"); ?>

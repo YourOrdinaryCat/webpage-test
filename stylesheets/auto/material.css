@@ -1,0 +1,82 @@
+/* Material colors */
+/* Light mode colors (default) */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Background */
+    --background: #FAFAFA;
+    --elevated1: #FFFFFF;
+    --elevated2: #FFFFFF;
+
+    /* Sidebar */
+    --sidebar: #FAFAFA;
+  
+    /* Text */
+    --primary: #000000;
+    --secondary: #00000099;
+    --tertiary: #00000061;
+    --quaternary: #00000061;
+  
+    /* Accent related */
+    --accent: #1A73E8;
+    --onAccent: #FFFFFF;
+  
+    /* Dividers */
+    --divider: #0000001C;
+  
+    /* Hover */
+    --hover: #0000001A;
+    --hover-transparent: #0000001A;
+
+    /* Shadows */
+    --shadow: #00000033;
+    --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+
+    /* Visited links */
+    --visited: #881798;
+
+    /* Corner radius */
+    --radius: 6px;
+    --radius-strong: 8px;
+  }
+}
+  
+/* Dark mode colors (default) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background */
+    --background: #121212;
+    --elevated1: #1E1E1E;
+    --elevated2: #FFFFFF1C;
+
+    /* Sidebar */
+    --sidebar: #121212;
+  
+    /* Text */
+    --primary: #FFFFFFDE;
+    --secondary: #FFFFFF99;
+    --tertiary: #FFFFFF61;
+    --quaternary: #FFFFFF61;
+  
+    /* Accent related */
+    --accent: #89B4F8;
+    --onAccent: #000000;
+  
+    /* Dividers */
+    --divider: #FFFFFF1C;
+  
+    /* Hover */
+    --hover: #FFFFFF1A;
+    --hover-transparent: #FFFFFF1A;
+
+    /* Shadows */
+    --shadow: #00000033;
+    --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+
+    /* Visited links */
+    --visited: #881798;
+
+    /* Corner radius */
+    --radius: 6px;
+    --radius-strong: 8px;
+  }
+}

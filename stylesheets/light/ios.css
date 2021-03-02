@@ -1,0 +1,39 @@
+/* iOS devices */
+/* Light mode colors */
+:root {
+  /* Background */
+  --background: #FFFFFF;
+  --elevated1: #FFFFFF;
+  --elevated2: #FFFFFF;
+
+  /* Sidebar */
+  --sidebar: #F2F2F7;
+  
+  /* Text */
+  --primary: #000000;
+  --secondary: #3C3C4399;
+  --tertiary: #3C3C434D;
+  --quaternary: #3C3C432E;
+  
+  /* Accent related */
+  --accent: #007AFF;
+  --onAccent: #FFFFFF;
+  
+  /* Dividers */
+  --divider: #3C3C434A;
+  
+  /* Hover */
+  --hover: #D1D1D6;
+  --hover-transparent: #3C3C434D;
+
+  /* Shadows */
+  --shadow: #0000004D;
+  --shadow-size: 0px 2px 8px var(--shadow);
+
+  /* Visited links */
+  --visited: #AF52DE;
+
+  /* Corner radius */
+  --radius: 8px;
+  --radius-strong: 12px;
+}

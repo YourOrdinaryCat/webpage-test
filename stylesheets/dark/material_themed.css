@@ -1,0 +1,39 @@
+/* Material colors */
+/* Dark mode colors (default) */
+  :root {
+    /* Background */
+    --background: #1B1F24;
+    --elevated1: #21262F;
+    --elevated2: #2C3645;
+
+    /* Sidebar */
+    --sidebar: #1B1F24;
+  
+    /* Text */
+    --primary: #E7F2FEDE;
+    --secondary: #E7F2FE99;
+    --tertiary: #E7F2FE61;
+    --quaternary: #E7F2FE61;
+  
+    /* Accent related */
+    --accent: #89B4F8;
+    --onAccent: #000000;
+  
+    /* Dividers */
+    --divider: #89B4F81C;
+  
+    /* Hover */
+    --hover: #89B4F81A;
+    --hover-transparent: #89B4F81A;
+
+    /* Shadows */
+    --shadow: #00000033;
+    --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+
+    /* Visited links */
+    --visited: #881798;
+
+    /* Corner radius */
+    --radius: 6px;
+    --radius-strong: 8px;
+  }

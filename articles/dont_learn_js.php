@@ -3,10 +3,13 @@
 ?>
 
 <!-- Title goes here -->
-<?php $title = "How to sleep correctly" ?>
+<?php $title = "Kill JS" ?>
 
 <!-- Intro paragraph -->
-<?php $intro = "The first step to get a good sleep is not learning JavaScript" ?>
+<?php $intro = "JS IS GAY DO NOT LEARN IT JS IS GAY DO NOT
+LEARN IT JS IS GAY DO NOT LEARN IT JS IS GAY DO NOT LEARN
+IT JS IS GAY DO NOT LEARN IT JS IS GAY DO NOT LEARN IT JS
+IS GAY DO NOT LEARN IT" ?>
 
 <!-- Author of the article, date -->
 <?php $author = "Omar, 2021" ?>
