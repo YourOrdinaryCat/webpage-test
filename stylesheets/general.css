@@ -146,6 +146,7 @@ button:hover {
 
 /* Forms */
 input {
+  appearance: none;
   background-color: var(--accent);
   border: 2px solid var(--accent);
   border-radius: var(--radius);
@@ -156,21 +157,25 @@ input {
 }
 
 optgroup {
+  appearance: none;
   background-color: var(--elevated2);
   font-weight: bold;
 }
 
 option {
+  appearance: none;
   background-color: var(--elevated2);
   border-radius: var(--radius);
   color: var(--primary);
 }
 
 option:hover {
+  appearance: none;
   background-color: var(--hover);
 }
 
 select {
+  appearance: none;
   background-color: var(--elevated1);
   border: 1px solid var(--divider);
   border-radius: var(--radius);

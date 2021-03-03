@@ -198,7 +198,19 @@
 
       <?php
         if(!isset($_COOKIE[$cookie_theme])) {
-          echo('<form method="post">
+            echo('<form method="post">
+            <select name="commentsMode" type="text">
+              <option value="off">Disable</option>
+              <optgroup label="Enable">
+                <option value="dark">Dark mode</option>
+                <option value="light">Light mode</option>
+              </optgroup>
+            </select>
+            <input name="changeComments" type="submit" value="Apply"/>
+          </form>
+          <figcaption>Toggle comments.</figcaption>
+          
+          <form method="post">
             <select name="themeName" type="text">
               <optgroup label="Material">
                 <option value="material">Default Material</option>
@@ -224,18 +236,6 @@
             <input name="changeMode" type="submit" value="Apply"/>
           </form>
           <figcaption>Toggle dark/light mode.</figcaption>
-          
-          <form method="post">
-            <select name="commentsMode" type="text">
-              <option value="off">Disable</option>
-              <optgroup label="Enable">
-                <option value="dark">Dark mode</option>
-                <option value="light">Light mode</option>
-              </optgroup>
-            </select>
-            <input name="changeComments" type="submit" value="Apply"/>
-          </form>
-          <figcaption>Toggle comments.</figcaption>
 
           <h3 id="21">Cookies</h3>
           <p>You can make a cookie to save your settings! This cookie will last 30 days, so
