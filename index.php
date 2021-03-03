@@ -9,24 +9,39 @@
     setcookie($cookie_comments, $_SESSION["comments"], time() + (86400 * 30));
     setcookie($cookie_mode, $_SESSION["mode"], time() + (86400 * 30));
     setcookie($cookie_theme, $_SESSION["theme"], time() + (86400 * 30));
+
+    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+    exit();
   }
 
   if(isset($_POST['delCookie'])) {
     setcookie($cookie_comments, " ", 1);
     setcookie($cookie_mode, " ", 1);
     setcookie($cookie_theme, " ", 1);
+
+    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+    exit();
   }
 
   if(isset($_POST['changeComments'])) {
     $_SESSION["comments"] = $_POST['commentsMode'];
+
+    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+    exit();
   }
 
   if(isset($_POST['changeMode'])) {
     $_SESSION["mode"] = $_POST['themeMode'];
+
+    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+    exit();
   }
 
   if(isset($_POST['changeTheme'])) {
     $_SESSION["theme"] = $_POST['themeName'];
+
+    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+    exit();
   }
 
   if(!isset($_COOKIE[$cookie_theme])) {
