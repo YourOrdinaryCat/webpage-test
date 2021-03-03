@@ -19,6 +19,7 @@
 <title><?php echo $title; ?></title>
 
 <?php include("../articles/parts/part2.html"); ?>
+<link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/themes-general.css"/>
 <link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
 
 <?php include("../articles/parts/part3.html"); ?>
@@ -44,12 +45,16 @@
         </ul>
       </details>
 
+      <ul>
+        <li><div class="sidebar-link" onclick="location.href='#3';"><a href="#3">Comments</a></div></li>
+      </ul>
+
 <?php include("../articles/parts/part4.html"); ?>
       <!-- Title -->
       <h1 id="0"><?php echo $title; ?></h1>
 
       <!-- Intro paragraph -->
-      <p><?php echo($intro) ?></p>
+      <p><?php echo $intro ?></p>
 
       <hr class="divider"/>
 
@@ -200,23 +205,17 @@
         </div>
       </div>
 
-      <h2>Comments</h2>
+      <h2 id="3">Comments</h2>
       <?php
         if($_SESSION["comments"] == "off") {
           echo "Comments are off";
         }
-
-        if($_SESSION['comments'] == "light") {
-          echo '<div class="comments">
-            <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1"></script>
-          </div>';
-        }
         
-        if($_SESSION['comments'] == "dark") {
-          echo '<div class="comments">
-            <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script>
-          </div>';
-        }
+        if($_SESSION['comments'] == "on") {
+            echo '<div class="comments">
+              <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" var(--comments)></script>
+            </div>';
+          }
       ?>
 
 <?php echo file_get_contents("../articles/parts/part5.html"); ?>

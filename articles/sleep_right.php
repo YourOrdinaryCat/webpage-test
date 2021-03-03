@@ -16,6 +16,7 @@
 <title><?php echo $title; ?></title>
 
 <?php include("parts/part2.html"); ?>
+<link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/themes-general.css"/>
 <link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
 
 <?php include("parts/part3.html"); ?>

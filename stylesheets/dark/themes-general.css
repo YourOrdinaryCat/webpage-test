@@ -1,0 +1,5 @@
+/* Color schemes */
+:root {
+  color-scheme: dark;
+  --comments: 'data-dark="1"';
+}

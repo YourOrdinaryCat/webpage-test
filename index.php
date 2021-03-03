@@ -94,6 +94,7 @@
 <title><?php echo $title; ?></title>
 
 <?php include("articles/parts/part2.html"); ?>
+<link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/themes-general.css"/>
 <link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
 
 <?php include("articles/parts/part3.html"); ?>
@@ -101,8 +102,6 @@
       <ul>
         <li><div class="sidebar-link" onclick="location.href='#1';"><a href="#1">Articles</a></div></li>
       </ul>
-
-      <br>
 
       <details>
         <summary>
@@ -113,6 +112,21 @@
           <li><div class="sidebar-link" onclick="location.href='#21';"><a href="#21">Cookies</a></div></li>
         </ul>
       </details>
+
+      <details>
+        <summary>
+          <h3><a href="#3">About</a></h3>
+          <hr class="divider"/>
+        </summary>
+        <ul>
+          <li><div class="sidebar-link" onclick="location.href='#31';"><a href="#31">Comments</a></div></li>
+          <li><div class="sidebar-link" onclick="location.href='#32';"><a href="#32">Source Code</a></div></li>
+        </ul>
+      </details>
+
+      <ul>
+        <li><div class="sidebar-link" onclick="location.href='#4';"><a href="#4">Comments</a></div></li>
+      </ul>
 
 <?php include("articles/parts/part4.html"); ?>
       <!-- Title -->
@@ -126,27 +140,13 @@
           ob_end_clean();
 
           echo '<div class="elevated-section">
-            <h4><a href="';
-
-          echo $p_value;
-
-          echo '">';
-
-          echo $title;
-
-          echo '</a></h4>
+          <h4><a href="', $p_value, '">', $title, '</a></h4>
           <p>';
 
           $intro = substr($intro, 0, 100);
 
-          echo $intro;
-          
-          echo '...</p>
-          <figcaption>';
-
-          echo $author;
-
-          echo '</figcaption>
+          echo $intro, '...</p>
+          <figcaption>', $author, '</figcaption>
           </div>';
         }
       ?>
@@ -161,27 +161,13 @@
           ob_end_clean();
 
           echo '<div class="elevated-section">
-          <h4><a href="';
-
-          echo $value;
-
-          echo '">';
-
-          echo $title;
-
-          echo '</a></h4>
+          <h4><a href="', $value, '">', $title, '</a></h4>
           <p>';
 
           $intro = substr($intro, 0, 100);
 
-          echo $intro;
-          
-          echo '...</p>
-          <figcaption>';
-
-          echo $author;
-
-          echo '</figcaption>
+          echo $intro, '...</p>
+          <figcaption>', $author, '</figcaption>
           </div>';
 
           if($key == 9) {
@@ -201,10 +187,7 @@
             echo '<form method="post">
             <select name="commentsMode" type="text">
               <option value="off">Disable</option>
-              <optgroup label="Enable">
-                <option value="dark">Dark mode</option>
-                <option value="light">Light mode</option>
-              </optgroup>
+              <option value="on">Enable</option>
             </select>
             <input name="changeComments" type="submit" value="Apply"/>
           </form>
@@ -260,5 +243,22 @@
         This is a Telegram thing, so best you can do about it is disabling comments if
         you don't want that.
       </p>
+
+      <h3 id="32">Source Code</h3>
+      <p>This blog's source code can be found <a href="https://github.com/YourOrdinaryCat/webpage-test">
+      here</a>. The author is <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
+
+      <h2 id="4">Comments</h2>
+      <?php
+        if($_SESSION["comments"] == "off") {
+          echo "Comments are off";
+        }
+        
+        if($_SESSION['comments'] == "on") {
+            echo '<div class="comments">
+              <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" var(--comments)></script>
+            </div>';
+          }
+      ?>
 
 <?php include("articles/parts/part5.html"); ?>
