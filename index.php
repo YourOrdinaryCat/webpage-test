@@ -241,7 +241,8 @@
       <h3 id="31">Comments</h3>
       <p>These are thanks to Telegram. It'll store some cookies if they're enabled.
         This is a Telegram thing, so best you can do about it is disabling comments if
-        you don't want that.
+        you don't want them. Learn more about comments
+        <a href="https://core.telegram.org/widgets/discussion">here</a>.
       </p>
 
       <h3 id="32">Source Code</h3>
@@ -250,15 +251,22 @@
 
       <h2 id="4">Comments</h2>
       <?php
-        if($_SESSION["comments"] == "off") {
-          echo "Comments are off";
+        if($_SESSION['comments'] == "off") {
+          echo '<p>Comments are off</p>';
         }
-        
+
         if($_SESSION['comments'] == "on") {
-            echo '<div class="comments">
-              <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" var(--comments)></script>
-            </div>';
+          if($_SESSION['mode'] == "auto") {
+            echo "<p>Hi there! Sorry for this, but I can't change comments theme dynamically.
+            I made it default to dark, so if you use light theme, please toggle themes manually!
+            <a href='../index.php#2'>Change your settings...</a></p>";
+            echo '<div class="comments"><script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script></div>';
+          } elseif ($_SESSION['mode'] == "dark") {
+            echo '<div class="comments"><script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script></div>';
+          } elseif($_SESSION['mode'] == "light") {
+            echo '<div class="comments"><script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1"></script></div>';
           }
+        }
       ?>
 
 <?php include("articles/parts/part5.html"); ?>

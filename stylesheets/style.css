@@ -10,10 +10,9 @@
 /* Elevated section */
 .elevated-section {
   background-color: var(--elevated1);
-  border: 0;
+  border: 1px solid var(--divider);
   border-radius: var(--radius-strong);
-  box-shadow: var(--shadow-size);
-  margin: 8px;
+  margin: 0;
   min-width: 192px;
   overflow: hidden;
   overflow-wrap: normal;
@@ -36,9 +35,8 @@
 /* Elevated section (fixed size, scrollable) */
 .elevated-section-fixed {
   background-color: var(--elevated1);
-  border: 0;
+  border: 1px solid var(--divider);
   border-radius: var(--radius-strong);
-  box-shadow: var(--shadow-size);
   margin: 8px;
   max-height: 7em;
   min-width: 192px;

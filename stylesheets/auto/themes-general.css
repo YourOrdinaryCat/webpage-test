@@ -2,15 +2,3 @@
 :root {
   color-scheme: light dark;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --comments: "";
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --comments: 'data-dark="1"';
-  }
-}
