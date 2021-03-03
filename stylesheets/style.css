@@ -37,7 +37,7 @@
   background-color: var(--elevated1);
   border: 1px solid var(--divider);
   border-radius: var(--radius-strong);
-  margin: 8px;
+  margin: 0;
   max-height: 7em;
   min-width: 192px;
   overflow: auto;
