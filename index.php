@@ -90,13 +90,13 @@
   });
 ?>
 
-<?php echo file_get_contents("articles/parts/part1.html"); ?>
+<?php include("articles/parts/part1.html"); ?>
 <title><?php echo $title; ?></title>
 
-<?php echo file_get_contents("articles/parts/part2.html"); ?>
+<?php include("articles/parts/part2.html"); ?>
 <link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
 
-<?php echo file_get_contents("articles/parts/part3.html"); ?>
+<?php include("articles/parts/part3.html"); ?>
       <!-- Sidebar items go here -->
       <ul>
         <li><div class="sidebar-link" onclick="location.href='#1';"><a href="#1">Articles</a></div></li>
@@ -114,7 +114,7 @@
         </ul>
       </details>
 
-<?php echo file_get_contents("articles/parts/part4.html"); ?>
+<?php include("articles/parts/part4.html"); ?>
       <!-- Title -->
       <h1 id="0"><?php echo $title; ?></h1>
 
@@ -125,29 +125,29 @@
           include $p_value;
           ob_end_clean();
 
-          echo('<div class="elevated-section">
-            <h4><a href="');
+          echo '<div class="elevated-section">
+            <h4><a href="';
 
           echo $p_value;
 
-          echo('">');
+          echo '">';
 
           echo $title;
 
-          echo('</a></h4>
-          <p>');
+          echo '</a></h4>
+          <p>';
 
           $intro = substr($intro, 0, 100);
 
-          echo($intro);
+          echo $intro;
           
-          echo('...</p>
-          <figcaption>');
+          echo '...</p>
+          <figcaption>';
 
-          echo($author);
+          echo $author;
 
-          echo('</figcaption>
-          </div>');
+          echo '</figcaption>
+          </div>';
         }
       ?>
 
@@ -160,34 +160,34 @@
           include $value;
           ob_end_clean();
 
-          echo('<div class="elevated-section">
-          <h4><a href="');
+          echo '<div class="elevated-section">
+          <h4><a href="';
 
           echo $value;
 
-          echo('">');
+          echo '">';
 
           echo $title;
 
-          echo('</a></h4>
-          <p>');
+          echo '</a></h4>
+          <p>';
 
           $intro = substr($intro, 0, 100);
 
-          echo($intro);
+          echo $intro;
           
-          echo('...</p>
-          <figcaption>');
+          echo '...</p>
+          <figcaption>';
 
-          echo($author);
+          echo $author;
 
-          echo('</figcaption>
-          </div>');
+          echo '</figcaption>
+          </div>';
 
           if($key == 9) {
-            echo('<button onClick="location.href=');
-            echo("'#2';");
-            echo('">Load all articles</button>');
+            echo '<button onClick="location.href=';
+            echo "'#2';";
+            echo '">Load all articles</button>' ;
             break;
           }
         }
@@ -198,7 +198,7 @@
 
       <?php
         if(!isset($_COOKIE[$cookie_theme])) {
-            echo('<form method="post">
+            echo '<form method="post">
             <select name="commentsMode" type="text">
               <option value="off">Disable</option>
               <optgroup label="Enable">
@@ -243,14 +243,14 @@
             stores your settings, pinky promise!</p>
             <form method="post">
               <input name="genCookie" type="submit" value="Make it! Make it!"/>
-          </form>');
+          </form>';
           
         } else {
-          echo('<h3 id="21">Cookies</h3>
+          echo '<h3 id="21">Cookies</h3>
             <p>Your cookie is enabled!</p>
             <form method="post">
               <input name="delCookie" type="submit" value="Delete this cookie"/>
-            </form>');
+            </form>';
         }
       ?>
 
@@ -261,4 +261,4 @@
         you don't want that.
       </p>
 
-<?php echo file_get_contents("articles/parts/part5.html"); ?>
+<?php include("articles/parts/part5.html"); ?>

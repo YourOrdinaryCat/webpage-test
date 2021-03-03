@@ -111,11 +111,6 @@
   text-decoration: none;
 }
 
-.sidebar divider {
-  max-width: 100%;
-  width: auto;
-}
-
 /* Sidebar headings */
 .sidebar h1 {
   margin-inline-start: 8px;
