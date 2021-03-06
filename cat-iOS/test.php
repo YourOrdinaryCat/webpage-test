@@ -3,7 +3,7 @@
 ?>
 
 <!-- Title goes here -->
-<?php $title = "How to sleep correctly" ?>
+<?php $title = "This is just a test" ?>
 
 <!-- Intro paragraph -->
 <?php $intro = "The first step to get a good sleep is getting rid of all

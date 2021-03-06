@@ -1,56 +1,67 @@
 <?php
   session_start();
 
+  $cookie_amount = "AmountCookie";
+  $cookie_art_stack = "ArtStackCookie";
   $cookie_comments = "CommentsCookie";
   $cookie_mode = "ModeCookie";
   $cookie_theme = "ThemeCookie";
 
   if(isset($_POST['genCookie'])) {
+    setcookie($cookie_amount, $_SESSION["amount_load"], time() + (86400 * 30));
+    setcookie($cookie_art_stack, $_SESSION["art_stack"], time() + (86400 * 30));
     setcookie($cookie_comments, $_SESSION["comments"], time() + (86400 * 30));
     setcookie($cookie_mode, $_SESSION["mode"], time() + (86400 * 30));
     setcookie($cookie_theme, $_SESSION["theme"], time() + (86400 * 30));
-
-    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
-    exit();
   }
 
   if(isset($_POST['delCookie'])) {
+    setcookie($cookie_amount, " ", 1);
+    setcookie($cookie_art_stack, " ", 1);
     setcookie($cookie_comments, " ", 1);
     setcookie($cookie_mode, " ", 1);
     setcookie($cookie_theme, " ", 1);
-
-    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
-    exit();
   }
 
   if(isset($_POST['changeComments'])) {
     $_SESSION["comments"] = $_POST['commentsMode'];
-
-    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
-    exit();
   }
 
   if(isset($_POST['changeMode'])) {
     $_SESSION["mode"] = $_POST['themeMode'];
+  }
 
-    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
-    exit();
+  if(isset($_POST['changeStack'])) {
+    $_SESSION["art_stack"] = $_POST['artStack'];
   }
 
   if(isset($_POST['changeTheme'])) {
     $_SESSION["theme"] = $_POST['themeName'];
+  }
 
+  if(isset($_POST['loadMore'])) {
+    $_SESSION["amount_load"] = $_SESSION["amount_load"] + 10;
+  }
+
+  if($_POST) {
     header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
     exit();
   }
 
-  if(!isset($_COOKIE[$cookie_theme])) {
-    $gen_cookie = "Make a cookie";
-  } else {
-    $gen_cookie = "Manage this cookie";
+  if(!isset($_COOKIE[$cookie_theme])) {} else {
+    $_SESSION["amount_load"] = $_COOKIE[$cookie_amount];
+    $_SESSION["art_stack"] = $_COOKIE[$cookie_art_stack];
     $_SESSION["comments"] = $_COOKIE[$cookie_comments];
     $_SESSION["mode"] = $_COOKIE[$cookie_mode];
     $_SESSION["theme"] = $_COOKIE[$cookie_theme];
+  }
+
+  if(!isset($_SESSION["amount_load"])) {
+    $_SESSION["amount_load"] = 9;
+  }
+
+  if(!isset($_SESSION["art_stack"])) {
+    $_SESSION["art_stack"] = 4;
   }
 
   if(!isset($_SESSION["comments"])) {
@@ -87,6 +98,11 @@
   });
 ?>
 
+<!-- Count amount of article folders for categories -->
+<?php $f_pattern = "cat-*";
+  $article_folders = glob($f_pattern, GLOB_ONLYDIR);
+?>
+
 <!-- Count amount of articles in pinned articles folder -->
 <?php $p_pattern = "pinned/*.php";
   $p_article_files = glob($p_pattern);
@@ -105,14 +121,14 @@
   });
 ?>
 
-<?php include("articles/parts/part1.html"); ?>
+<?php include("project-files/parts/part1.html"); ?>
 <title><?php echo $title; ?></title>
 
-<?php include("articles/parts/part2.html"); ?>
-<link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/themes-general.css"/>
-<link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
+<?php include("project-files/parts/part2.html"); ?>
+<link rel="stylesheet" href="../project-files/stylesheets/<?php echo $_SESSION["mode"]; ?>/themes-general.css"/>
+<link rel="stylesheet" href="../project-files/stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
 
-<?php include("articles/parts/part3.html"); ?>
+<?php include("project-files/parts/part3.html"); ?>
       <!-- Sidebar items go here -->
       <ul>
         <li><div class="sidebar-link" onclick="location.href='#1';"><a href="#1">Articles</a></div></li>
@@ -143,34 +159,26 @@
         <li><div class="sidebar-link" onclick="location.href='#4';"><a href="#4">Comments</a></div></li>
       </ul>
 
-<?php include("articles/parts/part4.html"); ?>
+<?php include("project-files/parts/part4.html"); ?>
       <!-- Title -->
       <h1 id="0"><?php echo $title; ?></h1>
 
       <!-- Pinned articles -->
       <?php
-        foreach($p_article_files as $p_key=>$p_value) {
-          ob_start();
-          include $p_value;
-          ob_end_clean();
+        $count = 0;
+        
+        foreach($p_article_files as $key=>$value) {
+          if($count == $_SESSION["art_stack"]) {
+            echo '</div>';
+            $count = 0;
+          }
 
-          echo '<div class="elevated-section">
-          <h4><a href="', $p_value, '">', $title, '</a></h4>
-          <p>';
+          if($count == 0) {
+            echo '<div class="hstack-nw">';
+          }
 
-          $intro = substr($intro, 0, 100);
+          $count++;
 
-          echo $intro, '...</p>
-          <figcaption>', $author, '</figcaption>
-          </div>';
-        }
-      ?>
-
-      <hr class="divider"/>
-
-      <h2 id="1">Articles</h2>
-      <?php
-        foreach($article_files as $key=>$value) {
           ob_start();
           include $value;
           ob_end_clean();
@@ -184,13 +192,124 @@
           echo $intro, '...</p>
           <figcaption>', $author, '</figcaption>
           </div>';
+        }
 
-          if($key == 9) {
-            echo '<button onClick="location.href=';
-            echo "'#2';";
-            echo '">Load all articles</button>' ;
+        if($count > 0) {
+          $count = 0;
+          echo '</div>';
+        }
+      ?>
+
+      <hr class="divider"/>
+
+      <h2 id="1">Articles</h2>
+
+      <!-- Articles -->
+      <?php
+        foreach($article_files as $key=>$value) {
+          if($key > $_SESSION["amount_load"]) {
+            echo '<form method="post">
+              <input name="loadMore" type="submit" value="Load more articles..."/>
+            </form>';
             break;
           }
+
+          if($count == $_SESSION["art_stack"]) {
+            echo '</div>';
+            $count = 0;
+          }
+
+          if($count == 0) {
+            echo '<div class="hstack-nw">';
+          }
+
+          $count++;
+
+          ob_start();
+          include $value;
+          ob_end_clean();
+
+          echo '<div class="elevated-section">
+          <h4><a href="', $value, '">', $title, '</a></h4>
+          <p>';
+
+          $intro = substr($intro, 0, 100);
+
+          echo $intro, '...</p>
+          <figcaption>', $author, '</figcaption>
+          </div>';
+        }
+
+        if($count > 0) {
+          $count = 0;
+          echo '</div>';
+        }
+      ?>
+
+      <!-- Categories -->
+      <?php
+        foreach($article_folders as $key=>$value) {
+          echo '<details>
+            <summary>
+              <h3 id="1', $key + 1, '">', substr($value, 4), '</h3>
+              <hr class="divider"/>
+            </summary>';
+
+          $ff_pattern = "$value/*.php";
+          $article_folder_files = glob($ff_pattern);
+
+          // Order array by creation date
+          usort($article_folder_files, function($f_file_1, $f_file_2) {
+            $f_file_1 = filectime($f_file_1);
+            $f_file_2 = filectime($f_file_2);
+            
+            if($f_file_1 == $f_file_2){
+              return 0;
+            }
+
+            return $f_file_1 < $f_file_2 ? 1 : -1;
+          });
+
+          foreach($article_folder_files as $key=>$value) {
+            if($key > 9) {
+              echo '<form method="post">
+                <input name="loadAll" type="submit" value="Load all from this category"/>
+              </form>';
+              break;
+            }
+
+            if($count == $_SESSION["art_stack"]) {
+              echo '</div>';
+              $count = 0;
+            }
+  
+            if($count == 0) {
+              echo '<div class="hstack-nw">';
+            }
+  
+            $count++;
+            
+            ob_start();
+            include $value;
+            ob_end_clean();
+  
+            echo '<div class="elevated-section">
+            <h4><a href="', $value, '">', $title, '</a></h4>
+            <p>';
+  
+            $intro = substr($intro, 0, 100);
+  
+            echo $intro, '...</p>
+            <figcaption>', $author, '</figcaption>
+            </div>';
+          }
+
+          if($count > 0) {
+            $count = 0;
+            echo '</div>';
+          }
+
+          echo "</details>";
         }
       ?>
 
@@ -207,6 +326,15 @@
             <input name="changeComments" type="submit" value="Apply"/>
           </form>
           <figcaption>Toggle comments.</figcaption>
+
+          <form method="post">
+            <select name="loadAmount" type="text">
+              <option value="9">No</option>
+              <option value="INF">Yes</option>
+            </select>
+            <input name="loadAll" type="submit" value="Apply"/>
+          </form>
+          <figcaption>Always load all available articles.</figcaption>
           
           <form method="post">
             <select name="themeName" type="text">
@@ -234,6 +362,12 @@
             <input name="changeMode" type="submit" value="Apply"/>
           </form>
           <figcaption>Toggle dark/light mode.</figcaption>
+
+          <form method="post">
+            <input name="artStack" type="number"/>
+            <input name="changeStack" type="submit" value="Apply"/>
+          </form>
+          <figcaption>Change number of posts stacked.</figcaption>
 
           <h3 id="21">Cookies</h3>
           <p>You can make a cookie to save your settings! This cookie will last 30 days, so
@@ -284,4 +418,4 @@
         }
       ?>
 
-<?php include("articles/parts/part5.html"); ?>
+<?php include("project-files/parts/part5.html"); ?>

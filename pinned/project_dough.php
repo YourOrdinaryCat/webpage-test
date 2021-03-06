@@ -15,14 +15,14 @@
 <!-- Author of the article, date -->
 <?php $author = "Omar, 2021" ?>
 
-<?php include("../articles/parts/part1.html"); ?>
+<?php include("../project-files/parts/part1.html"); ?>
 <title><?php echo $title; ?></title>
 
-<?php include("../articles/parts/part2.html"); ?>
-<link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/themes-general.css"/>
-<link rel="stylesheet" href="../../stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
+<?php include("../project-files/parts/part2.html"); ?>
+<link rel="stylesheet" href="../project-files/stylesheets/<?php echo $_SESSION["mode"]; ?>/themes-general.css"/>
+<link rel="stylesheet" href="../project-files/stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
 
-<?php include("../articles/parts/part3.html"); ?>
+<?php include("../project-files/parts/part3.html"); ?>
       <!-- Sidebar items go here -->
       <details>
         <summary>
@@ -49,7 +49,7 @@
         <li><div class="sidebar-link" onclick="location.href='#3';"><a href="#3">Comments</a></div></li>
       </ul>
 
-<?php include("../articles/parts/part4.html"); ?>
+<?php include("../project-files/parts/part4.html"); ?>
       <!-- Title -->
       <h1 id="0"><?php echo $title; ?></h1>
 
@@ -62,35 +62,35 @@
       <div class="hstack-nw">
         <div>
           <picture>
-            <img src="assets/photos/arepa.jpeg" alt="Arepa, a south american dish."/>
+            <img src="assets/project_dough/photos/arepa.jpeg" alt="Arepa, a south american dish."/>
             <figcaption>Arepa, a south american dish.</figcaption>
           </picture>
         </div>
 
         <div>
           <picture>
-            <img src="assets/photos/bagel.jpeg" alt="A very trustworthy bagel."/>
+            <img src="assets/project_dough/photos/bagel.jpeg" alt="A very trustworthy bagel."/>
             <figcaption>A very trustworthy bagel.</figcaption>
           </picture>
         </div>
 
         <div>
           <picture>
-            <img src="assets/photos/crepes.jpeg" alt="Crepes deserve more recognition."/>
+            <img src="assets/project_dough/photos/crepes.jpeg" alt="Crepes deserve more recognition."/>
             <figcaption>Crepes deserve more recognition.</figcaption>
           </picture>
         </div>
 
         <div>
           <picture>
-            <img src="assets/photos/pretzel.jpeg" alt="Just a pretzel."/>
+            <img src="assets/project_dough/photos/pretzel.jpeg" alt="Just a pretzel."/>
             <figcaption>Just a pretzel.</figcaption>
           </picture>
         </div>
 
         <div>
           <picture>
-            <img src="assets/photos/white.jpeg" alt="Good ol' white bread. It doesn't bite."/>
+            <img src="assets/project_dough/photos/white.jpeg" alt="Good ol' white bread. It doesn't bite."/>
             <figcaption>Good ol' white bread. It doesn't bite.</figcaption>
           </picture>
         </div>
@@ -128,7 +128,7 @@
   		  <!-- Bread best -->
     	  <div>
           <picture>
-            <img src="assets/photos/white.jpeg" alt="Bread is best food."/>
+            <img src="assets/project_dough/photos/white.jpeg" alt="Bread is best food."/>
             <figcaption>Bread is best food.</figcaption>
           </picture>
         </div>
@@ -192,14 +192,14 @@
       <div class="hstack-wrap">
         <div>
           <video controls>
-            <source src="assets/videos/ivy.mp4"/>
+            <source src="assets/project_dough/videos/ivy.mp4"/>
           </video>
           <figcaption>ivy, by ivy</figcaption>
         </div>
 
         <div>
           <video controls>
-        	  <source src="assets/videos/boxing.mp4"/>
+        	  <source src="assets/project_dough/videos/boxing.mp4"/>
           </video>
           <figcaption>red me not 8 in boxing, by omar</figcaption>
         </div>
@@ -225,4 +225,4 @@
         }
       ?>
 
-<?php echo file_get_contents("../articles/parts/part5.html"); ?>
+<?php echo file_get_contents("../project-files/parts/part5.html"); ?>

@@ -1,30 +1,30 @@
 /* Windows */
-/* Light mode colors (Windows) */
+/* Dark mode colors (Windows) */
 :root {
   /* Background */
-  --background: #F2F2F2;
-  --elevated1: #FFFFFF;
-  --elevated2: #F2F2F2;
+  --background: #1F1F1F;
+  --elevated1: #2B2B2B;
+  --elevated2: #333333;
 
   /* Sidebar */
-  --sidebar: #EFEFEF;
+  --sidebar: #2D2D2D;
   
   /* Text */
-  --primary: #000000;
-  --secondary: #00000099;
-  --tertiary: #00000061;
-  --quaternary: #00000061;
-
+  --primary: #FFFFFF;
+  --secondary: #FFFFFF99;
+  --tertiary: #FFFFFF66;
+  --quaternary: #FFFFFF66;
+  
   /* Accent related */
-  --accent: #0078D4;
+  --accent: #0065AF;
   --onAccent: #FFFFFF;
   
   /* Dividers */
-  --divider: #0000001C;
+  --divider: #FFFFFF1C;
   
   /* Hover */
-  --hover: #D8D8D8;
-  --hover-transparent: #0000004D;
+  --hover: #424242;
+  --hover-transparent: #FFFFFF4D;
 
   /* Shadows */
   --shadow: #0000004D;
