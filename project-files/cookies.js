@@ -50,8 +50,7 @@ function changeTheme() {
 // Redirect to category
 function goToCategory() {
   category = document.getElementById("categories").value;
-  alert('category.html#' + category);
-  location.href = 'category#' + category;
+  location.href = '/category#' + category;
 }
 
 // Function to handle cookie creation
