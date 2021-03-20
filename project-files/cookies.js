@@ -50,7 +50,8 @@ function changeTheme() {
 // Redirect to category
 function goToCategory() {
   category = document.getElementById("categories").value;
-  location.href = 'https://yourordinarycat.github.io/webpage-test/category#' + category;
+  dest = 'https://yourordinarycat.github.io/webpage-test/category#' + category;
+  window.location.assign(dest);
 }
 
 // Function to handle cookie creation
@@ -66,6 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("comments_alert").innerHTML = "Comments are off. <a href='index.html#21'>Turn them on...</a>";
     document.getElementById("comments_window").setAttribute("style", "display: none;");
   } else {
-    document.getElementById("comments_alert").innerHTML = "Remember to keep it civil! By the way, sorry for this, but I can't change comments theme dynamically. I made it default to dark, so if you use light theme, please toggle themes manually! <a href='index.html#2'>Change your settings...</a>";
+    document.getElementById("comments_alert").innerHTML = "Remember to keep it civil! By the way, sorry for this, but I can't change comments theme dynamically. I made it default to dark, so if you use light theme, please toggle themes with comment settings!";
   }
 });
