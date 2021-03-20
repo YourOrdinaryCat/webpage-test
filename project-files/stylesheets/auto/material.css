@@ -26,17 +26,9 @@
     /* Hover */
     --hover: #0000001A;
     --hover-transparent: #0000001A;
-
-    /* Shadows */
-    --shadow: #00000033;
-    --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-
+    
     /* Visited links */
     --visited: #881798;
-
-    /* Corner radius */
-    --radius: 6px;
-    --radius-strong: 8px;
   }
 }
   
@@ -68,15 +60,24 @@
     --hover: #FFFFFF1A;
     --hover-transparent: #FFFFFF1A;
 
-    /* Shadows */
-    --shadow: #00000033;
-    --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-
     /* Visited links */
     --visited: #881798;
-
-    /* Corner radius */
-    --radius: 6px;
-    --radius-strong: 8px;
   }
+}
+
+/* General stuff */
+:root {
+  /* Corner radius */
+  --radius: 6px;
+  --radius-strong: 8px;
+
+  /* Form labels */
+  --caps: capitalize;
+  --color: var(--accent);
+  --size: medium;
+  --weight: 600;
+
+  /* Shadows */
+  --shadow: #00000033;
+  --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 }

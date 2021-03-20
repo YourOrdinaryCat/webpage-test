@@ -33,25 +33,15 @@
   }
 }
 
-/* Wrap hstacks on phone screens */
+/* Small screens */
 @media only screen and (max-width: 962px) {
   .hstack-wrap {
     grid-template-columns: 100%;
     row-gap: 8px;
   }
-
-  .hstack-wrap > div img {
-    height: auto;
-    width: 100%;
-  }
-
-  .hstack-wrap > div video {
-    height: auto;
-    width: 100%;
-  }
 }
 
-/* Make hstacks fill the screen on tablet screens */
+/* Big screens */
 @media only screen and (min-width: 963px) {
   .hstack-wrap {
     grid-auto-flow: column;

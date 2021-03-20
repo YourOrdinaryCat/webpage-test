@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Omar's Blog</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="project-files/stylesheets/general.css"/>
+    <link rel="stylesheet" href="project-files/stylesheets/media-queries.css"/>
+    <link rel="stylesheet" href="project-files/stylesheets/style.css"/>
+
+    <link id="general_theming" rel="stylesheet"/>
+    <link id="theme_name" rel="stylesheet"/>
+
+    <script src="project-files/cookies.js"></script>
+
+    <link rel="manifest" href="project-files/manifest.webmanifest"/>
+
+    <link rel="icon" type="image/png" href="project-files/icon.png"/>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h1><a href="#0">Contents</a></h1>
+        <ul>
+          <li><div class="sidebar-link" onclick="location.href='#1';"><a href="#1">Articles</a></div></li>
+        </ul>
+
+        <details>
+        <summary>
+          <h3><a href="#2">Settings</a></h3>
+          <hr class="divider"/>
+        </summary>
+        <ul>
+          <li><div class="sidebar-link" onclick="location.href='#22';"><a href="#21">Comments</a></div></li>
+          <li><div class="sidebar-link" onclick="location.href='#23';"><a href="#22">Theming</a></div></li>
+          <li><div class="sidebar-link" onclick="location.href='#24';"><a href="#23">Cookies</a></div></li>
+        </ul>
+      </details>
+        <details>
+          <summary>
+            <h3><a href="#3">About</a></h3>
+            <hr class="divider"/>
+          </summary>
+          <ul>
+            <li><div class="sidebar-link" onclick="location.href='#31';"><a href="#31">Comments</a></div></li>
+            <li><div class="sidebar-link" onclick="location.href='#32';"><a href="#32">Source Code</a></div></li>
+          </ul>
+        </details>
+
+        <ul>
+          <li><div class="sidebar-link" onclick="location.href='#4';"><a href="#4">Comments</a></div></li>
+        </ul>
+
+    </div>
+
+    <article class="content">
+      <h1 id="0">Omar's Blog</h1>
+
+      <h2 id="1">Articles</h2>
+
+      <!-- Articles -->
+      <div class="elevated-section">
+        <h4><a href="sleep_right.html">How to sleep correctly</a></h4><p>The first step to get a good sleep is getting rid of all distractions. That includes this article, so if you're reading it right before going to bed... I have bad news for you.</p><figcaption>Omar, 2021-03-15</figcaption>
+      <figcaption>Health</figcaption>
+      </div><div class="elevated-section">
+        <h4><a href="project_dough.html">Project Dough</a></h4><div class="hstack-wrap">
+          <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves more recognition. It's truly a versatile food, and it stood the test of time really well. You may not like some variants, and that's okay! But bread is undeniably great. That's why I made Project Dough! With your help, we'll be able to establish a fully functional bread kingdom.</p>
+          <img src="assets/project_dough/photos/white.jpeg">
+        </div><figcaption>Omar, 2021-03-15</figcaption>
+      <figcaption>Food</figcaption>
+      </div><form>
+      <label for="categories">Categories</label>
+            
+      <br>
+
+      <select id="categories" type="text"><option value="2">Food</option><option value="3">Health</option></select>
+      <input type="submit" onclick="goToCategory()" value="Go"/>
+      </form>
+      
+      <!-- Settings -->
+      <h2 id="2">Settings</h2>
+      <h3 id="21">Comments</h3>
+      <form>
+        <label for="comments">Comments</label>
+        <br>
+        <select id="comments" type="text">
+          <option value="off">Disable</option>
+          <option value="on">Enable</option>
+        </select>
+
+        <input type="submit" onclick="changeComments()" value="Apply" />
+      </form>
+            
+      <h3 id="22">Theming</h3>
+      <form>
+        <label for="mode">Select Theme Mode</label>
+        <br>
+        <select id="mode" type="text">
+          <option value="auto">Auto</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+
+        <input type="submit" onclick="changeMode()" value="Apply"/>
+      </form>
+
+      <form>
+        <label for="theme">Select Theme</label>
+        <br>
+        <select id="theme" type="text">
+          <optgroup label="Material">
+            <option value="material">Default Material</option>
+            <option value="material_themed">Material Theming</option>
+          </optgroup>
+          <optgroup label="iOS">
+            <option value="ios">iOS</option>
+          </optgroup>
+          <optgroup label="Windows">
+            <option value="fluent">Fluent</option>
+          </optgroup>
+        </select>
+
+        <input type="submit" onclick="changeTheme()" value="Apply"/>
+      </form>
+
+      <h3 id="23">Cookies</h3>
+      <p>For settings to save correctly, cookies are needed. Here you're able to see what
+        values are stored in currently active cookies. If the website breaks, delete your
+        cookies and it should work fine again.
+      </p>
+      <button onclick="alert(document.cookie)">Check my cookies</button>
+
+      <h2 id="3">About</h2>
+      <h3 id="31">Comments</h3>
+      <p>These are thanks to Telegram. It'll store some cookies if they're enabled.
+        This is a Telegram thing, so best you can do about it is disabling comments if
+        you don't want them. <a href="https://core.telegram.org/widgets/discussion">About comments...</a>
+      </p>
+
+      <h3 id="32">Source Code</h3>
+      <p>This blog's source code can be found <a href="https://github.com/YourOrdinaryCat/webpage-test">
+      here</a>. The author is <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
+
+      <h2 id="3">Comments</h2>
+      <p id="comments_alert"></p>
+      <div id="comments_window" class="comments">
+        <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script>
+      </div>
+    </article>
+  </body>
+</html>

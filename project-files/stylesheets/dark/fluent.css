@@ -26,14 +26,23 @@
   --hover: #424242;
   --hover-transparent: #FFFFFF4D;
 
+  /* Visited links */
+  --visited: #881798;
+}
+
+/* General stuff */
+:root {
+  /* Corner radius */
+  --radius: 6px;
+  --radius-strong: 8px;
+
+  /* Form labels */
+  --caps: capitalize;
+  --color: var(--primary);
+  --size: medium;
+  --weight: bold;
+
   /* Shadows */
   --shadow: #0000004D;
   --shadow-size: 0 0 6px var(--shadow);
-
-  /* Visited links */
-  --visited: #881798;
-
-  /* Corner radius */
-  --radius: 4px;
-  --radius-strong: 8px;
 }

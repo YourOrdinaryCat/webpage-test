@@ -1,8 +1,5 @@
-# WARNING: Outdated documentation ahead!
-This documentation is severely outdated. Whenever I get time, I'll update it. DO NOT get guidance from this documentation.
-
 # Welcome
-Hi GitHub user! This is a test webpage, where I put some stuff I do with HTML/CSS. You'll see updates pretty often while I improve this website.
+Hi GitHub user! This is a test webpage, where I put some stuff I do with HTML/CSS/PHP/whatever. You'll see updates pretty often while I improve this website.
 
 ## Project structure
 The project has one main HTML file, with 4 CSS files and an assets folder with different images, videos and other files that may be needed.

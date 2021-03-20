@@ -26,14 +26,23 @@
   --hover: #3A3A3C;
   --hover-transparent: #3C3C434D;
 
-  /* Shadows */
-  --shadow: #0000004D;
-  --shadow-size: 0px 2px 8px var(--shadow);
-
   /* Visited links */
   --visited: #BF5AF2;
+}
 
+/* General stuff */
+:root {
   /* Corner radius */
   --radius: 8px;
   --radius-strong: 12px;
+
+  /* Form labels */
+  --caps: uppercase;
+  --color: var(--secondary);
+  --size: small;
+  --weight: normal;
+
+  /* Shadows */
+  --shadow: #0000004D;
+  --shadow-size: 0px 2px 8px var(--shadow);
 }

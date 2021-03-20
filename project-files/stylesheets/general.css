@@ -2,12 +2,18 @@
 selectors) */
 body {
   background-color: var(--background);
+  box-sizing: border-box;
   color: var(--primary);
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   text-align: start;
   transition: all;
   transition-duration: 0.6s;
+}
+
+*:focus {
+  box-shadow: 0 0 0 2px var(--divider);
+  outline: none;
 }
 
 /* Applies to the content */
@@ -17,6 +23,7 @@ body {
 
 /* Heading 1 */
 h1 {
+  font-size: xx-large;
   font-weight: bold;
   margin-block-end: 12px;
   margin-block-start: 32px;
@@ -76,8 +83,14 @@ details[open] hr.divider {
 }
 
 /* Remove details/summary bullet */
+summary {
+  list-style-type: none;
+}
+
+/* Browser specific */
 details summary::-webkit-details-marker {
   display: none;
+  margin-inline-end: 0;
 }
 
 /* Captions */
@@ -121,6 +134,8 @@ img {
   background-color: var(--elevated1);
   border: 1px solid var(--quaternary);
   border-radius: var(--radius);
+  height: auto;
+  width: 100%;
 }
 
 /* Videos */
@@ -135,14 +150,15 @@ video {
 /* Buttons */
 button {
   background-color: var(--accent);
-  border: 2px solid var(--accent);
+  border: 0;
   border-radius: var(--radius);
   color: var(--onAccent);
+  cursor: pointer;
   font-weight: bold;
-  height: 2.5em;
-  margin: 6px;
-  padding-inline-end: 8px;
-  padding-inline-start: 8px;
+  height: 2em;
+  padding-inline-end: var(--radius);
+  padding-inline-start: var(--radius);
+  width: auto;
 }
 
 /* Change color on hover */
@@ -158,13 +174,14 @@ input {
 
   appearance: none;
   background-color: var(--elevated1);
-  border: 1px solid var(--divider);
+  border: none;
   border-radius: var(--radius);
   color: var(--primary);
+  cursor: pointer;
   font-weight: bold;
   height: 2.5em;
-  padding-inline-end: 8px;
-  padding-inline-start: 8px;
+  padding-inline-end: var(--radius);
+  padding-inline-start: var(--radius);
   max-width: 200px;
 }
 
@@ -172,8 +189,8 @@ input[type="number"] {
   max-height: 2.35em;
   padding-block-end: 0;
   padding-block-start: 0;
-  padding-inline-end: 8px;
-  padding-inline-start: 8px;
+  padding-inline-end: var(--radius);
+  padding-inline-start: var(--radius);
   width: 3em;
 }
 
@@ -185,18 +202,26 @@ input[type="submit"] {
 
   appearance: none;
   background-color: var(--accent);
-  border: 0;
   border-radius: var(--radius);
   color: var(--onAccent);
   font-weight: bold;
-  height: 2.5em;
-  padding-inline-end: 8px;
-  padding-inline-start: 8px;
+  height: 2em;
+  padding-inline-end: var(--radius);
+  padding-inline-start: var(--radius);
   width: auto;
 }
 
 input[type="submit"]:hover {
   background-color: var(--hover-transparent);
+}
+
+
+label {
+  color: var(--color);
+  font-size: small;
+  font-weight: var(--weight);
+  margin-inline-start: var(--radius);
+  text-transform: var(--caps);
 }
 
 optgroup {
@@ -219,13 +244,13 @@ select {
 
   appearance: none;
   background-color: var(--elevated1);
-  border: 1px solid var(--divider);
+  border: none;
   border-radius: var(--radius);
   color: var(--primary);
   font-weight: bold;
-  height: 2.5em;
-  padding-inline-end: 8px;
-  padding-inline-start: 8px;
+  height: 2em;
+  padding-inline-end: var(--radius);
+  padding-inline-start: var(--radius);
   width: 200px;
 }
 

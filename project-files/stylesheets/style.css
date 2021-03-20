@@ -14,6 +14,7 @@
   border-radius: var(--radius-strong);
   margin: 8px 0 8px 0;
   min-width: 192px;
+  max-width: 100%;
   overflow: hidden;
   overflow-wrap: normal;
   padding: 8px;
@@ -75,23 +76,23 @@
 
 /* Control image size on horizontal stacks */
 .hstack-nw img {
-  height: 192px;
+  max-height: 192px;
   width: auto;
 }
 
 .hstack-wrap img {
-  height: 192px;
+  max-height: 192px;
   width: auto;
 }
 
 /* Control video size on horizontal stacks */
 .hstack-nw video {
-  height: 192px;
+  max-height: 192px;
   width: auto;
 }
 
 .hstack-wrap video {
-  height: 192px;
+  max-height: 192px;
   width: auto;
 }
 

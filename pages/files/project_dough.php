@@ -1,28 +1,8 @@
-<?php
-  session_start();
-?>
+<?php include("project-files/parts/part1.html"); ?>
+    <title>Project Dough</title>
 
-<!-- Title goes here -->
-<?php $title = "Project Dough" ?>
-
-<!-- Intro paragraph -->
-<?php $intro = "Hey fellow bread lover. I think we can agree on the fact that bread deserves
-  more recognition. It's truly a versatile food, and it stood the test of time
-  really well. You may not like some variants, and that's okay! But bread is
-  undeniably great. That's why I made Project Dough! With your help, we'll be
-  able to establish a fully functional bread kingdom." ?>
-
-<!-- Author of the article, date -->
-<?php $author = "Omar, 2021" ?>
-
-<?php include("../project-files/parts/part1.html"); ?>
-<title><?php echo $title; ?></title>
-
-<?php include("../project-files/parts/part2.html"); ?>
-<link rel="stylesheet" href="../project-files/stylesheets/<?php echo $_SESSION["mode"]; ?>/themes-general.css"/>
-<link rel="stylesheet" href="../project-files/stylesheets/<?php echo $_SESSION["mode"]; ?>/<?php echo $_SESSION["theme"]; ?>.css"/>
-
-<?php include("../project-files/parts/part3.html"); ?>
+<?php include("project-files/parts/part2.html"); ?>
+<?php include("project-files/parts/part3.html"); ?>
       <!-- Sidebar items go here -->
       <details>
         <summary>
@@ -49,12 +29,16 @@
         <li><div class="sidebar-link" onclick="location.href='#3';"><a href="#3">Comments</a></div></li>
       </ul>
 
-<?php include("../project-files/parts/part4.html"); ?>
+<?php include("project-files/parts/part4.html"); ?>
       <!-- Title -->
-      <h1 id="0"><?php echo $title; ?></h1>
+      <h1 id="0">Project Dough</h1>
 
       <!-- Intro paragraph -->
-      <p><?php echo $intro ?></p>
+      <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves
+        more recognition. It's truly a versatile food, and it stood the test of time
+        really well. You may not like some variants, and that's okay! But bread is
+        undeniably great. That's why I made Project Dough! With your help, we'll be
+        able to establish a fully functional bread kingdom.</p>
 
       <hr class="divider"/>
 
@@ -206,23 +190,9 @@
       </div>
 
       <h2 id="3">Comments</h2>
-      <?php
-        if($_SESSION['comments'] == "off") {
-          echo '<p>Comments are off</p>';
-        }
+      <p id="comments_alert"></p>
+      <div id="comments_window" class="comments">
+        <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script>
+      </div>
 
-        if($_SESSION['comments'] == "on") {
-          if($_SESSION['mode'] == "auto") {
-            echo "<p>Hi there! Sorry for this, but I can't change comments theme dynamically.
-            I made it default to dark, so if you use light theme, please toggle themes manually!
-            <a href='../index.php#2'>Change your settings...</a></p>";
-            echo '<div class="comments"><script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script></div>';
-          } elseif ($_SESSION['mode'] == "dark") {
-            echo '<div class="comments"><script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script></div>';
-          } elseif($_SESSION['mode'] == "light") {
-            echo '<div class="comments"><script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1"></script></div>';
-          }
-        }
-      ?>
-
-<?php echo file_get_contents("../project-files/parts/part5.html"); ?>
+<?php echo include("project-files/parts/part5.html"); ?>
