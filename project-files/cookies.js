@@ -50,7 +50,7 @@ function changeTheme() {
 // Redirect to category
 function goToCategory() {
   category = document.getElementById("categories").value;
-  location.href = '/category#' + category;
+  location.href = 'https://yourordinarycat.github.io/webpage-test/category#' + category;
 }
 
 // Function to handle cookie creation
