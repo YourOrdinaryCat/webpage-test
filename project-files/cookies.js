@@ -50,7 +50,7 @@ function changeTheme() {
 // Redirect to category
 function goToCategory() {
   category = document.getElementById("categories").value;
-  dest = 'https://yourordinarycat.github.io/webpage-test/category#' + category;
+  dest = 'https://yourordinarycat.github.io/webpage-test/category';
   window.location.assign(dest);
 }
 
