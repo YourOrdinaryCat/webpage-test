@@ -1,39 +1,46 @@
 /* Material colors */
 /* Light mode colors (default) */
-  :root {
-    /* Background */
-    --background: #E8EFF9;
-    --elevated1: #DDE9F8;
-    --elevated2: #C8DCF6;
+:root {
+  /* Background */
+  --background: #E8EFF9;
+  --elevated1: #DDE9F8;
+  --elevated2: #C8DCF6;
 
-    /* Sidebar */
-    --sidebar: #E3F2FF;
-  
-    /* Text */
-    --primary: #1F41B6;
-    --secondary: #1F41B699;
-    --tertiary: #1F41B661;
-    --quaternary: #1F41B661;
-  
-    /* Accent related */
-    --accent: #1A73E8;
-    --onAccent: #FFFFFF;
-  
-    /* Dividers */
-    --divider: #1F41B61C;
-  
-    /* Hover */
-    --hover: #1F41B61A;
-    --hover-transparent: #1F41B61A;
+  /* Sidebar */
+  --sidebar: #E3F2FF;
 
-    /* Shadows */
-    --shadow: #00000033;
-    --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  /* Text */
+  --primary: #1F41B6;
+  --secondary: #1F41B699;
+  --tertiary: #1F41B661;
+  --quaternary: #1F41B661;
 
-    /* Visited links */
-    --visited: #881798;
+  /* Accent related */
+  --accent: #1A73E8;
+  --onAccent: #FFFFFF;
 
-    /* Corner radius */
-    --radius: 6px;
-    --radius-strong: 8px;
-  }
+  /* Dividers */
+  --divider: #1F41B61C;
+
+  /* Hover */
+  --hover: #1F41B61A;
+  --hover-transparent: #1F41B61A;
+
+  /* Visited links */
+  --visited: #881798;
+
+  /* General stuff */
+  /* Corner radius */
+  --radius: 6px;
+  --radius-strong: 8px;
+
+  /* Form labels */
+  --caps: none;
+  --color: var(--accent);
+  --size: medium;
+  --weight: 600;
+
+  /* Shadows */
+  --shadow: #00000033;
+  --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}

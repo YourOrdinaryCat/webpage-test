@@ -4,25 +4,24 @@
     <meta charset="utf-8">
     <title>Omar's Blog</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="project-files/stylesheets/general.css"/>
-    <link rel="stylesheet" href="project-files/stylesheets/media-queries.css"/>
-    <link rel="stylesheet" href="project-files/stylesheets/style.css"/>
+  <link rel="stylesheet" href="project-files/stylesheets/general.css"/>
+  <link rel="stylesheet" href="project-files/stylesheets/media-queries.css"/>
+  <link rel="stylesheet" href="project-files/stylesheets/style.css"/>
 
-    <link id="general_theming" rel="stylesheet"/>
-    <link id="theme_name" rel="stylesheet"/>
+  <link id="general_theming" rel="stylesheet"/>
+  <link id="theme_name" rel="stylesheet"/>
+      <script src="project-files/cookies.js"></script>
 
-    <script src="project-files/cookies.js"></script>
+  <link rel="manifest" href="project-files/manifest.webmanifest"/>
 
-    <link rel="manifest" href="project-files/manifest.webmanifest"/>
+  <link rel="icon" type="image/png" href="project-files/icon.png"/>
+</head>
 
-    <link rel="icon" type="image/png" href="project-files/icon.png"/>
-  </head>
-
-  <body>
-    <div class="sidebar">
-      <h1><a href="#0">Contents</a></h1>
+<body>
+  <div class="sidebar">
+    <h1><a href="#0">Contents</a></h1>
         <ul>
           <li><div class="sidebar-link" onclick="location.href='#1';"><a href="#1">Articles</a></div></li>
         </ul>
@@ -37,7 +36,8 @@
           <li><div class="sidebar-link" onclick="location.href='#23';"><a href="#22">Theming</a></div></li>
           <li><div class="sidebar-link" onclick="location.href='#24';"><a href="#23">Cookies</a></div></li>
         </ul>
-      </details>
+        </details>
+
         <details>
           <summary>
             <h3><a href="#3">About</a></h3>
@@ -53,27 +53,26 @@
           <li><div class="sidebar-link" onclick="location.href='#4';"><a href="#4">Comments</a></div></li>
         </ul>
 
-    </div>
+</div>
 
-    <article class="content">
-      <h1 id="0">Omar's Blog</h1>
-
-      <h2 id="1">Articles</h2>
-
-      <!-- Articles -->
-      <div class="elevated-section">
+<article class="content"><h1 id="0">Omar's Blog</h1>
+<h2 id="1">Articles</h2>
+<!-- Articles -->
+<blockquote>
         <h4><a href="sleep_right.html">How to sleep correctly</a></h4><p>The first step to get a good sleep is getting rid of all distractions. That includes this article, so if you're reading it right before going to bed... I have bad news for you.</p><figcaption>Omar, 2021-03-15</figcaption>
       <figcaption>Health</figcaption>
-      </div><div class="elevated-section">
+      </blockquote><blockquote>
         <h4><a href="project_dough.html">Project Dough</a></h4><div class="hstack-wrap">
           <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves more recognition. It's truly a versatile food, and it stood the test of time really well. You may not like some variants, and that's okay! But bread is undeniably great. That's why I made Project Dough! With your help, we'll be able to establish a fully functional bread kingdom.</p>
           <img src="assets/project_dough/photos/white.jpeg">
         </div><figcaption>Omar, 2021-03-15</figcaption>
       <figcaption>Food</figcaption>
-      </div>
-      
-      <a href="https://yourordinarycat.github.io/webpage-test/category">Categories</a>
-      
+      </blockquote><form>
+      <label for="categories">Navigate to category</label>
+      <br>
+      <select id="categories" onchange="javascript:location.href = 'categories.html#' + document.getElementById('categories').value;" type="text">
+        <option>---</option><option value="1">Food</option><option value="2">Health</option></select>
+    </form>
       <!-- Settings -->
       <h2 id="2">Settings</h2>
       <h3 id="21">Comments</h3>
@@ -90,7 +89,7 @@
             
       <h3 id="22">Theming</h3>
       <form>
-        <label for="mode">Select Theme Mode</label>
+        <label for="mode">Select theme mode</label>
         <br>
         <select id="mode" type="text">
           <option value="auto">Auto</option>
@@ -102,7 +101,7 @@
       </form>
 
       <form>
-        <label for="theme">Select Theme</label>
+        <label for="theme">Select theme</label>
         <br>
         <select id="theme" type="text">
           <optgroup label="Material">
@@ -138,11 +137,12 @@
       <p>This blog's source code can be found <a href="https://github.com/YourOrdinaryCat/webpage-test">
       here</a>. The author is <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
 
-      <h2 id="3">Comments</h2>
+      <h2 id="4">Comments</h2>
       <p id="comments_alert"></p>
       <div id="comments_window" class="comments">
         <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="2CVB_3-2" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script>
       </div>
+
     </article>
   </body>
 </html>

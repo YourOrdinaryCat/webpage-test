@@ -47,13 +47,6 @@ function changeTheme() {
   makeCookies();
 }
 
-// Redirect to category
-function goToCategory() {
-  category = document.getElementById("categories").value;
-  dest = 'https://yourordinarycat.github.io/webpage-test/category';
-  window.location.assign(dest);
-}
-
 // Function to handle cookie creation
 function makeCookies() {
   document.cookie = "comments=" + comments + ";expires=" + in_month + ";path=/";

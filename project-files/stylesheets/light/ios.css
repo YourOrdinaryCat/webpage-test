@@ -28,10 +28,8 @@
 
   /* Visited links */
   --visited: #AF52DE;
-}
 
-/* General stuff */
-:root {
+  /* General stuff */
   /* Corner radius */
   --radius: 8px;
   --radius-strong: 12px;

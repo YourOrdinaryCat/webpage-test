@@ -122,14 +122,14 @@
       <h3 id="11">Quotes</h3>
 
       <div class="hstack-wrap">
-        <div class="elevated-section-fixed">
+        <blockquote class="fixed">
           <h4>bread sus</h4>
           <p>WHERE IS THE SUS FILTER😭😭😭💔💔💔💔 dead body reported, oop its the
             bodies of LC OT admins! I saw someone vented but who was it? 🤔🤌🏻</p>
           <figcaption>Az, 2021</figcaption>
-        </div>
+        </blockquote>
 
-        <div class="elevated-section-fixed">
+        <blockquote class="fixed">
           <h4>Dead body reported</h4>
           <p>Me (M13) screamed "dead body reported" at my aunt's funeral. My mom said
             that my aunt died and that we are going to her funeral the next morning. As
@@ -143,14 +143,14 @@
             me instead of laughing. My mom took my x box and said that I am going to
             therapist tomorrow. I dunno bro, my mom is acting kinda sus</p>
           <figcaption>Among Us, 2021</figcaption>
-        </div>
+        </blockquote>
 
-        <div class="elevated-section-fixed">
+        <blockquote class="fixed">
           <h4>Such a great food</h4>
           <p>Bread is the best food ever. It helped me search myself and find out who I
             really am.</p>
           <figcaption>Someone, 2021</figcaption>
-        </div>
+        </blockquote>
       </div>
 
       <!-- Fun facts about bread -->
@@ -192,7 +192,7 @@
       <h2 id="3">Comments</h2>
       <p id="comments_alert"></p>
       <div id="comments_window" class="comments">
-        <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="B8gkNf6d" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script>
+        <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="2CVB_3-2" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-dark="1"></script>
       </div>
 
 <?php echo include("project-files/parts/part5.html"); ?>

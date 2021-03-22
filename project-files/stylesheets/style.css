@@ -7,58 +7,6 @@
   width: auto;
 }
 
-/* Elevated section */
-.elevated-section {
-  background-color: var(--elevated1);
-  border: 1px solid var(--divider);
-  border-radius: var(--radius-strong);
-  margin: 8px 0 8px 0;
-  min-width: 192px;
-  max-width: 100%;
-  overflow: hidden;
-  overflow-wrap: normal;
-  padding: 8px;
-}
-
-/* Remove padding on figcaption */
-.elevated-section figcaption {
-  padding: 0;
-}
-
-/* Customize h4 for elevated sections */
-.elevated-section h4 {
-  color: var(--accent);
-  font-weight: bold;
-  margin-block-end: 4px;
-  margin-block-start: 0;
-}
-
-/* Elevated section (fixed size, scrollable) */
-.elevated-section-fixed {
-  background-color: var(--elevated1);
-  border: 1px solid var(--divider);
-  border-radius: var(--radius-strong);
-  margin: 0;
-  max-height: 7em;
-  min-width: 192px;
-  overflow: auto;
-  overflow-wrap: normal;
-  padding: var(--radius-strong);
-}
-
-/* Remove padding on figcaption */
-.elevated-section-fixed figcaption {
-  padding: 0;
-}
-
-/* Customize h4 for elevated sections */
-.elevated-section-fixed h4 {
-  color: var(--accent);
-  font-weight: bold;
-  margin-block-end: 4px;
-  margin-block-start: 0;
-}
-
 /* Horizontal stack container (never wrap) */
 .hstack-nw {
   display: inline-grid;

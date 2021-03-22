@@ -72,7 +72,7 @@
   --radius-strong: 8px;
 
   /* Form labels */
-  --caps: capitalize;
+  --caps: none;
   --color: var(--accent);
   --size: medium;
   --weight: 600;

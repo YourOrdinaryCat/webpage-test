@@ -28,16 +28,14 @@
 
   /* Visited links */
   --visited: #881798;
-}
 
-/* General stuff */
-:root {
+  /* General stuff */
   /* Corner radius */
   --radius: 6px;
   --radius-strong: 8px;
 
   /* Form labels */
-  --caps: capitalize;
+  --caps: none;
   --color: var(--primary);
   --size: medium;
   --weight: bold;

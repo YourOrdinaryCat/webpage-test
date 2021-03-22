@@ -28,10 +28,8 @@
 
   /* Visited links */
   --visited: #BF5AF2;
-}
 
-/* General stuff */
-:root {
+  /* General stuff */
   /* Corner radius */
   --radius: 8px;
   --radius-strong: 12px;
