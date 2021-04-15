@@ -3,17 +3,18 @@
   "short_name": "Omar's Blog",
   "description": "This is my blog, now as a PWA!",
   "lang": "en-US",
-  "start_url": "../index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "theme_color": "#0078D4",
   "icons": [
     {
-      "src": "icon.png",
-      "sizes": "16x16"
+      "src": "Icon.png",
+      "sizes": "16x16",
+      "type": "image/png"
     }
   ],
-  "background_color": "#0078D4",
-  "url": "webpage-test",
-  "manifestUrl": "manifest.webmanifest",
+  "background_color": "#121212",
+  "url": "https://yourordinarycat.github.io/webpage-test/",
+  "manifestUrl": "https://yourordinarycat.github.io/webpage-test/Files/Manifest.webmanifest",
   "screenshots": []
 }

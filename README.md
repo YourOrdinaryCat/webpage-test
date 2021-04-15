@@ -51,7 +51,7 @@ webpage-test
 ### Getting your article in PHP files
 Now you can start actually making articles! Open the PHP file you created in the last section and paste the following inside of it:
 
-```
+```php
 <?php include __DIR__ . "/../Parts/Part1.html"; ?>
 <title><?php echo $_SESSION["title"]; ?></title>
 
@@ -78,7 +78,7 @@ Under `<!-- Article contents -->`... Guess what you have to put. Make sure to gi
 
 For the outline, use the following format:
 
-```
+```html
 /* Headings with subheadings */
 <details>
   <summary>
@@ -99,7 +99,7 @@ For the outline, use the following format:
 ### Author card
 In the `PHP/Authors` folder, add a file called `Author name.html`. Paste the following code into it:
 
-```
+```html
 <details class="card">
   <summary>
     <h4>Omar</h4>
@@ -120,7 +120,7 @@ Here I'll explain what my custom styling can do. Everything in this section can 
 ### hstack-nw
 Shorthand for Horizontal Stack - No Wrap. It allows for horizontal item stacking, and it doesn't wrap on any screen size. When overflowed, it allows for scrolling without making the whole page scrollable.
 
-```
+```html
 <div class="hstack-nw">   /* Container */
   <div>                   /* Item #1 */
     /* Your stuff */
@@ -141,7 +141,7 @@ This stays consistent on small screens, and in case of overflow it becomes scrol
 ### hstack-wrap
 Shorthand for Horizontal Stack - Wrap. It allows for horizontal item stacking, and it wraps on phone screens by making every item occupy one column. When overflowed, it allows for scrolling without making the whole page scrollable, and if it's on a phone screen, it makes every item occupy one row.
 
-```
+```html
 <div class="hstack-wrap"> /* Container */
   <div>                   /* Item #1 */
     /* Your stuff */
@@ -169,7 +169,7 @@ For cards, I use the `blockquote` and `details` elements. They both can give you
 #### blockquote
 These are normal cards, using `h4` for the title is recommended.
 
-```
+```html
 <blockquote>
   <h4>Title</h4>
   /* Your stuff */
@@ -183,7 +183,7 @@ Here's how it looks:
 #### details class="card"
 These are like blockquotes, with the difference being that it's a fixed size. It reveals its contents on tap (when opening the `details` element).
 
-```
+```html
 <details class="card">
   <summary>
     <h4>Title</h4>
