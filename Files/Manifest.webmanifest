@@ -3,7 +3,7 @@
   "short_name": "Omar's Blog",
   "description": "This is my blog, now as a PWA!",
   "lang": "en-US",
-  "start_url": "index.html",
+  "start_url": "../index.html",
   "display": "standalone",
   "theme_color": "#0078D4",
   "icons": [
