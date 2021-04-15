@@ -51,14 +51,6 @@
   z-index: 1;
 }
 
-.outline h1 {
-  color: var(--accent);
-  font-size: medium;
-  font-weight: bold;
-  margin-block-end: 0;
-  margin-block-start: 0;
-}
-
 /* Outline links */
 .outline a {
   color: var(--primary);
@@ -67,7 +59,11 @@
 
 /* Outline headings */
 .outline h1 {
-  margin-inline-start: 0;
+  color: var(--accent);
+  font-size: medium;
+  font-weight: bold;
+  margin-block-end: 0;
+  margin-block-start: 0;
   text-align: center;
 }
 
