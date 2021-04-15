@@ -94,9 +94,9 @@
         <label for="mode">Select theme mode</label>
         <br>
         <select id="mode" type="text">
-          <option value="auto">Auto</option>
-          <option value="dark">Dark</option>
-          <option value="light">Light</option>
+          <option value="Auto">Auto</option>
+          <option value="Dark">Dark</option>
+          <option value="Light">Light</option>
         </select>
 
         <input type="submit" onclick="changeMode()" value="Apply"/>
