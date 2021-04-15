@@ -4,42 +4,51 @@
     <meta charset="utf-8">
     <title>All</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="project-files/stylesheets/general.css"/>
-  <link rel="stylesheet" href="project-files/stylesheets/media-queries.css"/>
-  <link rel="stylesheet" href="project-files/stylesheets/style.css"/>
+    <link rel="stylesheet" href="Files/Stylesheets/General.css"/>
+    <link rel="stylesheet" href="Files/Stylesheets/MediaQueries.css"/>
+    <link rel="stylesheet" href="Files/Stylesheets/Style.css"/>
 
-  <link id="general_theming" rel="stylesheet"/>
-  <link id="theme_name" rel="stylesheet"/>
-      <script src="project-files/cookies.js"></script>
+    <link id="theme-name" rel="stylesheet"/>
 
-  <link rel="manifest" href="project-files/manifest.webmanifest"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="Files/Scripts.js"></script>
 
-  <link rel="icon" type="image/png" href="project-files/icon.png"/>
-</head>
+    <link rel="manifest" href="Files/Manifest.webmanifest"/>
 
-<body>
-  <div class="sidebar">
-    <h1><a href="#0">Contents</a></h1>      <ul>
-        <li><div class="sidebar-link" onclick="location.href='../';"><a href="../">Home</a></div></li>
-        <li><div class="sidebar-link" onclick="location.href='categories';"><a href="categories">Categories</a></div></li>
+    <link rel="icon" type="image/png" href="Files/icon.png"/>
+  </head>
+
+  <body>
+    <div class="outline" id="outline">
+      <details id="outline-wrap" style="margin-block-end:0px; margin-block-start: 4px;">
+        <summary id="outline-summary" onclick="openMenu()">
+          <h1 id="0"><i class="material-icons">format_list_bulleted</i></h1>
+        </summary>      <ul>
+        <li><div class="outline-link" onclick="location.href='index.html';"><a href="index.html">Home</a></div></li>
+        <li><div class="outline-link" onclick="location.href='categories.html';"><a href="categories.html">Categories</a></div></li>
       </ul>
 
-</div>
+    </details>
+  </div>
 
-<article class="content">      <h1 id="0">All</h1>
+  <article class="content">      <h1>All</h1>
 
 <blockquote>
-        <h4><a href="sleep_right">How to sleep correctly</a></h4><p>The first step to get a good sleep is getting rid of all distractions. That includes this article, so if you're reading it right before going to bed... I have bad news for you.</p><figcaption>Omar, 2021-03-15</figcaption>
-      <figcaption>Health</figcaption>
-      </blockquote><blockquote>
-        <h4><a href="project_dough">Project Dough</a></h4><div class="hstack-wrap">
-          <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves more recognition. It's truly a versatile food, and it stood the test of time really well. You may not like some variants, and that's okay! But bread is undeniably great. That's why I made Project Dough! With your help, we'll be able to establish a fully functional bread kingdom.</p>
-          <img src="assets/project_dough/photos/white.jpeg">
-        </div><figcaption>Omar, 2021-03-15</figcaption>
-      <figcaption>Food</figcaption>
-      </blockquote>
+      <img alt="Project Dough" class="thumbnail" src="Assets/Thumbnails/Project Dough.png" onerror="this.src='Assets/Thumbnails/Default.png'"/>
+      <h4><a href="Project Dough.html">Project Dough</a></h4>
+
+      <figcaption>Omar, Food</figcaption>
+    </blockquote><blockquote>
+      <img alt="Lorem Ipsum" class="thumbnail" src="Assets/Thumbnails/Lorem Ipsum.png" onerror="this.src='Assets/Thumbnails/Default.png'"/>
+      <h4><a href="Lorem Ipsum.html">Lorem Ipsum</a></h4>
+
+      <figcaption>Template, Templates</figcaption>
+    </blockquote>
     </article>
+
+    <div class="sticky-right" id="sticky-right">
+    </div>
   </body>
 </html>

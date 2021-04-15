@@ -1,0 +1,49 @@
+/* Windows */
+/* Dark mode colors (Windows) */
+:root {
+  /* Background */
+  --background: #1F1F1F;
+  --elevated1: #2B2B2B;
+  --elevated2: #333333;
+
+  /* Sidebar */
+  --sidebar: #2D2D2D;
+  
+  /* Text */
+  --primary: #FFFFFF;
+  --secondary: #FFFFFF99;
+  --tertiary: #FFFFFF66;
+  --quaternary: #FFFFFF66;
+  
+  /* Accent related */
+  --accent: #0065AF;
+  --onAccent: #000000;
+  
+  /* Dividers */
+  --divider: #FFFFFF1C;
+  
+  /* Hover */
+  --hover: #424242;
+  --hover-transparent: #FFFFFF4D;
+
+  /* Visited links */
+  --visited: #881798;
+
+  /* General stuff */
+  /* Color schemes */
+  color-scheme: dark;
+
+  /* Corner radius */
+  --radius: 6px;
+  --radius-strong: 8px;
+
+  /* Form labels */
+  --caps: none;
+  --color: var(--primary);
+  --size: medium;
+  --weight: bold;
+
+  /* Shadows */
+  --shadow: #0000004D;
+  --shadow-size: 0 0 6px var(--shadow);
+}

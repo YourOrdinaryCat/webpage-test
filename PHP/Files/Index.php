@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<?php include("Parts/Part1.html"); ?>
     <title>Omar's Blog</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="Files/Stylesheets/General.css"/>
-    <link rel="stylesheet" href="Files/Stylesheets/MediaQueries.css"/>
-    <link rel="stylesheet" href="Files/Stylesheets/Style.css"/>
-
-    <link id="theme-name" rel="stylesheet"/>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="Files/Scripts.js"></script>
-
-    <link rel="manifest" href="Files/Manifest.webmanifest"/>
-
-    <link rel="icon" type="image/png" href="Files/icon.png"/>
-  </head>
-
-  <body>
-    <div class="outline" id="outline">
-      <details id="outline-wrap" style="margin-block-end:0px; margin-block-start: 4px;">
-        <summary id="outline-summary" onclick="openMenu()">
-          <h1 id="0"><i class="material-icons">format_list_bulleted</i></h1>
-        </summary>        <ul>
+<?php include("Parts/Part2.html"); ?>
+        <ul>
           <li><div class="outline-link" onclick="location.href='#1';"><a href="#1">Articles</a></div></li>
         </ul>
 
@@ -52,28 +29,52 @@
           </ul>
         </details>
 
-    </details>
-  </div>
-
-  <article class="content"><h1>Omar's Blog</h1>
+<?php include("Parts/Part3.html"); ?>
+<h1>Omar's Blog</h1>
 <h2 id="1">Articles</h2>
 <!-- Articles -->
-<blockquote>
-      <img alt="Project Dough" class="thumbnail" src="Assets/Thumbnails/Project Dough.png" onerror="this.src='Assets/Thumbnails/Default.png'"/>
-      <h4><a href="Project Dough.html">Project Dough</a></h4>
+<?php
+  foreach($_SESSION["all"] as $key=>$value) {
+    if($key > 9) {
+      echo '<button onclick=\'location.href="all.html"\'>Load all articles</button>';
+      break;
+    }
 
-      <figcaption>Omar, Food</figcaption>
-    </blockquote><blockquote>
-      <img alt="Lorem Ipsum" class="thumbnail" src="Assets/Thumbnails/Lorem Ipsum.png" onerror="this.src='Assets/Thumbnails/Default.png'"/>
-      <h4><a href="Lorem Ipsum.html">Lorem Ipsum</a></h4>
+    // Get article author
+    $author = substr($value, strpos($value, ";;") + 2, strpos($value, ";;"));
+    $author = substr($author, 0, -4);
 
-      <figcaption>Template, Templates</figcaption>
-    </blockquote><form>
+    // Get article title from array
+    $title = substr($value, 0, 0 - strlen($author) - 6);
+    $title = substr($title, strpos($title, "/", 6) + 1, strpos($title, "/", 6));
+
+    // Get article category
+    $category = substr($value, 0, 0 - strlen($title) - strlen($author) - 7);
+    $category = substr($category, 10);
+
+    echo '<blockquote>
+      <img alt="' . $title . '" class="thumbnail" src="Assets/Thumbnails/', $title, '.png" onerror="this.src=\'Assets/Thumbnails/Default.png\'"/>
+      <h4><a href="', $title, '.html">', $title, '</a></h4>
+
+      <figcaption>', $author, ', ', $category, '</figcaption>
+    </blockquote>';
+  }
+
+  // Make a picker for categories
+  echo '<form>
     <label for="categories">Navigate to category</label>
     <br>
-    <select id="categories" onchange="javascript:location.href = 'categories.html#' + document.getElementById('categories').value;" type="text">
-        <option>---</option><option value="1">Food</option><option value="2">Templates</option></select>
-    </form>
+    <select id="categories" onchange="javascript:location.href = \'categories.html#\' + document.getElementById(\'categories\').value;" type="text">
+        <option>---</option>';
+
+    foreach($_SESSION["categories"] as $key=>$value) {
+      echo '<option value="' . $key + 1, '">' . substr($value, 10) . '</option>';
+    }
+
+    echo '</select>
+    </form>';
+?>
+
       <!-- Settings -->
       <h2 id="2">Settings</h2>
       <h3 id="21">Comments</h3>
@@ -105,7 +106,20 @@
         <label for="theme">Select theme</label>
         <br>
         <select id="theme" type="text">
-          <option value="Fluent">Fluent</option><option value="Material Themed">Material Themed</option><option value="Material">Material</option><option value="iOS">iOS</option>        </select>
+          <?php
+            // Create arrays with theme files
+            $pattern = "../Files/Stylesheets/Auto/*.css";
+            $themes = glob($pattern);
+
+            // For every item in the array, add an entry
+            foreach($themes as $key=>$value) {
+              $theme_name = substr($value, 26);
+              $theme_name = substr($theme_name, 0, -4);
+
+              echo "<option value=\"", $theme_name, "\">", $theme_name, "</option>";
+            }
+          ?>
+        </select>
 
         <input type="submit" onclick="changeTheme()" value="Apply"/>
       </form>
@@ -128,10 +142,7 @@
       <p>This blog's source code can be found <a href="https://github.com/YourOrdinaryCat/webpage-test">
       here</a>. The author is <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
 
-    </article>
+<?php include("Parts/Part4.html"); ?>
+      <!-- Sticky content -->
 
-    <div class="sticky-right" id="sticky-right">      <!-- Sticky content -->
-
-    </div>
-  </body>
-</html>
+<?php include("Parts/Part5.html"); ?>

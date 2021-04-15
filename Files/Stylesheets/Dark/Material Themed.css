@@ -1,0 +1,49 @@
+/* Material colors */
+/* Dark mode colors (default) */
+:root {
+  /* Background */
+  --background: #1B1F24;
+  --elevated1: #21262F;
+  --elevated2: #2C3645;
+
+  /* Sidebar */
+  --sidebar: #1B1F24;
+
+  /* Text */
+  --primary: #FFFFFFDE;
+  --secondary: #FFFFFF99;
+  --tertiary: #FFFFFF61;
+  --quaternary: #FFFFFF61;
+
+  /* Accent related */
+  --accent: #89B4F8;
+  --onAccent: #000000;
+
+  /* Dividers */
+  --divider: #89B4F81C;
+
+  /* Hover */
+  --hover: #89B4F81A;
+  --hover-transparent: #89B4F81A;
+
+  /* Visited links */
+  --visited: #881798;
+
+  /* General stuff */
+  /* Color schemes */
+  color-scheme: dark;
+  
+  /* Corner radius */
+  --radius: 6px;
+  --radius-strong: 8px;
+
+  /* Form labels */
+  --caps: none;
+  --color: var(--accent);
+  --size: medium;
+  --weight: 600;
+
+  /* Shadows */
+  --shadow: #00000033;
+  --shadow-size: 0px 2px 1px -1px var(--shadow), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
