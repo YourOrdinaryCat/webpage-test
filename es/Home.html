@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Blog de Omar</title>
+
+    <link rel="manifest" href="Manifest.webmanifest"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
+    <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
+    <link rel="stylesheet" href="../Files/Stylesheets/Style.css"/>
+
+    <link id="theme-name" rel="stylesheet"/>
+
+    <script src="../Files/Scripts.js"></script>
+    <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
+
+    <link rel="icon" type="image/png" href="../Files/Icon.png"/>
+  </head>
+
+  <body>
+    <article class="content">      <h1>Blog de Omar</h1>
+      <h2 id="1">Artículos</h2>
+
+      <!-- Articles -->
+      <blockquote>
+            <img alt="Proyecto Masa" class="thumbnail" src="../Assets/Thumbnails/Proyecto Masa.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
+            <h4><a href="Proyecto Masa.html">Proyecto Masa</a></h4>
+
+            <figcaption>Omar, Comida</figcaption>
+          </blockquote><blockquote>
+            <img alt="Lorem Ipsum" class="thumbnail" src="../Assets/Thumbnails/Lorem Ipsum.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
+            <h4><a href="Lorem Ipsum.html">Lorem Ipsum</a></h4>
+
+            <figcaption>Plantilla, Plantillas</figcaption>
+          </blockquote><form>
+          <label for="categories">Navegar a categoría</label>
+          <br>
+          <select id="categories" onchange="javascript:location.href = 'Categories.html#' + document.getElementById('categories').value;" type="text">
+              <option>---</option><option value="1">Comida</option><option value="2">Plantillas</option></select>
+          </form>
+      <!-- Settings -->
+      <h2 id="2">Configuración</h2>
+      <h3 id="21">Comentarios</h3>
+      <form>
+        <label for="comments">Comentarios</label>
+        <br>
+        <select id="comments" type="text">
+          <option value="off">Deshabilitar</option>
+          <option value="on">Habilitar</option>
+        </select>
+
+        <input type="submit" onclick="changeComments()" value="Apply" />
+      </form>
+
+      <h3 id="22">Idioma</h3>
+      <form>
+        <label for="lang">Idioma</label>
+        <br>
+        <select id="lang" type="text">
+          <option value="en">Inglés</option>
+          <option value="es">Español</option>
+        </select>
+
+        <input type="submit" onclick="changeLang()" value="Apply" />
+      </form>
+
+      <h3 id="23">Temas</h3>
+      <form>
+        <label for="mode">Modo</label>
+        <br>
+        <select id="mode" type="text">
+          <option value="Auto">Automático</option>
+          <option value="Dark">Oscuro</option>
+          <option value="Light">Claro</option>
+        </select>
+
+        <input type="submit" onclick="changeMode()" value="Apply"/>
+      </form>
+
+      <form>
+        <label for="theme">Tema</label>
+        <br>
+        <select id="theme" type="text">
+          <option value="Fluent">Fluent</option><option value="Material Themed">Material Themed</option><option value="Material">Material</option><option value="iOS">iOS</option>        </select>
+
+        <input type="submit" onclick="changeTheme()" value="Apply"/>
+      </form>
+
+      <h3 id="24">Cookies</h3>
+      <p>Para que los ajustes se guarden correctamente, necesitas cookies. Aquí
+        puedes ver lo que contienen. Si el sitio da problemas, elimina las cookies
+        y debe funcionar bien de nuevo.
+      </p>
+      <button onclick="alert(document.cookie)">Revisar mis cookies</button>
+
+      <h2 id="3">Acerca de</h2>
+      <h3 id="31">Comentarios</h3>
+      <p>Estos son gracias a Telegram. Guardarán algunas cookies si los habilitas.
+        Esto es de parte de Telegram, así que si no las quieres, deshabilita los comentarios.
+        <a href="https://core.telegram.org/widgets/discussion">Acerca de los comentarios...</a>
+      </p>
+
+      <h3 id="32">Código fuente</h3>
+      <p>El código fuente de este blog se puede ver <a href="https://github.com/YourOrdinaryCat/webpage-test">
+      aquí</a>. El autor es <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
+
+    </article>
+
+    <aside>
+      <nav>
+        <h1>Contenidos</h1>        <ul>
+          <li><a class="nav-link" href="All.html">Todo</a></li>
+          <li><a class="nav-link" href="Categories.html">Categorías</a></li>
+        </ul>
+
+        <hr class="divider">
+
+        <ul>
+          <li><a class="nav-link" href="#1">Artículos</a></li>
+        </ul>
+
+        <details>
+          <summary>
+            <h3><a href="#2">Configuración</a></h3>
+            <hr class="divider"/>
+          </summary>
+          <ul>
+            <li><a class="nav-link" href="#21">Comentarios</a></li>
+            <li><a class="nav-link" href="#22">Idioma</a></li>
+            <li><a class="nav-link" href="#23">Temas</a></li>
+            <li><a class="nav-link" href="#24">Cookies</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>
+            <h3><a href="#3">Acerca de</a></h3>
+            <hr class="divider"/>
+          </summary>
+          <ul>
+            <li><a class="nav-link" href="#31">Comentarios</a></li>
+            <li><a class="nav-link" href="#32">Código fuente</a></li>
+          </ul>
+        </details>
+
+      </nav>
+    </aside>
+  </body>
+</html>

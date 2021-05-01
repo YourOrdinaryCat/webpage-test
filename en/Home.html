@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Omar's Blog</title>
+
+    <link rel="manifest" href="Manifest.webmanifest"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
+    <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
+    <link rel="stylesheet" href="../Files/Stylesheets/Style.css"/>
+
+    <link id="theme-name" rel="stylesheet"/>
+
+    <script src="../Files/Scripts.js"></script>
+    <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
+
+    <link rel="icon" type="image/png" href="../Files/Icon.png"/>
+  </head>
+
+  <body>
+    <article class="content">      <h1>Omar's Blog</h1>
+      <h2 id="1">Articles</h2>
+
+      <!-- Articles -->
+      <blockquote>
+            <img alt="Project Dough" class="thumbnail" src="../Assets/Thumbnails/Project Dough.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
+            <h4><a href="Project Dough.html">Project Dough</a></h4>
+
+            <figcaption>Omar, Food</figcaption>
+          </blockquote><blockquote>
+            <img alt="Lorem Ipsum" class="thumbnail" src="../Assets/Thumbnails/Lorem Ipsum.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
+            <h4><a href="Lorem Ipsum.html">Lorem Ipsum</a></h4>
+
+            <figcaption>Template, Templates</figcaption>
+          </blockquote><form>
+          <label for="categories">Navigate to category</label>
+          <br>
+          <select id="categories" onchange="javascript:location.href = 'Categories.html#' + document.getElementById('categories').value;" type="text">
+              <option>---</option><option value="1">Food</option><option value="2">Templates</option></select>
+          </form>
+      <!-- Settings -->
+      <h2 id="2">Settings</h2>
+      <h3 id="21">Comments</h3>
+      <form>
+        <label for="comments">Comments</label>
+        <br>
+        <select id="comments" type="text">
+          <option value="off">Disable</option>
+          <option value="on">Enable</option>
+        </select>
+
+        <input type="submit" onclick="changeComments()" value="Apply" />
+      </form>
+
+      <h3 id="22">Language</h3>
+      <form>
+        <label for="lang">Language</label>
+        <br>
+        <select id="lang" type="text">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+        </select>
+
+        <input type="submit" onclick="changeLang()" value="Apply" />
+      </form>
+
+      <h3 id="23">Theming</h3>
+      <form>
+        <label for="mode">Select theme mode</label>
+        <br>
+        <select id="mode" type="text">
+          <option value="Auto">Auto</option>
+          <option value="Dark">Dark</option>
+          <option value="Light">Light</option>
+        </select>
+
+        <input type="submit" onclick="changeMode()" value="Apply"/>
+      </form>
+
+      <form>
+        <label for="theme">Select theme</label>
+        <br>
+        <select id="theme" type="text">
+          <option value="Fluent">Fluent</option><option value="Material Themed">Material Themed</option><option value="Material">Material</option><option value="iOS">iOS</option>        </select>
+
+        <input type="submit" onclick="changeTheme()" value="Apply"/>
+      </form>
+
+      <h3 id="24">Cookies</h3>
+      <p>For settings to save correctly, cookies are needed. Here you're able to see what
+        values are stored in currently active cookies. If the website breaks, delete your
+        cookies and it should work fine again.
+      </p>
+      <button onclick="alert(document.cookie)">Check my cookies</button>
+
+      <h2 id="3">About</h2>
+      <h3 id="31">Comments</h3>
+      <p>These are thanks to Telegram. It'll store some cookies if they're enabled.
+        This is a Telegram thing, so best you can do about it is disabling comments if
+        you don't want them. <a href="https://core.telegram.org/widgets/discussion">About comments...</a>
+      </p>
+
+      <h3 id="32">Source Code</h3>
+      <p>This blog's source code can be found <a href="https://github.com/YourOrdinaryCat/webpage-test">
+      here</a>. The author is <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
+
+    </article>
+
+    <aside>
+      <nav>
+        <h1>Outline</h1>        <ul>
+          <li><a class="nav-link" href="All.html">All</a></li>
+          <li><a class="nav-link" href="Categories.html">Categories</a></li>
+        </ul>
+
+        <hr class="divider">
+
+        <ul>
+          <li><a class="nav-link" href="#1">Articles</a></li>
+        </ul>
+
+        <details>
+          <summary>
+            <h3><a href="#2">Settings</a></h3>
+            <hr class="divider"/>
+          </summary>
+          <ul>
+            <li><a class="nav-link" href="#21">Comments</a></li>
+            <li><a class="nav-link" href="#22">Language</a></li>
+            <li><a class="nav-link" href="#23">Theming</a></li>
+            <li><a class="nav-link" href="#24">Cookies</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>
+            <h3><a href="#3">About</a></h3>
+            <hr class="divider"/>
+          </summary>
+          <ul>
+            <li><a class="nav-link" href="#31">Comments</a></li>
+            <li><a class="nav-link" href="#32">Source Code</a></li>
+          </ul>
+        </details>
+
+      </nav>
+    </aside>
+  </body>
+</html>

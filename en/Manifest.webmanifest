@@ -1,0 +1,15 @@
+{
+  "background_color": "#121212",
+  "description": "This is my blog, now as a PWA!",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "../Files/Icon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "name": "Omar's Blog",
+  "short_name": "Omar's Blog",
+  "start_url": "/en"
+}

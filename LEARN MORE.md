@@ -8,7 +8,7 @@ webpage-test
 │   ├── Authors
 │   │   └── /* Author pictures (if needed) */
 │   ├── Article Name
-│   │   ├── /* Assets for article */
+│   │   └── /* Assets for article */
 │   └── Thumbnails
 │       ├── Default.png       /* Fallback thumbnail */
 │       └── Article Name.png  /* Article thumbnail */
@@ -29,7 +29,7 @@ webpage-test
 │   ├── Manifest.webmanifest
 │   └── Scripts.js
 ├── PHP
-│   ├── Files
+│   ├── Language code
 │   │   ├── Authors
 │   │   │   └── /* Author cards */
 │   │   ├── cat-Category Name
@@ -42,11 +42,15 @@ webpage-test
 │   ├── Output
 │   │   └── /* Output HTML files */
 │   └── Generate.php
-├── /* HTML content from Output folder */
+├── Language code
+│   ├── /* HTML content from Output folder */
+│   ├── 404.html
+│   └── Manifest.webmanifest
 └── README.md
 ```
 
 TODO:
+- Add webmanifest
 - Better documentation
 - Better performance
-- Improve desktop layout
+- Fix comments

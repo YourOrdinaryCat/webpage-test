@@ -18,7 +18,7 @@ I decided I wanted to keep everything simple, so there are no databases or anyth
 
 ## Set everything up
 ### Stuff you have to do
-First off, download a program that allows you to run PHP files. Personally I recommend [XAMPP](https://www.apachefriends.org/index.html), because of how easy to use it is, and I'll assume you use it if you're reading this.
+First off, download a program that allows you to run PHP files. Personally I recommend [XAMPP](https://www.apachefriends.org/index.html) because of how easy to use it is, and I'll assume you use it if you're reading this.
 
 After this, you have to clone the repo and stuff, you're probably already familiar with this. The folder with the repo will have to go under the htdocs folder inside XAMPP's installation folder.
 
@@ -26,6 +26,11 @@ Now that you set everything up, open up the XAMPP Control Panel. Start the Apach
 
 ## Writing an article
 If the steps above worked, that's great! Now we can get to writing.
+
+### Multiple languages
+Add a folder inside `PHP` with the language code you want to add. Copy over the files from another language and check them out. It should be easy to see what needs to get changed.
+
+You should also check the root directory of another language and grab the 404 and manifest files from there.
 
 ### Files
 First up, the filename. It should follow this format: `Article Title;;Author.php`. The code gets the title and author from the filename, and this it what's gonna show up in the homepage, so make sure to use a good title.
@@ -43,7 +48,7 @@ webpage-test
 │       ├── Default.png
 │       └── Article Name.png
 └── PHP
-    └── Files
+    └── Language code
         └── cat-Category Name
             └── Article Name;;Author.php
 ```
@@ -56,20 +61,19 @@ Now you can start actually making articles! Open the PHP file you created in the
 <title><?php echo $_SESSION["title"]; ?></title>
 
 <?php include __DIR__ . "/../Parts/Part2.html"; ?>
-      <!-- Outline -->
-
-<?php include __DIR__ . "/../Parts/Part3.html"; ?>
       <!-- Title -->
       <h1><?php echo $_SESSION["title"]; ?></h1>
 
       <!-- Article contents -->
 
-<?php include __DIR__ . "/../Parts/Part4.html"; ?>
-      <!-- Sticky content -->
+      <!-- Author card and comments -->
       <?php include __DIR__ . "/../Authors/" . $_SESSION["author"] . ".html"; ?>
       <?php include __DIR__ . "/../Parts/Comments.html"; ?>
 
-<?php include __DIR__ . "/../Parts/Part5.html"; ?>
+<?php include __DIR__ . "/../Parts/Part3.html"; ?>
+      <!-- Outline -->
+
+<?php include __DIR__ . "/../Parts/Part4.html"; ?>
 ```
 
 If you want to remove comments, remove the `<?php include __DIR__ . "/../Parts/Comments.html"; ?>` line. If you don't want an author card, remove the `<?php include __DIR__ . "/../Authors/" . $_SESSION["author"] . ".html"; ?>` line.
@@ -86,25 +90,26 @@ For the outline, use the following format:
     <hr class="divider"/>
   </summary>
   <ul>
-    <li><div class="outline-link" onclick="location.href='#subheading-id';"><a href="#subheading-id">Subheading</a></div></li>
+    <li><a href="#subheading1-id">Subheading 1</a></li>
+    <li><a href="#subheading2-id">Subheading 2</a></li>
   </ul>
 </details>
 
 /* Headings without subheadings */
 <ul>
-  <li><div class="outline-link" onclick="location.href='#heading-id';"><a href="#heading-id">Heading</a></div></li>
+  <li><a href="#heading-id">Heading</a></li>
 </ul>
 ```
 
 ### Author card
-In the `PHP/Authors` folder, add a file called `Author name.html`. Paste the following code into it:
+In the `PHP/Language code/Authors` folder, add a file called `Author name.html`. Paste the following code into it:
 
 ```html
 <details class="card">
   <summary>
     <h4>Omar</h4>
   </summary>
-  <img class="thumbnail" src="Assets/Authors/Omar.png">
+  <img class="thumbnail" src="../Assets/Authors/Omar.png">
   <p>Heya! I'm the guy who made this blog! I'm not a developer of anything meaningful, so sit back and watch nothing.</p>
 </details>
 ```
@@ -112,7 +117,7 @@ In the `PHP/Authors` folder, add a file called `Author name.html`. Paste the fol
 Change the `src` attribute of the image to point to your own image, or remove the whole thing if you don't want one. Replace the contents in `<h4>` with the author name and the ones in `<p>` with a small description.
 
 ### Put it all together
-Assuming you already fired up XAMPP, visit http://localhost/webpage-test/PHP/Generate.php. Click on the button shown, it will output some files to the `PHP/Output` folder. Copy those files to the project's root folder and check that http://localhost/webpage-test/ shows the blog with your articles. Congratulations! You did it! Wasn't that hard huh? Execution speed is a bit slow, but it's good enough. Of course, there's more improvements to come, specially better documentation.
+Assuming you already fired up XAMPP, visit http://localhost/webpage-test/PHP/Generate.php. Click on the button shown, it will output some files to the `PHP/Output` folder. Copy those files to the project's root folder and check that http://localhost/webpage-test/ shows the blog with your articles. Congratulations! You did it! Wasn't that hard huh? Execution speed is a bit slow (almost half a second with 2 articles and 1 language), but it's good enough for me. Of course, there's more improvements to come, specially better documentation.
 
 ## Custom styling
 Here I'll explain what my custom styling can do. Everything in this section can be found in the `Styles.css` and `General.css` files.
@@ -198,7 +203,7 @@ Here's how it looks:
 
 ## Not very frequently asked questions
 ### Why are you doing this?
-This is mostly just a template with some things I'll need for future projects. You can use it as well, no questions asked. However, it isn't perfect. If you ever find anything you think you can improve, feel free to make a pull request! If I think the change is good, I'll accept it. Remember that anyone can use this, so if you find improvements, they can benefit everyone!
+This is mostly just a template with some things I (likely won't) need for future projects. You can use it as well, no questions asked. However, it isn't perfect. If you ever find anything you think you can improve, feel free to make a pull request! If I think the change is good, I'll accept it. Remember that anyone can use this, so if you find improvements, they can benefit everyone!
 
 ### Can I reach out to you?
 Absolutely! Find me on [Telegram](t.me/YourOrdinaryCat) if you need anything.
