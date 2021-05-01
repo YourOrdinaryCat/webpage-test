@@ -56,7 +56,7 @@ function changeComments() {
 function changeLang() {
   lang = document.getElementById("lang").value;
   makeCookies();
-  window.location.href = "../" + lang;
+  window.location.href = "../" + lang + "/Home.html";
 }
 
 function changeMode() {
