@@ -2,7 +2,7 @@
 .comments {
   border: 1px solid var(--divider);
   border-radius: var(--radius-strong);
-  height: auto;
+  height: 397px;
   overflow: hidden;
   width: auto;
 }
