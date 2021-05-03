@@ -42,7 +42,7 @@
 
 <?php include("Parts/Part2.html"); ?>
         <ul>
-          <li><a class="nav-link" href="../en/">Home</a></li>
+          <li><a class="nav-link" href="Index.html">Home</a></li>
           <li><a class="nav-link" href="All.html">All</a></li>
         </ul>
 

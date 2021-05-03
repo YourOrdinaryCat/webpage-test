@@ -12,7 +12,7 @@
 
 <?php include("Parts/Part2.html"); ?>
         <ul>
-          <li><a class="nav-link" href="../es/">Inicio</a></li>
+          <li><a class="nav-link" href="Index.html">Inicio</a></li>
           <li><a class="nav-link" href="Categories.html">Categorías</a></li>
         </ul>
 

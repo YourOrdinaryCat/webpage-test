@@ -80,7 +80,7 @@ function makeCookies() {
 // Execute after DOM is loaded
 document.addEventListener("DOMContentLoaded", function() {
   if(comments == "off") {
-    document.getElementById("comments_alert").innerHTML = "Comments are off.";
+    document.getElementById("comments_alert").innerText = "Comments are off.";
     document.getElementById("comments_window").setAttribute("style", "display: none;");
   }
 });
