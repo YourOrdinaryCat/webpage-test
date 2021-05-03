@@ -23,7 +23,7 @@
 
     foreach($langs as $key=>$lang) {
       // Unset array with all the files
-      unset($_SESSION["all"]);
+      unset($all);
 
       // Create language directories
       mkdir("Output/" . $lang, 0777, true);
@@ -34,18 +34,18 @@
 
       // Create array with categories
       $pattern = $lang . "/cat-*";
-      $_SESSION["categories"] = glob($pattern, GLOB_ONLYDIR);
+      $categories = glob($pattern, GLOB_ONLYDIR);
 
-      foreach($_SESSION["categories"] as $key=>$value) {
-        if(isset($_SESSION["all"])) {
-          $_SESSION["all"] = array_merge($_SESSION["all"],glob($value . "/*.php"));
+      foreach($categories as $key=>$value) {
+        if(isset($all)) {
+          $all = array_merge($all,glob($value . "/*.php"));
         } else {
-          $_SESSION["all"] = glob($value . "/*.php");
+          $all = glob($value . "/*.php");
         }
       }
 
       // Order array by creation date
-      usort($_SESSION["all"], function($file1, $file2) {
+      usort($all, function($file1, $file2) {
         $file1 = filectime($file1);
         $file2 = filectime($file2);
         if($file1 == $file2) {
@@ -53,6 +53,21 @@
         }
         return $file1 < $file2 ? 1 : -1;
       });
+
+      // Get article data
+      foreach($all as $key=>$value) {
+        // Get article authors
+        $author[$key] = substr($value, strpos($value, ";;") + 2);
+        $author[$key] = substr($author[$key], 0, -4);
+
+        // Get article titles
+        $title[$key] = substr($value, strpos($value, "/", 4) + 1);
+        $title[$key] = substr($title[$key], 0, 0 - strlen($author[$key]) - 6);
+
+        // Get article categories
+        $category[$key] = substr($value, strpos($value, "cat-") + 4);
+        $category[$key] = substr($category[$key], 0, strpos($category[$key], "/"));
+      }
 
       // Loop that outputs every file in main array to html
       foreach($main as $key=>$value) {
@@ -74,21 +89,9 @@
       }
 
       // Loop that outputs every file in articles array to html
-      foreach($_SESSION["all"] as $key=>$value) {
-        // Get article author
-        $_SESSION["author"] = substr($value, strpos($value, ";;") + 2);
-        $_SESSION["author"] = substr($_SESSION["author"], 0, -4);
-
-        // Get article title
-        $_SESSION["title"] = substr($value, strpos($value, "/", 4) + 1);
-        $_SESSION["title"] = substr($_SESSION["title"], 0, 0 - strlen($_SESSION["author"]) - 6);
-
-        // Get article category
-        $_SESSION["category"] = substr($value, strpos($value, "cat-") + 4);
-        $_SESSION["category"] = substr($_SESSION["category"], 0, strpos($_SESSION["category"], "/"));
-
+      foreach($all as $key=>$value) {
         //Create files
-        fopen('Output/' . $_SESSION["title"] . '.html', 'w');
+        fopen('Output/' . $lang . "/" . $title[$key] . '.html', 'w');
 
         // Start output buffer
         ob_start();
@@ -97,7 +100,7 @@
         include($value);
 
         // Output HTML file, clean buffer
-        file_put_contents('Output/' . $lang . "/" . $_SESSION["title"] . '.html', ob_get_clean());
+        file_put_contents('Output/' . $lang . "/" . $title[$key] . '.html', ob_get_clean());
       }
     }
 
@@ -141,4 +144,13 @@
       }
     ?>
   </article>
+
+  <aside>
+    <nav>
+      <h1>Testing</h1>
+      <ul>
+        <li><a class="nav-link" href="/webpage-test/">Home</a></li>
+      </ul>
+    </nav>
+  </aside>
 </body>

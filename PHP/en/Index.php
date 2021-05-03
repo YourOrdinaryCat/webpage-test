@@ -1,46 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Omar's Blog</title>
-
-    <link rel="manifest" href="Manifest.webmanifest"/>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
-    <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
-    <link rel="stylesheet" href="../Files/Stylesheets/Style.css"/>
-
-    <link id="theme-name" rel="stylesheet"/>
-
-    <script src="../Files/Scripts.js"></script>
-    <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
-
-    <link rel="icon" type="image/png" href="../Files/Icon.png"/>
-  </head>
-
-  <body>
-    <article class="content">      <h1>Omar's Blog</h1>
+<?php $title_a = "Omar's Blog"; include("Parts/Part1.php"); ?>
       <h2 id="1">Articles</h2>
 
       <!-- Articles -->
-      <blockquote>
-            <img alt="Project Dough" class="thumbnail" src="../Assets/Thumbnails/Project Dough.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
-            <h4><a href="Project Dough.html">Project Dough</a></h4>
+      <?php
+        foreach($all as $key=>$value) {
+          if($key > 9) {
+            echo '<button onclick=\'location.href="All.html"\'>Load all articles</button>';
+            break;
+          }
 
-            <figcaption>Omar, Food</figcaption>
-          </blockquote><blockquote>
-            <img alt="Lorem Ipsum" class="thumbnail" src="../Assets/Thumbnails/Lorem Ipsum.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
-            <h4><a href="Lorem Ipsum.html">Lorem Ipsum</a></h4>
+          echo '<blockquote>
+            <img alt="' . $title[$key] . '" class="thumbnail" src="../Assets/Thumbnails/', $title[$key], '.png" onerror="this.src=\'../Assets/Thumbnails/Default.png\'"/>
+            <h4><a href="', $title[$key], '.html">', $title[$key], '</a></h4>
 
-            <figcaption>Template, Templates</figcaption>
-          </blockquote><form>
-          <label for="categories">Navigate to category</label>
-          <br>
-          <select id="categories" onchange="javascript:location.href = 'Categories.html#' + document.getElementById('categories').value;" type="text">
-              <option>---</option><option value="1">Food</option><option value="2">Templates</option></select>
-          </form>
+            <figcaption>', $author[$key], ', ', $category[$key], '</figcaption>
+          </blockquote>';
+        }
+      ?>
+
+      <!-- Categories picker -->
+      <form>
+        <label for="categories">Navigate to category</label>
+        <br>
+        <select id="categories" onchange="javascript:location.href = 'Categories.html#' + document.getElementById('categories').value;" type="text">
+          <option>---</option>
+          <?php
+            // Add categories in array
+            foreach($categories as $key=>$value) {
+              echo '<option value="' . $key + 1, '">' . substr($value, strlen($lang) + 5) . '</option>';
+            }
+          ?>
+        </select>
+      </form>
+
       <!-- Settings -->
       <h2 id="2">Settings</h2>
       <h3 id="21">Comments</h3>
@@ -84,7 +76,20 @@
         <label for="theme">Select theme</label>
         <br>
         <select id="theme" type="text">
-          <option value="Fluent">Fluent</option><option value="Material Themed">Material Themed</option><option value="Material">Material</option><option value="iOS">iOS</option>        </select>
+          <?php
+            // Create arrays with theme files
+            $pattern = __DIR__ . "/../../Files/Stylesheets/Auto/*.css";
+            $themes = glob($pattern);
+
+            // For every item in the array, add an entry
+            foreach($themes as $key=>$value) {
+              $theme_name = trim(substr($value, strrpos($value, '/') + 1));
+              $theme_name = substr($theme_name, 0, -4);
+
+              echo "<option value=\"", $theme_name, "\">", $theme_name, "</option>";
+            }
+          ?>
+        </select>
 
         <input type="submit" onclick="changeTheme()" value="Apply"/>
       </form>
@@ -107,11 +112,8 @@
       <p>This blog's source code can be found <a href="https://github.com/YourOrdinaryCat/webpage-test">
       here</a>. The author is <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
 
-    </article>
-
-    <aside>
-      <nav>
-        <h1>Outline</h1>        <ul>
+<?php include("Parts/Part2.html"); ?>
+        <ul>
           <li><a class="nav-link" href="All.html">All</a></li>
           <li><a class="nav-link" href="Categories.html">Categories</a></li>
         </ul>
@@ -146,7 +148,4 @@
           </ul>
         </details>
 
-      </nav>
-    </aside>
-  </body>
-</html>
+<?php include("Parts/Part3.html"); ?>

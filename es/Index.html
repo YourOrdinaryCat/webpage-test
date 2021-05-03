@@ -2,10 +2,8 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
+
     <title>Blog de Omar</title>
-
-    <link rel="manifest" href="Manifest.webmanifest"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
@@ -17,12 +15,14 @@
     <script src="../Files/Scripts.js"></script>
     <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
 
+    <link rel="manifest" href="Manifest.webmanifest">
+
     <link rel="icon" type="image/png" href="../Files/Icon.png"/>
   </head>
 
   <body>
-    <article class="content">      <h1>Blog de Omar</h1>
-      <h2 id="1">Artículos</h2>
+    <article class="content">
+      <h1>Blog de Omar</h1>      <h2 id="1">Artículos</h2>
 
       <!-- Articles -->
       <blockquote>
@@ -35,12 +35,16 @@
             <h4><a href="Lorem Ipsum.html">Lorem Ipsum</a></h4>
 
             <figcaption>Plantilla, Plantillas</figcaption>
-          </blockquote><form>
-          <label for="categories">Navegar a categoría</label>
-          <br>
-          <select id="categories" onchange="javascript:location.href = 'Categories.html#' + document.getElementById('categories').value;" type="text">
-              <option>---</option><option value="1">Comida</option><option value="2">Plantillas</option></select>
-          </form>
+          </blockquote>
+      <!-- Categories picker -->
+      <form>
+        <label for="categories">Ir a categoría</label>
+        <br>
+        <select id="categories" onchange="javascript:location.href = 'Categories.html#' + document.getElementById('categories').value;" type="text">
+          <option>---</option>
+          <option value="1">Comida</option><option value="2">Plantillas</option>        </select>
+      </form>
+
       <!-- Settings -->
       <h2 id="2">Configuración</h2>
       <h3 id="21">Comentarios</h3>

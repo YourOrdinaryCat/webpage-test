@@ -50,7 +50,6 @@ webpage-test
 ```
 
 TODO:
-- Add webmanifest
 - Better documentation
-- Better performance
+- Better performance (maybe, dunno where to improve that makes a significant difference)
 - Fix comments

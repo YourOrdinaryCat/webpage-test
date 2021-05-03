@@ -1,10 +1,4 @@
-<?php include __DIR__ . "/../Parts/Part1.html"; ?>
-    <title><?php echo $_SESSION["title"]; ?></title>
-
-<?php include __DIR__ . "/../Parts/Part2.html"; ?>
-      <!-- Title -->
-      <h1><?php echo $_SESSION["title"]; ?></h1>
-
+<?php $title_a = $title[$key]; include __DIR__ . "/../Parts/Part1.php"; ?>
       <!-- Intro paragraph -->
       <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves
         more recognition. It's truly a versatile food, and it stood the test of time
@@ -147,10 +141,10 @@
         </div>
       </div>
 
-      <?php include __DIR__ . "/../Authors/" . $_SESSION["author"] . ".html"; ?>
+      <?php include __DIR__ . "/../Authors/" . $author[$key] . ".html"; ?>
       <?php include __DIR__ . "/../Parts/Comments.html"; ?>
 
-<?php include __DIR__ . "/../Parts/Part3.html"; ?>
+<?php include __DIR__ . "/../Parts/Part2.html"; ?>
         <details>
           <summary>
             <h3><a href="#1">Bread</a></h3>
@@ -172,4 +166,4 @@
           </ul>
         </details>
 
-<?php include __DIR__ . "/../Parts/Part4.html"; ?>
+<?php include __DIR__ . "/../Parts/Part3.html"; ?>

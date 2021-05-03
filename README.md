@@ -57,23 +57,17 @@ webpage-test
 Now you can start actually making articles! Open the PHP file you created in the last section and paste the following inside of it:
 
 ```php
-<?php include __DIR__ . "/../Parts/Part1.html"; ?>
-<title><?php echo $_SESSION["title"]; ?></title>
-
-<?php include __DIR__ . "/../Parts/Part2.html"; ?>
-      <!-- Title -->
-      <h1><?php echo $_SESSION["title"]; ?></h1>
-
+<?php $title_a = $title[$key]; include __DIR__ . "/../Parts/Part1.php"; ?>
       <!-- Article contents -->
 
       <!-- Author card and comments -->
       <?php include __DIR__ . "/../Authors/" . $_SESSION["author"] . ".html"; ?>
       <?php include __DIR__ . "/../Parts/Comments.html"; ?>
 
-<?php include __DIR__ . "/../Parts/Part3.html"; ?>
+<?php include __DIR__ . "/../Parts/Part2.html"; ?>
       <!-- Outline -->
 
-<?php include __DIR__ . "/../Parts/Part4.html"; ?>
+<?php include __DIR__ . "/../Parts/Part3.html"; ?>
 ```
 
 If you want to remove comments, remove the `<?php include __DIR__ . "/../Parts/Comments.html"; ?>` line. If you don't want an author card, remove the `<?php include __DIR__ . "/../Authors/" . $_SESSION["author"] . ".html"; ?>` line.
@@ -83,21 +77,21 @@ Under `<!-- Article contents -->`... Guess what you have to put. Make sure to gi
 For the outline, use the following format:
 
 ```html
-/* Headings with subheadings */
+<!-- Headings with subheadings -->
 <details>
   <summary>
     <h3><a href="#heading-id">Heading</a></h3>
     <hr class="divider"/>
   </summary>
   <ul>
-    <li><a href="#subheading1-id">Subheading 1</a></li>
-    <li><a href="#subheading2-id">Subheading 2</a></li>
+    <li><a class="nav-link" href="#subheading1-id">Subheading 1</a></li>
+    <li><a class="nav-link" href="#subheading2-id">Subheading 2</a></li>
   </ul>
 </details>
 
-/* Headings without subheadings */
+<!-- Headings without subheadings -->
 <ul>
-  <li><a href="#heading-id">Heading</a></li>
+  <li><a class="nav-link" href="#heading-id">Heading</a></li>
 </ul>
 ```
 
