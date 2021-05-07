@@ -30,12 +30,12 @@ webpage-test
 │   └── Scripts.js
 ├── PHP
 │   ├── Language code
+│   │   ├── Articles
+│   │   │   └── Article filename.php
 │   │   ├── Authors
 │   │   │   └── /* Author cards */
-│   │   ├── cat-Category Name
-│   │   │   └── Article Name;;Author.php
 │   │   ├── Parts
-│   │   │   └── /* Article parts (1-5) and comments */
+│   │   │   └── /* Article parts (1-3) and comments */
 │   │   ├── All.php
 │   │   ├── Categories.php
 │   │   └── Index.php
@@ -51,5 +51,8 @@ webpage-test
 
 TODO:
 - Better documentation
-- Better performance (maybe, dunno where to improve that makes a significant difference)
+- Add categories picker again
 - Fix comments
+
+DONE:
+- Performance improvements

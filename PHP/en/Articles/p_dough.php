@@ -1,28 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<?php
+  $title = "Project Dough";
+  $author = "Omar";
+  $category = "Food";
+  $description = "Bread is amazing, but you ever just want to dominate the world?";
 
-    <title>Project Dough</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
-    <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
-    <link rel="stylesheet" href="../Files/Stylesheets/Style.css"/>
-
-    <link id="theme-name" rel="stylesheet"/>
-
-    <script src="../Files/Scripts.js"></script>
-    <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
-
-    <link rel="manifest" href="Manifest.webmanifest">
-
-    <link rel="icon" type="image/png" href="../Files/Icon.png"/>
-  </head>
-
-  <body>
-    <article class="content">
-      <h1>Project Dough</h1>      <!-- Intro paragraph -->
+  include __DIR__ . "/../Parts/Part1.php";
+?>
+      <!-- Intro paragraph -->
       <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves
         more recognition. It's truly a versatile food, and it stood the test of time
         really well. You may not like some variants, and that's okay! But bread is
@@ -164,28 +148,11 @@
         </div>
       </div>
 
-            <hr class="divider">
+      <?php include __DIR__ . "/../Authors/" . $author . ".html"; ?>
+      <?php include __DIR__ . "/../Parts/Comments.html"; ?>
 
-      <details class="card">
-        <summary>
-          <h4>Omar</h4>
-        </summary>
-        <img class="thumbnail" src="../Assets/Authors/Omar.png">
-        <p>Heya! I'm the guy who made this blog! I'm not a developer of anything meaningful, so sit back and watch nothing.</p>
-      </details>            <details class="card">
-        <summary>
-          <h4>Comments</h4>
-        </summary>
-        <p id="comments_alert"></p>
-        <div id="comments_window" class="comments">
-          <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="2CVB_3-2" data-limit="100" data-height="397" data-dislikes="1" data-outlined="1" data-colorful="1" data-dark="1"></script>
-        </div>
-      </details>
-    </article>
-
-    <aside>
-      <nav>
-        <h1>Contents</h1>        <details>
+<?php include __DIR__ . "/../Parts/Part2.html"; ?>
+        <details>
           <summary>
             <h3><a href="#1">Bread</a></h3>
             <hr class="divider"/>
@@ -206,7 +173,4 @@
           </ul>
         </details>
 
-      </nav>
-    </aside>
-  </body>
-</html>
+<?php include __DIR__ . "/../Parts/Part3.html"; ?>

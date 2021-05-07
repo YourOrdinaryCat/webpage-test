@@ -24,7 +24,7 @@ try {
   theme = cookiearray[3].split('=')[1];
 } catch(error) {
   comments = "off";
-  lang = "en";
+  lang = "unset";
   mode = "Auto";
   theme = "Material";
 }
@@ -56,7 +56,9 @@ function changeComments() {
 function changeLang() {
   lang = document.getElementById("lang").value;
   makeCookies();
-  window.location.href = "/webpage-test/" + lang + "/Home.html";
+
+  location = '../' + lang + '/Index.html';
+  return false;
 }
 
 function changeMode() {

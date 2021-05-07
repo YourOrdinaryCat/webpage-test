@@ -1,6 +1,9 @@
 # Welcome
 Hi GitHub user! This is a test webpage, where I put some stuff I do with HTML/CSS/PHP/JS. You'll see updates pretty often while I improve this website.
 
+## Outdated
+Gonna update the documentation when I get time. Sorry for that.
+
 ## General details
 ### CSS
 There are 3 main CSS files: `General`, `MediaQueries` and `Style`. `General` has styling for HTML elements, mostly applying colors and changing default values. `MediaQueries` contains different media queries that help make the website more accessible and usable on all screen sizes. Lastly, `Style` contains my custom styling that help simplify stuff like stacking items, making cards, etc.

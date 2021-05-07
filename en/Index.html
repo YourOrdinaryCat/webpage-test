@@ -6,6 +6,9 @@
     <title>Omar's Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="description" content="This is my blog. Have fun!">
+    <meta name="author" content="Omar">
+
     <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
     <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
     <link rel="stylesheet" href="../Files/Stylesheets/Style.css"/>
@@ -26,29 +29,26 @@
 
       <!-- Articles -->
       <blockquote>
-            <img alt="Project Dough" class="thumbnail" src="../Assets/Thumbnails/Project Dough.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
-            <h4><a href="Project Dough.html">Project Dough</a></h4>
+            <img alt="Project Dough" class="thumbnail" src="../Assets/Thumbnails/p_dough.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
+            <h4><a href="p_dough.html">Project Dough</a></h4>
+
+            <p>Bread is amazing, but you ever just want to dominate the world?</p>
 
             <figcaption>Omar, Food</figcaption>
+            <figcaption>1620352415</figcaption>
           </blockquote><blockquote>
-            <img alt="Lorem Ipsum" class="thumbnail" src="../Assets/Thumbnails/Lorem Ipsum.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
-            <h4><a href="Lorem Ipsum.html">Lorem Ipsum</a></h4>
+            <img alt="Lorem Ipsum" class="thumbnail" src="../Assets/Thumbnails/lorem.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
+            <h4><a href="lorem.html">Lorem Ipsum</a></h4>
+
+            <p>All about Lorem Ipsum.</p>
 
             <figcaption>Template, Templates</figcaption>
+            <figcaption>1620352415</figcaption>
           </blockquote>
-      <!-- Categories picker -->
-      <form>
-        <label for="categories">Navigate to category</label>
-        <br>
-        <select id="categories" onchange="javascript:location.href = 'Categories.html#' + document.getElementById('categories').value;" type="text">
-          <option>---</option>
-          <option value="1">Food</option><option value="2">Templates</option>        </select>
-      </form>
-
       <!-- Settings -->
       <h2 id="2">Settings</h2>
       <h3 id="21">Comments</h3>
-      <form>
+      <form onsubmit="return changeComments();">
         <label for="comments">Comments</label>
         <br>
         <select id="comments" type="text">
@@ -56,11 +56,11 @@
           <option value="on">Enable</option>
         </select>
 
-        <input type="submit" onclick="changeComments()" value="Apply" />
+        <input type="submit" value="Apply" />
       </form>
 
       <h3 id="22">Language</h3>
-      <form>
+      <form onsubmit="return changeLang();">
         <label for="lang">Language</label>
         <br>
         <select id="lang" type="text">
@@ -68,11 +68,11 @@
           <option value="es">Spanish</option>
         </select>
 
-        <input type="submit" onclick="changeLang()" value="Apply" />
+        <input type="submit" value="Apply" />
       </form>
 
       <h3 id="23">Theming</h3>
-      <form>
+      <form onsubmit="return changeMode();">
         <label for="mode">Select theme mode</label>
         <br>
         <select id="mode" type="text">
@@ -81,16 +81,16 @@
           <option value="Light">Light</option>
         </select>
 
-        <input type="submit" onclick="changeMode()" value="Apply"/>
+        <input type="submit" value="Apply"/>
       </form>
 
-      <form>
+      <form onsubmit="return changeTheme();">
         <label for="theme">Select theme</label>
         <br>
         <select id="theme" type="text">
           <option value="Fluent">Fluent</option><option value="Material Themed">Material Themed</option><option value="Material">Material</option><option value="iOS">iOS</option>        </select>
 
-        <input type="submit" onclick="changeTheme()" value="Apply"/>
+        <input type="submit" value="Apply"/>
       </form>
 
       <h3 id="24">Cookies</h3>
@@ -117,7 +117,6 @@
       <nav>
         <h1>Contents</h1>        <ul>
           <li><a class="nav-link" href="All.html">All</a></li>
-          <li><a class="nav-link" href="Categories.html">Categories</a></li>
         </ul>
 
         <hr class="divider">

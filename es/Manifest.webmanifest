@@ -1,7 +1,7 @@
 {
   "background_color": "#121212",
   "description": "Este es mi blog, ¡ahora como PWA!",
-  "display": "minimal-ui",
+  "display": "standalone",
   "icons": [
     {
       "src": "/webpage-test/Files/Icon.png",
@@ -11,9 +11,7 @@
   ],
   "name": "Blog de Omar",
   "short_name": "Blog de Omar",
-  "start_url": "/es",
-  "url": "/webpage-test/es/",
+  "start_url": "/webpage-test/es/Index.html",
   "manifestUrl": "/webpage-test/es/Manifest.webmanifest",
-  "lang": "es",
-  "screenshots": []
+  "lang": "es"
 }

@@ -1,42 +1,36 @@
-<?php $title_a = "Omar's Blog"; include("Parts/Part1.php"); ?>
+<?php
+  $title = "Omar's Blog";
+  $author = "Omar";
+  $description = "This is my blog. Have fun!";
+
+  include("Parts/Part1.php");
+?>
       <h2 id="1">Articles</h2>
 
       <!-- Articles -->
       <?php
-        foreach($all as $key=>$value) {
-          if($key > 9) {
+        foreach($all as $key_a=>$value_a) {
+          if($key_a > 9) {
             echo '<button onclick=\'location.href="All.html"\'>Load all articles</button>';
             break;
           }
 
           echo '<blockquote>
-            <img alt="' . $title[$key] . '" class="thumbnail" src="../Assets/Thumbnails/', $title[$key], '.png" onerror="this.src=\'../Assets/Thumbnails/Default.png\'"/>
-            <h4><a href="', $title[$key], '.html">', $title[$key], '</a></h4>
+            <img alt="' . $titles[$key_a] . '" class="thumbnail" src="../Assets/Thumbnails/', $filenames[$key_a], '.png" onerror="this.src=\'../Assets/Thumbnails/Default.png\'"/>
+            <h4><a href="', $filenames[$key_a], '.html">', $titles[$key_a], '</a></h4>
 
-            <figcaption>', $author[$key], ', ', $category[$key], '</figcaption>
+            <p>' , $descriptions[$key_a], '</p>
+
+            <figcaption>', $authors[$key_a], ', ', $categories[$key_a], '</figcaption>
+            <figcaption>', filemtime($value), '</figcaption>
           </blockquote>';
         }
       ?>
 
-      <!-- Categories picker -->
-      <form>
-        <label for="categories">Navigate to category</label>
-        <br>
-        <select id="categories" onchange="javascript:location.href = 'Categories.html#' + document.getElementById('categories').value;" type="text">
-          <option>---</option>
-          <?php
-            // Add categories in array
-            foreach($categories as $key=>$value) {
-              echo '<option value="' . $key + 1, '">' . substr($value, strlen($lang) + 5) . '</option>';
-            }
-          ?>
-        </select>
-      </form>
-
       <!-- Settings -->
       <h2 id="2">Settings</h2>
       <h3 id="21">Comments</h3>
-      <form>
+      <form onsubmit="return changeComments();">
         <label for="comments">Comments</label>
         <br>
         <select id="comments" type="text">
@@ -44,11 +38,11 @@
           <option value="on">Enable</option>
         </select>
 
-        <input type="submit" onclick="changeComments()" value="Apply" />
+        <input type="submit" value="Apply" />
       </form>
 
       <h3 id="22">Language</h3>
-      <form>
+      <form onsubmit="return changeLang();">
         <label for="lang">Language</label>
         <br>
         <select id="lang" type="text">
@@ -56,11 +50,11 @@
           <option value="es">Spanish</option>
         </select>
 
-        <input type="submit" onclick="changeLang()" value="Apply" />
+        <input type="submit" value="Apply" />
       </form>
 
       <h3 id="23">Theming</h3>
-      <form>
+      <form onsubmit="return changeMode();">
         <label for="mode">Select theme mode</label>
         <br>
         <select id="mode" type="text">
@@ -69,29 +63,22 @@
           <option value="Light">Light</option>
         </select>
 
-        <input type="submit" onclick="changeMode()" value="Apply"/>
+        <input type="submit" value="Apply"/>
       </form>
 
-      <form>
+      <form onsubmit="return changeTheme();">
         <label for="theme">Select theme</label>
         <br>
         <select id="theme" type="text">
           <?php
-            // Create arrays with theme files
-            $pattern = __DIR__ . "/../../Files/Stylesheets/Auto/*.css";
-            $themes = glob($pattern);
-
             // For every item in the array, add an entry
-            foreach($themes as $key=>$value) {
-              $theme_name = trim(substr($value, strrpos($value, '/') + 1));
-              $theme_name = substr($theme_name, 0, -4);
-
-              echo "<option value=\"", $theme_name, "\">", $theme_name, "</option>";
+            foreach($themes as $key_t=>$value_t) {
+              echo "<option value=\"", $theme_name[$key_t], "\">", $theme_name[$key_t], "</option>";
             }
           ?>
         </select>
 
-        <input type="submit" onclick="changeTheme()" value="Apply"/>
+        <input type="submit" value="Apply"/>
       </form>
 
       <h3 id="24">Cookies</h3>
@@ -115,7 +102,6 @@
 <?php include("Parts/Part2.html"); ?>
         <ul>
           <li><a class="nav-link" href="All.html">All</a></li>
-          <li><a class="nav-link" href="Categories.html">Categories</a></li>
         </ul>
 
         <hr class="divider">

@@ -1,11 +1,20 @@
-<?php $title_a = "All"; include("Parts/Part1.php"); ?>
-      <?php
-        foreach($all as $key=>$value) {
-          echo '<blockquote>
-            <img alt="' . $title[$key] . '" class="thumbnail" src="../Assets/Thumbnails/', $title[$key], '.png" onerror="this.src=\'../Assets/Thumbnails/Default.png\'"/>
-            <h4><a href="', $title[$key], '.html">', $title[$key], '</a></h4>
+<?php
+  $title = "All";
+  $author = "Omar";
+  $description = "All the articles from Omar's blog.";
 
-            <figcaption>', $author[$key], ', ', $category[$key], '</figcaption>
+  include("Parts/Part1.php");
+?>
+      <?php
+        foreach($all as $key_a=>$value_a) {
+          echo '<blockquote>
+            <img alt="' . $titles[$key_a] . '" class="thumbnail" src="../Assets/Thumbnails/', $filenames[$key_a], '.png" onerror="this.src=\'../Assets/Thumbnails/Default.png\'"/>
+            <h4><a href="', $filenames[$key_a], '.html">', $titles[$key_a], '</a></h4>
+
+            <p>' , $descriptions[$key_a], '</p>
+
+            <figcaption>', $authors[$key_a], ', ', $categories[$key_a], '</figcaption>
+            <figcaption>', filemtime($value), '</figcaption>
           </blockquote>';
         }
       ?>
@@ -13,7 +22,6 @@
 <?php include("Parts/Part2.html"); ?>
         <ul>
           <li><a class="nav-link" href="Index.html">Home</a></li>
-          <li><a class="nav-link" href="Categories.html">Categories</a></li>
         </ul>
 
 <?php include("Parts/Part3.html"); ?>

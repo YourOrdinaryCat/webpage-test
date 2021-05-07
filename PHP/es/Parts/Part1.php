@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
 
-    <title><?php echo $title_a; ?></title>
+    <title><?php echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="<?php echo $description; ?>">
+    <meta name="author" content="<?php echo $author; ?>">
 
     <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
     <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
@@ -22,4 +25,4 @@
 
   <body>
     <article class="content">
-      <h1><?php echo $title_a; ?></h1>
+      <h1><?php echo $title; ?></h1>

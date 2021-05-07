@@ -1,4 +1,11 @@
-<?php $title_a = $title[$key]; include __DIR__ . "/../Parts/Part1.php"; ?>
+<?php
+  $title = "Proyecto Masa";
+  $author = "Omar";
+  $category = "Comida";
+  $description = "Pan es increíble y todo, ¿pero no quieres dominar al mundo?";
+
+  include __DIR__ . "/../Parts/Part1.php";
+?>
       <!-- Intro paragraph -->
       <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves
         more recognition. It's truly a versatile food, and it stood the test of time
@@ -141,7 +148,7 @@
         </div>
       </div>
 
-      <?php include __DIR__ . "/../Authors/" . $author[$key] . ".html"; ?>
+      <?php include __DIR__ . "/../Authors/" . $author . ".html"; ?>
       <?php include __DIR__ . "/../Parts/Comments.html"; ?>
 
 <?php include __DIR__ . "/../Parts/Part2.html"; ?>

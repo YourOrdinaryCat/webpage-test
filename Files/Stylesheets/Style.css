@@ -36,9 +36,9 @@
 
 /* Navigation links */
 ul li a.nav-link {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
   border: 0;
   border-radius: var(--radius-strong);
