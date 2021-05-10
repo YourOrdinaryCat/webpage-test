@@ -61,6 +61,14 @@ function changeLang() {
   return false;
 }
 
+function changeLangIndex() {
+  lang = document.getElementById("lang").value;
+  makeCookies();
+
+  location = lang + '/Index.html';
+  return false;
+}
+
 function changeMode() {
   mode = document.getElementById("mode").value;
   makeCookies();
