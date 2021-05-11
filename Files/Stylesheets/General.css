@@ -19,7 +19,7 @@ html {
 
 *:focus {
   box-shadow: 0 0 0 2px var(--accent), var(--shadow-size);
-  outline: none;
+  outline: 0;
   transform: scale(1.01);
   transition: all 300ms;
 }
@@ -188,7 +188,7 @@ video {
 button,
 input[type="submit"] {
   background-color: var(--accent);
-  border: none;
+  border: 0;
   border-radius: var(--radius);
   color: var(--onAccent);
   cursor: pointer;
@@ -203,7 +203,7 @@ input[type="submit"] {
 button:hover,
 input[type="submit"]:hover {
   background-color: var(--hover-transparent);
-  border: none;
+  border: 0;
 }
 
 button:focus,
@@ -246,7 +246,7 @@ input:hover {
 
 input:focus {
   background-color: var(--elevated1);
-  border: none;
+  border: 0;
 }
 
 label {
@@ -293,7 +293,7 @@ select:hover {
 
 select:focus {
   background-color: var(--elevated1);
-  border: none;
+  border: 0;
 }
 
 /* Blockquotes (old elevated section) */
