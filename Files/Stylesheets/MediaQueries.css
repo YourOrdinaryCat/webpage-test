@@ -71,6 +71,7 @@
   }
 
   aside {
+    background-color: var(--sidebar);
     border-right: 1px solid var(--divider);
     height: 100%;
     margin-inline-end: 0;

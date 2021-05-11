@@ -1,0 +1,46 @@
+/* iOS devices */
+/* Dark mode colors (iOS) */
+:root {
+  /* Background */
+  --background: #1E1E1E;
+  --elevated1: #282828;
+  --elevated2: #282828;
+
+  /* Sidebar */
+  --sidebar: #282828;
+
+  /* Text */
+  --primary: #FFFFFFD9;
+  --secondary: #FFFFFF80;
+  --tertiary: #FFFFFF40;
+  --quaternary: #FFFFFF20;
+
+  /* Accent related */
+  --accent: #007AFF;
+  --onAccent: #FFFFFF;
+
+  /* Dividers */
+  --divider: #FFFFFF1A;
+
+  /* Hover */
+  --hover: #3A3A3C;
+  --hover-transparent: #FFFFFF40;
+
+  /* General stuff */
+  /* Color schemes */
+  color-scheme: dark;
+  
+  /* Corner radius */
+  --radius: 5px;
+  --radius-strong: 10px;
+
+  /* Form labels */
+  --caps: none;
+  --color: var(--secondary);
+  --size: small;
+  --weight: normal;
+
+  /* Shadows */
+  --shadow: #0000008C;
+  --shadow-size: 0px 0px 3px var(--shadow);
+}

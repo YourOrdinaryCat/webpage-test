@@ -26,12 +26,6 @@
     /* Hover */
     --hover: #D8D8D8;
     --hover-transparent: #0000004D;
-
-    /* Shadows */
-    --shadow: #0000004D;
-
-    /* Visited links */
-    --visited: #881798;
   }
 }
 
@@ -62,9 +56,6 @@
     /* Hover */
     --hover: #424242;
     --hover-transparent: #FFFFFF4D;
-
-    /* Visited links */
-    --visited: #881798;
   }
 }
 

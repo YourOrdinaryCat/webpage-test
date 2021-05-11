@@ -1,9 +1,6 @@
 # Welcome
 Hi GitHub user! This is a test webpage, where I put some stuff I do with HTML/CSS/PHP/JS. You'll see updates pretty often while I improve this website.
 
-## Outdated
-Gonna update the documentation when I get time. Sorry for that.
-
 ## General details
 ### CSS
 There are 3 main CSS files: `General`, `MediaQueries` and `Style`. `General` has styling for HTML elements, mostly applying colors and changing default values. `MediaQueries` contains different media queries that help make the website more accessible and usable on all screen sizes. Lastly, `Style` contains my custom styling that help simplify stuff like stacking items, making cards, etc.
@@ -33,14 +30,12 @@ If the steps above worked, that's great! Now we can get to writing.
 ### Multiple languages
 Add a folder inside `PHP` with the language code you want to add. Copy over the files from another language and check them out. It should be easy to see what needs to get changed.
 
-You should also check the root directory of another language and grab the 404 and manifest files from there.
+You need to add an extra entry to one of the `<select>` elements in the Index files with the language code as the value.
+
+You should also check the root directory of another language and grab the webmanifest file from there.
 
 ### Files
-First up, the filename. It should follow this format: `Article Title;;Author.php`. The code gets the title and author from the filename, and this it what's gonna show up in the homepage, so make sure to use a good title.
-
-You also have to assign a category. Under the PHP folder, there's a folder for every category, and all of them share the prefix `cat-` to indicate the code what it is. The prefix is only used to find the folder and is then stripped when writing the category name anywhere, so you don't need to worry about the category name looking weird with it. Just remember the prefix, or the code won't be able to see your folders.
-
-Next up, the thumbnail. They're stored in the `Assets/Thumbnails` folder and should follow this naming scheme: `Article Title.png` (and yes, it must be a PNG). If you don't want to use a thumbnail, just don't include one. The default one will be applied. Keep in mind however, if you want to include one, it will be cropped to a 1:1 aspect ratio.
+First up, the filename. It should have the same name your thumbnail file will get. Thumbnails are stored in the `Assets/Thumbnails` folder and should follow this naming scheme: `Article Filename.png` (and yes, it must be a PNG). If you don't want to use a thumbnail, just don't include one. The default one will be applied. Keep in mind however, if you want to include one, it will be cropped to a 1:1 aspect ratio.
 
 Here's the folder structure of everything in this section:
 
@@ -49,22 +44,29 @@ webpage-test
 ├── Assets
 │   └── Thumbnails
 │       ├── Default.png
-│       └── Article Name.png
+│       └── Article Filename.png
 └── PHP
     └── Language code
-        └── cat-Category Name
-            └── Article Name;;Author.php
+        └── Articles
+            └── Article Filename.php
 ```
 
 ### Getting your article in PHP files
 Now you can start actually making articles! Open the PHP file you created in the last section and paste the following inside of it:
 
 ```php
-<?php $title_a = $title[$key]; include __DIR__ . "/../Parts/Part1.php"; ?>
+<?php
+  $title = "Article title";
+  $author = "Author";
+  $category = "Category";
+  $description = "Article description";
+
+  include __DIR__ . "/../Parts/Part1.php";
+?>
       <!-- Article contents -->
 
       <!-- Author card and comments -->
-      <?php include __DIR__ . "/../Authors/" . $_SESSION["author"] . ".html"; ?>
+      <?php include __DIR__ . "/../Authors/" . $author . ".html"; ?>
       <?php include __DIR__ . "/../Parts/Comments.html"; ?>
 
 <?php include __DIR__ . "/../Parts/Part2.html"; ?>
@@ -73,7 +75,9 @@ Now you can start actually making articles! Open the PHP file you created in the
 <?php include __DIR__ . "/../Parts/Part3.html"; ?>
 ```
 
-If you want to remove comments, remove the `<?php include __DIR__ . "/../Parts/Comments.html"; ?>` line. If you don't want an author card, remove the `<?php include __DIR__ . "/../Authors/" . $_SESSION["author"] . ".html"; ?>` line.
+The variables at the beginning are used to set the title, author, category and description for the articles. These are used for the homepage and for meta tags.
+
+If you want to remove comments, remove the `<?php include __DIR__ . "/../Parts/Comments.html"; ?>` line. If you don't want an author card, remove the `<?php include __DIR__ . "/../Authors/" . $author . ".html"; ?>` line.
 
 Under `<!-- Article contents -->`... Guess what you have to put. Make sure to give individual IDs to every heading you deem relevant enough.
 
@@ -114,7 +118,7 @@ In the `PHP/Language code/Authors` folder, add a file called `Author name.html`.
 Change the `src` attribute of the image to point to your own image, or remove the whole thing if you don't want one. Replace the contents in `<h4>` with the author name and the ones in `<p>` with a small description.
 
 ### Put it all together
-Assuming you already fired up XAMPP, visit http://localhost/webpage-test/PHP/Generate.php. Click on the button shown, it will output some files to the `PHP/Output` folder. Copy those files to the project's root folder and check that http://localhost/webpage-test/ shows the blog with your articles. Congratulations! You did it! Wasn't that hard huh? Execution speed is a bit slow (almost half a second with 2 articles and 1 language), but it's good enough for me. Of course, there's more improvements to come, specially better documentation.
+Assuming you already fired up XAMPP, visit http://localhost/webpage-test/PHP/Generate.php. Click on the button shown, it will output some files to the `PHP/Output` folder. Copy those files to the project's root folder and check that http://localhost/webpage-test/ shows the blog with your articles. Congratulations! You did it! Wasn't that hard huh? Execution speed is a bit slow (about 0.25s with 2 articles and 2 languages), but it's good enough for me. Of course, there's more improvements to come, specially better documentation.
 
 ## Custom styling
 Here I'll explain what my custom styling can do. Everything in this section can be found in the `Styles.css` and `General.css` files.

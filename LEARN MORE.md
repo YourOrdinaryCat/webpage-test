@@ -50,9 +50,6 @@ webpage-test
 ```
 
 TODO:
-- Better documentation
 - Add categories picker again
+- Documentation for custom themes
 - Fix comments
-
-DONE:
-- Performance improvements

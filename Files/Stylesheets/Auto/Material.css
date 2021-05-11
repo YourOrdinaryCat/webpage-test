@@ -26,9 +26,6 @@
     /* Hover */
     --hover: #0000001A;
     --hover-transparent: #0000001A;
-    
-    /* Visited links */
-    --visited: #881798;
   }
 }
   
@@ -59,9 +56,6 @@
     /* Hover */
     --hover: #FFFFFF1A;
     --hover-transparent: #FFFFFF1A;
-
-    /* Visited links */
-    --visited: #881798;
   }
 }
 

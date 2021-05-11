@@ -19,10 +19,8 @@
             <img alt="' . $titles[$key_a] . '" class="thumbnail" src="../Assets/Thumbnails/', $filenames[$key_a], '.png" onerror="this.src=\'../Assets/Thumbnails/Default.png\'"/>
             <h4><a href="', $filenames[$key_a], '.html">', $titles[$key_a], '</a></h4>
 
-            <p>' , $descriptions[$key_a], '</p>
-
             <figcaption>', $authors[$key_a], ', ', $categories[$key_a], '</figcaption>
-            <figcaption>', filemtime($value), '</figcaption>
+            <figcaption>', date("Y-m-d", filemtime($value)), '</figcaption>
           </blockquote>';
         }
       ?>
