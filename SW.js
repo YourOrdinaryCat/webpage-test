@@ -1,4 +1,3 @@
-// Add files to cache
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open('yoc-store').then((cache) => cache.addAll([
