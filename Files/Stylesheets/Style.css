@@ -36,7 +36,6 @@
 
 /* Navigation links */
 ul li a.nav-link {
-  background-color: var(--sidebar);
   border: 0;
   border-radius: var(--radius-strong);
   color: var(--primary);
