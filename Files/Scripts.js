@@ -89,14 +89,12 @@ function makeCookies() {
 
 // Execute after DOM is loaded
 document.addEventListener("DOMContentLoaded", function() {
-  if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/webpage-test/SW.js').then(function(registration) {
-      console.log('ServiceWorker registration successful with scope:',  registration.scope);
-    }).catch(function(error) {
-      console.log('ServiceWorker registration failed:', error);
-    });
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('/webpage-test/SW.js')
+      .then(() => { console.log('Service Worker Registered'); });
   }
-  
+
   if(comments == "off") {
     document.getElementById("comments_alert").innerText = "Comments are off.";
     document.getElementById("comments_window").setAttribute("style", "display: none;");
