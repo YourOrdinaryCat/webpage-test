@@ -17,7 +17,7 @@
   ],
   "name": "Omar's Blog",
   "short_name": "Omar's Blog",
-  "start_url": "https://yourordinarycat.github.io/webpage-test/",
-  "scope": "https://yourordinarycat.github.io/webpage-test/",
-  "manifestUrl": "https://yourordinarycat.github.io/webpage-test/Manifest.webmanifest"
+  "start_url": "/webpage-test/",
+  "scope": "/webpage-test/",
+  "manifestUrl": "/webpage-test/Manifest.webmanifest"
 }
