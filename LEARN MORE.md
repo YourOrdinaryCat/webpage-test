@@ -8,48 +8,56 @@ webpage-test
 │   ├── Authors
 │   │   └── /* Author pictures (if needed) */
 │   ├── Article Name
-│   │   └── /* Assets for article */
+│   │   └── /* Article Assets */
 │   └── Thumbnails
-│       ├── Default.png       /* Fallback thumbnail */
-│       └── Article Name.png  /* Article thumbnail */
+│       ├── Default.png
+│       └── /* Article Thumbnails */
+├── Language code
+│   ├── All.html
+│   ├── Index.html
+│   └── /* Articles */
 ├── Files
 │   ├── Screenshots
-│   │   └── /* README screenshots */
+│   │   └── /* README Screenshots */
 │   ├── Stylesheets
 │   │   ├── Auto
-│   │   │   └── Theme Name.css
+│   │   │   └── /* Themes */
 │   │   ├── Dark
-│   │   │   └── Theme Name.css
+│   │   │   └── /* Themes */
 │   │   ├── Light
-│   │   │   └── Theme Name.css
+│   │   │   └── /* Themes */
 │   │   ├── General.css
 │   │   ├── MediaQueries.css
 │   │   └── Style.css
+│   ├── 404.js
 │   ├── Icon.png
-│   ├── Manifest.webmanifest
+│   ├── PWA.png
 │   └── Scripts.js
 ├── PHP
 │   ├── Language code
 │   │   ├── Articles
-│   │   │   └── Article filename.php
+│   │   │   └── /* Articles */
 │   │   ├── Authors
 │   │   │   └── /* Author cards */
 │   │   ├── Parts
-│   │   │   └── /* Article parts (1-3) and comments */
+│   │   │   ├── Comments.html
+│   │   │   ├── Part1.php
+│   │   │   ├── Part2.html
+│   │   │   └── Part3.html
 │   │   ├── All.php
-│   │   ├── Categories.php
 │   │   └── Index.php
 │   ├── Output
-│   │   └── /* Output HTML files */
+│   │   └── /* Output */
 │   └── Generate.php
-├── Language code
-│   ├── /* HTML content from Output folder */
-│   ├── 404.html
-│   └── Manifest.webmanifest
-└── README.md
+├── 404.html
+├── Index.html
+├── LEARN MORE.md
+├── Manifest.webmanifest
+├── README.md
+└── SW.js
 ```
 
 TODO:
 - Add categories picker again
-- Documentation for custom themes
+- Documentation for custom themes and how everything works
 - Fix comments

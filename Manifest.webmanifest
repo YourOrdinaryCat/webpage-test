@@ -1,0 +1,23 @@
+{
+  "background_color": "#121212",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/webpage-test/Files/PWA.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/webpage-test/Files/Icon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "name": "Omar's Blog",
+  "short_name": "Omar's Blog",
+  "start_url": "/webpage-test/",
+  "scope": "/webpage-test/",
+  "manifestUrl": "/webpage-test/Manifest.webmanifest"
+}

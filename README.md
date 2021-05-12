@@ -32,7 +32,7 @@ Add a folder inside `PHP` with the language code you want to add. Copy over the 
 
 You need to add an extra entry to one of the `<select>` elements in the Index files with the language code as the value.
 
-You should also check the root directory of another language and grab the webmanifest file from there.
+You should also add the Index file of your language to the service worker cache in the `SW.js` file.
 
 ### Files
 First up, the filename. It should have the same name your thumbnail file will get. Thumbnails are stored in the `Assets/Thumbnails` folder and should follow this naming scheme: `Article Filename.png` (and yes, it must be a PNG). If you don't want to use a thumbnail, just don't include one. The default one will be applied. Keep in mind however, if you want to include one, it will be cropped to a 1:1 aspect ratio.
