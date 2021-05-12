@@ -2,9 +2,9 @@
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open('yoc-store').then((cache) => cache.addAll([
-      '../Index.html',
-      '../en/Index.html',
-      '../es/Index.html',
+      '/webpage-test/Index.html',
+      '/webpage-test/en/Index.html',
+      '/webpage-test/es/Index.html',
     ])),
   );
 });
