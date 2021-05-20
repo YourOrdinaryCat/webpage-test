@@ -207,4 +207,4 @@ Here's how it looks:
 This is mostly just a template with some things I (likely won't) need for future projects. You can use it as well, no questions asked. However, it isn't perfect. If you ever find anything you think you can improve, feel free to make a pull request! If I think the change is good, I'll accept it. Remember that anyone can use this, so if you find improvements, they can benefit everyone!
 
 ### Can I reach out to you?
-Absolutely! Find me on [Telegram](t.me/YourOrdinaryCat) if you need anything.
+Absolutely! Find me on [Telegram](https://t.me/YourOrdinaryCat) if you need anything.
