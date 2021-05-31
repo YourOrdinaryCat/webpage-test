@@ -55,10 +55,6 @@
     background-color: var(--elevated2);
     transform: scale(1.01);
   }
-
-  ul li a.nav-link {
-    background-color: var(--elevated1);
-  }
 }
 
 /* Wide screens */

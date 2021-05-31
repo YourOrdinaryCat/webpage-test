@@ -63,5 +63,6 @@ ul li a.nav-link:hover {
 
 ul li a.nav-link:active {
   background-color: var(--accent);
+  color: var(--onAccent);
   text-decoration: none;
 }
