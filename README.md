@@ -30,9 +30,9 @@ If the steps above worked, that's great! Now we can get to writing.
 ### Multiple languages
 Add a folder inside `PHP` with the language code you want to add. Copy over the files from another language and check them out. It should be easy to see what needs to get changed.
 
-You need to add an extra entry to one of the `<select>` elements in the Index files with the language code as the value. Don't forget to add the app install experience in the root folder (`PWA-Language code.html`) and change the link to the install experience (first option under settings).
+You need to add an extra entry to one of the `<select>` elements in the Index files with the language code as the value. Don't forget to add the webmanifest and service worker files to the language folder.
 
-You should also add the Index file of your language to the service worker cache in the `SW.js` file.
+You should also add the Index file of your language to the service worker cache in the `SW.js` files.
 
 ### Files
 First up, the filename. It should have the same name your thumbnail file will get. Thumbnails are stored in the `Assets/Thumbnails` folder and should follow this naming scheme: `Article Filename.png` (and yes, it must be a PNG). If you don't want to use a thumbnail, just don't include one. The default one will be applied. Keep in mind however, if you want to include one, it will be cropped to a 1:1 aspect ratio.

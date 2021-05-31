@@ -91,7 +91,7 @@ function makeCookies() {
 document.addEventListener("DOMContentLoaded", function() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('/webpage-test/SW.js')
+      .register('/webpage-test/' + lang + '/SW.js')
       .then(() => { console.log('Service Worker Registered'); });
   }
 

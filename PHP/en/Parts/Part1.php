@@ -19,6 +19,8 @@
     <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
 
     <link rel="icon" type="image/png" href="../Files/Icon.png"/>
+
+    <link rel="manifest" href="Manifest.webmanifest">
   </head>
 
   <body>

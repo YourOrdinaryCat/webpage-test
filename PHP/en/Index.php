@@ -27,10 +27,7 @@
 
       <!-- Settings -->
       <h2 id="2">Settings</h2>
-      <h3 id="21">PWA</h3>
-      <p>You can install this website as a PWA! <a href="../PWA-en.html">Install it here...</a></p>
-
-      <h3 id="22">Comments</h3>
+      <h3 id="21">Comments</h3>
       <form onsubmit="return changeComments();">
         <label for="comments">Comments</label>
         <br>
@@ -42,7 +39,7 @@
         <input type="submit" value="Apply" />
       </form>
 
-      <h3 id="23">Language</h3>
+      <h3 id="22">Language</h3>
       <form onsubmit="return changeLang();">
         <label for="lang">Language</label>
         <br>
@@ -54,7 +51,7 @@
         <input type="submit" value="Apply" />
       </form>
 
-      <h3 id="24">Theming</h3>
+      <h3 id="23">Theming</h3>
       <form onsubmit="return changeMode();">
         <label for="mode">Select theme mode</label>
         <br>
@@ -82,7 +79,7 @@
         <input type="submit" value="Apply"/>
       </form>
 
-      <h3 id="25">Cookies</h3>
+      <h3 id="24">Cookies</h3>
       <p>For settings to save correctly, cookies are needed. Here you're able to see what
         values are stored in currently active cookies. If the website breaks, delete your
         cookies and it should work fine again.
@@ -117,11 +114,10 @@
             <hr class="divider"/>
           </summary>
           <ul>
-            <li><a class="nav-link" href="#21">PWA</a></li>
-            <li><a class="nav-link" href="#22">Comments</a></li>
-            <li><a class="nav-link" href="#23">Language</a></li>
-            <li><a class="nav-link" href="#24">Theming</a></li>
-            <li><a class="nav-link" href="#25">Cookies</a></li>
+            <li><a class="nav-link" href="#21">Comments</a></li>
+            <li><a class="nav-link" href="#22">Language</a></li>
+            <li><a class="nav-link" href="#23">Theming</a></li>
+            <li><a class="nav-link" href="#24">Cookies</a></li>
           </ul>
         </details>
 

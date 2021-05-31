@@ -27,10 +27,7 @@
 
       <!-- Settings -->
       <h2 id="2">Configuración</h2>
-      <h3 id="21">Aplicación Web</h3>
-      <p>¡Puedes instalar este sitio web como una aplicación! <a href="../PWA-es.html">Instálalo aquí...</a></p>
-
-      <h3 id="22">Comentarios</h3>
+      <h3 id="21">Comentarios</h3>
       <form onsubmit="return changeComments();">
         <label for="comments">Comentarios</label>
         <br>
@@ -42,7 +39,7 @@
         <input type="submit" value="Apply" />
       </form>
 
-      <h3 id="23">Idioma</h3>
+      <h3 id="22">Idioma</h3>
       <form onsubmit="return changeLang();">
         <label for="lang">Idioma</label>
         <br>
@@ -54,7 +51,7 @@
         <input type="submit" value="Apply" />
       </form>
 
-      <h3 id="24">Temas</h3>
+      <h3 id="23">Temas</h3>
       <form onsubmit="return changeMode();">
         <label for="mode">Modo</label>
         <br>
@@ -82,7 +79,7 @@
         <input type="submit" value="Apply"/>
       </form>
 
-      <h3 id="25">Cookies</h3>
+      <h3 id="24">Cookies</h3>
       <p>Para que los ajustes se guarden correctamente, necesitas cookies. Aquí
         puedes ver lo que contienen. Si el sitio da problemas, elimina las cookies
         y debe funcionar bien de nuevo.
@@ -117,11 +114,10 @@
             <hr class="divider"/>
           </summary>
           <ul>
-            <li><a class="nav-link" href="#21">Aplicación Web</a></li>
-            <li><a class="nav-link" href="#22">Comentarios</a></li>
-            <li><a class="nav-link" href="#23">Idioma</a></li>
-            <li><a class="nav-link" href="#24">Temas</a></li>
-            <li><a class="nav-link" href="#25">Cookies</a></li>
+            <li><a class="nav-link" href="#21">Comentarios</a></li>
+            <li><a class="nav-link" href="#22">Idioma</a></li>
+            <li><a class="nav-link" href="#23">Temas</a></li>
+            <li><a class="nav-link" href="#24">Cookies</a></li>
           </ul>
         </details>
 
