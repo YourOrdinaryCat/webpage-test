@@ -22,7 +22,7 @@ First off, download a program that allows you to run PHP files. Personally I rec
 
 After this, you have to clone the repo and stuff, you're probably already familiar with this. The folder with the repo will have to go under the htdocs folder inside XAMPP's installation folder.
 
-Now that you set everything up, open up the XAMPP Control Panel. Start the Apache module and check that visiting [localhost/webpage-test/PHP/Generate.php](localhost/webpage-test/PHP/Generate.php) in your browser shows something. If it doesn't, check your folder structure. It should be along the lines of `XAMPP Folder/htdocs/webpage-test/`. Check that the `Generate.php` file exists in the `PHP` folder too. If it still doesn't work then idk I can't see what you're doing wrong it works for me fix it up yourself.
+Now that you set everything up, open up the XAMPP Control Panel. Start the Apache module and check that visiting http://localhost/webpage-test/PHP/Generate.php in your browser shows something. If it doesn't, check your folder structure. It should be along the lines of `XAMPP Folder/htdocs/webpage-test/`. Check that the `Generate.php` file exists in the `PHP` folder too. If it still doesn't work then idk I can't see what you're doing wrong it works for me fix it up yourself.
 
 ## Writing an article
 If the steps above worked, that's great! Now we can get to writing.
