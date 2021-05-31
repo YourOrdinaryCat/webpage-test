@@ -124,6 +124,7 @@
 
     <?php
       if(isset($_SESSION["exec_time"])) {
+        echo "<hr class='divider'>";
         echo "<p>Time elapsed in last run: ", $_SESSION["exec_time"] * 1000 , "ms</p>";
       }
     ?>
@@ -133,7 +134,7 @@
     <nav>
       <h1>Testing</h1>
       <ul>
-        <li><a class="nav-link" href="/webpage-test/">Home</a></li>
+        <li><a class="nav-link" href="/webpage-test/">Homepage</a></li>
       </ul>
     </nav>
   </aside>

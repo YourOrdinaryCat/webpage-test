@@ -18,8 +18,6 @@
     <script src="../Files/Scripts.js"></script>
     <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
 
-    <link rel="manifest" href="../Manifest.webmanifest">
-
     <link rel="icon" type="image/png" href="../Files/Icon.png"/>
   </head>
 
