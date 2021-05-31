@@ -19,6 +19,7 @@
     <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
 
     <link rel="icon" type="image/png" href="../Files/Icon.png"/>
+    <link rel="apple-touch-icon" href="../Files/PWA.png"/>
 
     <link rel="manifest" href="Manifest.webmanifest">
   </head>
