@@ -27,10 +27,17 @@
 
       <!-- Settings -->
       <h2 id="2">Configuración</h2>
-      <h3 id="21">Comentarios</h3>
+      <h3 id="21">Aplicación Web</h3>
+      <p>¡Puedes instalar este sitio como una aplicación web! Serás dirigido a la pantalla de selección de lenguaje, donde debes presionar "Añadir a Pantalla de Inicio".</p>
+
+      <hr class="divider">
+
+      <p><strong>ADVERTENCIA:</strong> ¡Esto no funcionará en algunos navegadores/dispositivos! Si no funciona, revisa el internet, encontrarás ayuda ahí.</p>
+      <button onclick="return installPWA();">Instalar</button>
+
+      <h3 id="22">Comentarios</h3>
       <form onsubmit="return changeComments();">
         <label for="comments">Comentarios</label>
-        <br>
         <select id="comments" type="text">
           <option value="off">Deshabilitar</option>
           <option value="on">Habilitar</option>
@@ -39,10 +46,9 @@
         <input type="submit" value="Apply" />
       </form>
 
-      <h3 id="22">Idioma</h3>
+      <h3 id="23">Idioma</h3>
       <form onsubmit="return changeLang();">
         <label for="lang">Idioma</label>
-        <br>
         <select id="lang" type="text">
           <option value="en">Inglés</option>
           <option value="es">Español</option>
@@ -51,10 +57,9 @@
         <input type="submit" value="Apply" />
       </form>
 
-      <h3 id="23">Temas</h3>
+      <h3 id="24">Temas</h3>
       <form onsubmit="return changeMode();">
         <label for="mode">Modo</label>
-        <br>
         <select id="mode" type="text">
           <option value="Auto">Automático</option>
           <option value="Dark">Oscuro</option>
@@ -66,7 +71,6 @@
 
       <form onsubmit="return changeTheme();">
         <label for="theme">Tema</label>
-        <br>
         <select id="theme" type="text">
           <?php
             // For every item in the array, add an entry
@@ -79,7 +83,7 @@
         <input type="submit" value="Apply"/>
       </form>
 
-      <h3 id="24">Cookies</h3>
+      <h3 id="25">Cookies</h3>
       <p>Para que los ajustes se guarden correctamente, necesitas cookies. Aquí
         puedes ver lo que contienen. Si el sitio da problemas, elimina las cookies
         y debe funcionar bien de nuevo.
@@ -96,6 +100,9 @@
       <h3 id="32">Código fuente</h3>
       <p>El código fuente de este blog se puede ver <a href="https://github.com/YourOrdinaryCat/webpage-test">
       aquí</a>. El autor es <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
+
+      <h3 id="33">Normalize.css</h3>
+      <p>Una alternativa moderna a resetos de CSS. <a href="https://github.com/necolas/normalize.css">Aprende más...</a></p>
 
 <?php include("Parts/Part2.html"); ?>
         <ul>
@@ -114,10 +121,11 @@
             <hr class="divider"/>
           </summary>
           <ul>
-            <li><a class="nav-link" href="#21">Comentarios</a></li>
-            <li><a class="nav-link" href="#22">Idioma</a></li>
-            <li><a class="nav-link" href="#23">Temas</a></li>
-            <li><a class="nav-link" href="#24">Cookies</a></li>
+            <li><a class="nav-link" href="#21">Aplicación Web</a></li>
+            <li><a class="nav-link" href="#22">Comentarios</a></li>
+            <li><a class="nav-link" href="#23">Idioma</a></li>
+            <li><a class="nav-link" href="#24">Temas</a></li>
+            <li><a class="nav-link" href="#25">Cookies</a></li>
           </ul>
         </details>
 
@@ -129,6 +137,7 @@
           <ul>
             <li><a class="nav-link" href="#31">Comentarios</a></li>
             <li><a class="nav-link" href="#32">Código fuente</a></li>
+            <li><a class="nav-link" href="#33">Normalize.css</a></li>
           </ul>
         </details>
 

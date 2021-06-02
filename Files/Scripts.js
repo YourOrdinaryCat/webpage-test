@@ -47,6 +47,15 @@ function addMonths(date, months) {
 // Add one month to current date, pass to variable
 inMonth = addMonths(new Date(),1).toString();
 
+// PWA Installation
+function installPWA() {
+  lang = "unset";
+  makeCookies();
+
+  location = '../Index.html';
+  return false;
+}
+
 // Form handling
 function changeComments() {
   comments = document.getElementById("comments").value;
@@ -91,12 +100,15 @@ function makeCookies() {
 document.addEventListener("DOMContentLoaded", function() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('/webpage-test/' + lang + '/SW.js')
+      .register('/webpage-test/SW.js')
       .then(() => { console.log('Service Worker Registered'); });
   }
 
   if(comments == "off") {
-    document.getElementById("comments_alert").innerText = "Comments are off.";
+    document.getElementById("comments_alert").setAttribute("style", "display: block;");
     document.getElementById("comments_window").setAttribute("style", "display: none;");
+  } else {
+    document.getElementById("comments_alert").setAttribute("style", "display: none;");
+    document.getElementById("comments_window").setAttribute("style", "display: block;");
   }
 });

@@ -27,10 +27,17 @@
 
       <!-- Settings -->
       <h2 id="2">Settings</h2>
-      <h3 id="21">Comments</h3>
+      <h3 id="21">PWA</h3>
+      <p>You can install this website as a PWA! You'll get redirected to the language select screen, where you should click on the "Add to Homescreen" dialog.</p>
+
+      <hr class="divider">
+
+      <p><strong>DISCLAIMER:</strong> This won't work on some browsers/devices! If it doesn't work, check the internet, you'll be able to get help there.</p>
+      <button onclick="return installPWA();">Install</button>
+
+      <h3 id="22">Comments</h3>
       <form onsubmit="return changeComments();">
         <label for="comments">Comments</label>
-        <br>
         <select id="comments" type="text">
           <option value="off">Disable</option>
           <option value="on">Enable</option>
@@ -39,10 +46,9 @@
         <input type="submit" value="Apply" />
       </form>
 
-      <h3 id="22">Language</h3>
+      <h3 id="23">Language</h3>
       <form onsubmit="return changeLang();">
         <label for="lang">Language</label>
-        <br>
         <select id="lang" type="text">
           <option value="en">English</option>
           <option value="es">Spanish</option>
@@ -51,10 +57,9 @@
         <input type="submit" value="Apply" />
       </form>
 
-      <h3 id="23">Theming</h3>
+      <h3 id="24">Theming</h3>
       <form onsubmit="return changeMode();">
         <label for="mode">Select theme mode</label>
-        <br>
         <select id="mode" type="text">
           <option value="Auto">Auto</option>
           <option value="Dark">Dark</option>
@@ -66,7 +71,6 @@
 
       <form onsubmit="return changeTheme();">
         <label for="theme">Select theme</label>
-        <br>
         <select id="theme" type="text">
           <?php
             // For every item in the array, add an entry
@@ -79,7 +83,7 @@
         <input type="submit" value="Apply"/>
       </form>
 
-      <h3 id="24">Cookies</h3>
+      <h3 id="25">Cookies</h3>
       <p>For settings to save correctly, cookies are needed. Here you're able to see what
         values are stored in currently active cookies. If the website breaks, delete your
         cookies and it should work fine again.
@@ -96,6 +100,9 @@
       <h3 id="32">Source Code</h3>
       <p>This blog's source code can be found <a href="https://github.com/YourOrdinaryCat/webpage-test">
       here</a>. The author is <a href="https://github.com/YourOrdinaryCat">YourOrdinaryCat</a>.</p>
+
+      <h3 id="33">Normalize.css</h3>
+      <p>A modern alternative to CSS resets. <a href="https://github.com/necolas/normalize.css">Learn more...</a></p>
 
 <?php include("Parts/Part2.html"); ?>
         <ul>
@@ -114,10 +121,11 @@
             <hr class="divider"/>
           </summary>
           <ul>
-            <li><a class="nav-link" href="#21">Comments</a></li>
-            <li><a class="nav-link" href="#22">Language</a></li>
-            <li><a class="nav-link" href="#23">Theming</a></li>
-            <li><a class="nav-link" href="#24">Cookies</a></li>
+            <li><a class="nav-link" href="#21">PWA</a></li>
+            <li><a class="nav-link" href="#22">Comments</a></li>
+            <li><a class="nav-link" href="#23">Language</a></li>
+            <li><a class="nav-link" href="#24">Theming</a></li>
+            <li><a class="nav-link" href="#25">Cookies</a></li>
           </ul>
         </details>
 
@@ -129,6 +137,7 @@
           <ul>
             <li><a class="nav-link" href="#31">Comments</a></li>
             <li><a class="nav-link" href="#32">Source Code</a></li>
+            <li><a class="nav-link" href="#33">Normalize.css</a></li>
           </ul>
         </details>
 

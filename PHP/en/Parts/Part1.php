@@ -9,6 +9,8 @@
     <meta name="description" content="<?php echo $description; ?>">
     <meta name="author" content="<?php echo $author; ?>">
 
+    <link rel="stylesheet" href="../Files/Stylesheets/Normalize.css"/>
+
     <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
     <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
     <link rel="stylesheet" href="../Files/Stylesheets/Style.css"/>

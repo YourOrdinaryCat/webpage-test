@@ -17,6 +17,6 @@
   ],
   "name": "Omar's Blog",
   "short_name": "Omar's Blog",
-  "start_url": "/webpage-test/en/Index.html",
-  "scope": "/webpage-test/en/"
+  "start_url": "/webpage-test/",
+  "scope": "/webpage-test/"
 }
