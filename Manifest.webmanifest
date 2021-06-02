@@ -1,5 +1,6 @@
 {
   "background_color": "#121212",
+  "description": "PWA for this website.",
   "display": "standalone",
   "icons": [
     {
