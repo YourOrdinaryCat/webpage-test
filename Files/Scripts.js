@@ -52,7 +52,7 @@ function installPWA() {
   lang = "unset";
   makeCookies();
 
-  location = '../Index.html';
+  location = '../';
   return false;
 }
 
