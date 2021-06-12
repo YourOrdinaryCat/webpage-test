@@ -28,11 +28,7 @@
       <!-- Settings -->
       <h2 id="2">Settings</h2>
       <h3 id="21">PWA</h3>
-      <p>You can install this website as a PWA! You'll get redirected to the language select screen, where you should click on the "Add to Homescreen" dialog.</p>
-
-      <hr class="divider">
-
-      <p><strong>DISCLAIMER:</strong> This won't work on some browsers/devices! If it doesn't work, check the internet, you'll be able to get help there.</p>
+      <p>You can install this website as a PWA! You'll get redirected to the language select screen, where you should click on the "Install" button. If it doesn't show up, your browser isn't compatible.</p>
       <button onclick="return installPWA();">Install</button>
 
       <h3 id="22">Comments</h3>

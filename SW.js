@@ -1,6 +1,6 @@
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('yoc-store').then((cache) => cache.addAll([
+    caches.open('ordinary-store').then((cache) => cache.addAll([
       '/webpage-test/',
       '/webpage-test/Index.html',
       '/webpage-test/en/Index.html',

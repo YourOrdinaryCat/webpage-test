@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="Files/Stylesheets/MediaQueries.css"/>
     <link rel="stylesheet" href="Files/Stylesheets/Style.css"/>
 
-    <script src="PWA.js"></script>
+    <script src="PWA.js" defer></script>
     <link rel="manifest" href="Manifest.webmanifest"/>
 
     <link rel="icon" type="image/png" href="Files/Icon.png"/>
@@ -45,8 +45,12 @@
           <option lang="es" value="es">Español</option>
         </select>
 
-        <input type="submit" value="✓" />
+        <input type="submit" value="Redirect" />
       </form>
+
+      <hr class="divider">
+
+      <button id="pwa" style="display: none;">Install</button>
     </article>
 
     <aside>

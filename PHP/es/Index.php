@@ -28,11 +28,7 @@
       <!-- Settings -->
       <h2 id="2">Configuración</h2>
       <h3 id="21">Aplicación Web</h3>
-      <p>¡Puedes instalar este sitio como una aplicación web! Serás dirigido a la pantalla de selección de lenguaje, donde debes presionar "Añadir a Pantalla de Inicio".</p>
-
-      <hr class="divider">
-
-      <p><strong>ADVERTENCIA:</strong> ¡Esto no funcionará en algunos navegadores/dispositivos! Si no funciona, revisa el internet, encontrarás ayuda ahí.</p>
+      <p>¡Puedes instalar este sitio como una aplicación web! Serás dirigido a la pantalla de selección de lenguaje, donde debes presionar el botón que dice "Install". Si no aparece, tu navegador no es compatible.</p>
       <button onclick="return installPWA();">Instalar</button>
 
       <h3 id="22">Comentarios</h3>
