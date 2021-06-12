@@ -2,7 +2,7 @@ self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open('ordinary-store').then((cache) => cache.addAll([
       '/webpage-test/',
-      '/webpage-test/Index.html',
+      '/webpage-test/index.html',
       '/webpage-test/en/Index.html',
       '/webpage-test/es/Index.html',
     ])),
