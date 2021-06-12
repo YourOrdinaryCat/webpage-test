@@ -1,6 +1,6 @@
-/* Applies to everything */
+/* Applies to every element */
 * {
-  transition: all 600ms;
+  transition: background 300ms, color 150ms, transform 300ms;
 }
 
 *:focus {
@@ -54,25 +54,25 @@ h4 {
 
 /* Heading 1 */
 h1 {
-  font-size: xx-large;
+  font-size: 2em;
   margin-block-start: 32px;
 }
 
 /* Heading 2 */
 h2 {
-  font-size: x-large;
+  font-size: 1.5em;
   margin-block-start: 24px;
 }
 
 /* Heading 3 */
 h3 {
-  font-size: large;
+  font-size: 1.17em;
   margin-block-start: 16px;
 }
 
 /* Heading 4 */
 h4 {
-  font-size: medium;
+  font-size: 1em;
   margin-block-start: 8px;
 }
 
@@ -112,7 +112,7 @@ details h3 a {
 }
 
 details[open] summary ~ * {
-  animation: open 600ms;
+  animation: open 300ms;
 }
 
 details[open] hr.divider {
@@ -134,7 +134,7 @@ details summary::-webkit-details-marker {
 figcaption {
   box-sizing: content-box;
   color: var(--secondary);
-  font-size: small;
+  font-size: 80%;
   padding: 0 var(--radius) 1em var(--radius);
 }
 
@@ -145,7 +145,6 @@ figcaption a {
 /* Paragraphs */
 p {
   color: var(--primary);
-  font-size: medium;
   margin-block-end: 8px;
   margin-block-start: 0;
 }
@@ -184,6 +183,16 @@ video {
   max-width: calc(100% - 2px);
 }
 
+/* Dividers */
+hr.divider {
+  border-color: var(--divider);
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  max-width: 100%;
+}
+
 /* Buttons */
 button,
 input[type="submit"] {
@@ -211,18 +220,8 @@ input[type="submit"]:focus {
   box-shadow: var(--shadow-size);
 }
 
-/* Dividers */
-hr.divider {
-  border-color: var(--divider);
-  border-style: solid;
-  border-width: 1px 0 0 0;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
-  max-width: 100%;
-}
-
 /* Forms */
-input {
+input, select {
   /* Browser specific */
   -moz-appearance: none; 
 	-webkit-appearance: none;
@@ -232,25 +231,33 @@ input {
   border: 1px solid var(--divider);
   border-radius: var(--radius);
   color: var(--primary);
-  font-weight: bold;
   height: 2em;
   max-width: 200px;
   padding-inline-end: var(--radius);
   padding-inline-start: var(--radius);
 }
 
-input:hover {
+input {
+  font-weight: bold;
+}
+
+select {
+  width: 200px;
+}
+
+input:hover, select:hover {
   border: 1px solid var(--secondary);
 }
 
-input:focus {
+input:focus, select:focus {
   background-color: var(--elevated1);
   border: 0;
 }
 
+/* Form labels */
 label {
   color: var(--color);
-  font-size: small;
+  font-size: 80%;
   font-weight: var(--weight);
   margin-inline-start: var(--radius);
   text-transform: var(--caps);
@@ -272,32 +279,6 @@ option {
   border-radius: var(--radius);
   color: var(--primary);
   white-space: normal;
-}
-
-select {
-  /* Browser specific */
-  -moz-appearance: none; 
-	-webkit-appearance: none;
-
-  appearance: none;
-  background-color: var(--background);
-  border: 1px solid var(--divider);
-  border-radius: var(--radius);
-  color: var(--primary);
-  font-weight: bold;
-  height: 2em;
-  padding-inline-end: var(--radius);
-  padding-inline-start: var(--radius);
-  width: 200px;
-}
-
-select:hover {
-  border: 1px solid var(--secondary);
-}
-
-select:focus {
-  background-color: var(--elevated1);
-  border: 0;
 }
 
 /* Blockquotes (old elevated section) */

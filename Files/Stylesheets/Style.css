@@ -46,6 +46,7 @@ ul li a.nav-link {
   padding: 8px;
   padding-inline-end: 4px;
   padding-inline-start: calc(8px + 1em);
+  transition: transform 300ms;
   width: calc(100% - 12px - 1em);
 }
 
