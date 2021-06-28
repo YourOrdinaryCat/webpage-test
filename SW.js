@@ -3,8 +3,8 @@ self.addEventListener('install', (e) => {
     caches.open('ordinary-store').then((cache) => cache.addAll([
       '/webpage-test/',
       '/webpage-test/index.html',
-      '/webpage-test/en/Index.html',
-      '/webpage-test/es/Index.html',
+      '/webpage-test/en/index.html',
+      '/webpage-test/es/index.html',
     ])),
   );
 });
