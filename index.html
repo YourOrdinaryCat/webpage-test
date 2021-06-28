@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="Files/Stylesheets/MediaQueries.css"/>
     <link rel="stylesheet" href="Files/Stylesheets/Style.css"/>
 
-    <script src="PWA.js" defer></script>
     <link rel="manifest" href="Manifest.webmanifest"/>
 
     <link rel="icon" type="image/png" href="Files/Icon.png"/>
@@ -26,7 +25,7 @@
 
     <noscript><link rel="stylesheet" href="Files/Stylesheets/Auto/Material.css"/></noscript>
   </head>
-    
+
   <body>
     <!-- If language is set, redirect user -->
     <script>
@@ -34,33 +33,41 @@
         window.location.href = lang + "/Index.html";
       }
     </script>
+
     <article class="content">
       <h1>Language selection</h1>
-      <p>Select your language / Selecciona tu idioma.</p>
 
-      <form onsubmit="return changeLangIndex();">
-        <label for="lang">Languages</label>
-        <select id="lang" type="text">
-          <option lang="en" value="en">English</option>
-          <option lang="es" value="es">Español</option>
-        </select>
+      <div id="lang-form">
 
-        <input type="submit" value="Redirect" />
-      </form>
+      </div>
 
-      <hr class="divider">
+      <script>
+        document.getElementById('lang-form').insertAdjacentHTML('afterbegin', `<p>Select your language / Selecciona tu idioma.</p>
+        <form onsubmit="return changeLangIndex();">
+          <label for="lang">Languages</label>
+          <select id="lang" type="text">
+            <option lang="en" value="en">English</option>
+            <option lang="es" value="es">Español</option>
+          </select>
 
-      <button id="pwa" style="display: none;">Install</button>
-    </article>
+          <input type="submit" value="Redirect" />
+        </form>`)
+      </script>
 
-    <aside>
       <nav>
-        <h1>Languages</h1>
-        <ul>
-          <li><a class="nav-link" href="en/Index.html">English</a></li>
-          <li><a class="nav-link" href="es/Index.html">Español</a></li>
-        </ul>
+        <details open>
+          <summary>
+            <h1>Contents</h1>
+          </summary>
+
+          <ul>
+            <li><a class="list-link" href="en/Index.html">English</a></li>
+            <li><a class="list-link" href="es/Index.html">Español</a></li>
+          </ul>
+
+        </details>
       </nav>
-    </aside>
+
+    </article>
   </body>
 </html>

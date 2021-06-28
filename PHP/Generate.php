@@ -96,46 +96,49 @@
   }
 ?>
 
-<head>
-  <meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
 
-  <title>Static Files Generator</title>
+    <title>Static Files Generator</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
-  <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
-  <link rel="stylesheet" href="../Files/Stylesheets/Style.css"/>
+    <link rel="stylesheet" href="../Files/Stylesheets/Normalize.css"/>
 
-  <link id="theme-name" rel="stylesheet"/>
+    <link rel="stylesheet" href="../Files/Stylesheets/General.css"/>
+    <link rel="stylesheet" href="../Files/Stylesheets/MediaQueries.css"/>
+    <link rel="stylesheet" href="../Files/Stylesheets/Style.css"/>
 
-  <script src="../Files/Scripts.js"></script>
+    <link id="theme-name" rel="stylesheet"/>
 
-  <link rel="icon" type="image/png" href="../Files/icon.png"/>
-</head>
+    <script src="../Files/Scripts.js"></script>
+    <noscript><link rel="stylesheet" href="../Files/Stylesheets/Auto/Material.css"/></noscript>
 
-<body>
-  <article class="content">
-    <h1>Static Files Generator</h1>
-    <p>Welcome. Here, you can generate the static files from your PHP files. Click the button below to proceed.</p>
-    <form method="post">
-      <input type="submit" name="generate" value="Generate Files"/>
-    </form>
+    <link rel="icon" type="image/png" href="../Files/icon.png"/>
+  </head>
 
-    <?php
-      if(isset($_SESSION["exec_time"])) {
-        echo "<hr class='divider'>";
-        echo "<p>Time elapsed in last run: ", $_SESSION["exec_time"] * 1000 , "ms</p>";
-      }
-    ?>
-  </article>
+  <body>
+    <article class="content">
+      <h1>Static Files Generator</h1>
+      <nav>
+        <h1>Testing</h1>
+        <ul>
+          <li><a class="list-link" href="/webpage-test/">Homepage</a></li>
+        </ul>
+      </nav>
 
-  <aside>
-    <nav>
-      <h1>Testing</h1>
-      <ul>
-        <li><a class="nav-link" href="/webpage-test/">Homepage</a></li>
-      </ul>
-    </nav>
-  </aside>
-</body>
+      <p>Welcome. Here, you can generate the static files from your PHP files. Click the button below to proceed.</p>
+      <form method="post">
+        <input type="submit" name="generate" value="Generate Files"/>
+      </form>
+
+      <?php
+        if(isset($_SESSION["exec_time"])) {
+          echo "<hr class='divider'>";
+          echo "<p>Time elapsed in last run: ", $_SESSION["exec_time"] * 1000 , "ms</p>";
+        }
+      ?>
+    </article>
+  </body>
+</html>

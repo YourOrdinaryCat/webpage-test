@@ -3,7 +3,7 @@ Hi GitHub user! This is a test webpage, where I put some stuff I do with HTML/CS
 
 ## General details
 ### CSS
-There are 3 main CSS files: `General`, `MediaQueries` and `Style`. `General` has styling for HTML elements, mostly applying colors and changing default values. `MediaQueries` contains different media queries that help make the website more accessible and usable on all screen sizes. Lastly, `Style` contains my custom styling that help simplify stuff like stacking items, making cards, etc.
+There are 3 main CSS files: `General`, `MediaQueries` and `Style`. `General` has styling for HTML elements, mostly applying colors and changing default values. `MediaQueries` contains different media queries that help make the website more accessible and usable on all screen sizes. Lastly, `Style` contains my custom styling that help simplify stuff like stacking items, making cards, etc. There's also Normalize, which is mostly unchanged.
 
 ### HTML
 The HTML is generated from PHP files. I use HTML to get GitHub Pages support.
@@ -35,7 +35,7 @@ You need to add an extra entry to one of the `<select>` elements in the Index fi
 You should also add the Index file of your language to the service worker cache in the `SW.js` file.
 
 ### Files
-First up, the filename. It should have the same name your thumbnail file will get. Thumbnails are stored in the `Assets/Thumbnails` folder and should follow this naming scheme: `Article Filename.png` (and yes, it must be a PNG). If you don't want to use a thumbnail, just don't include one. The default one will be applied. Keep in mind however, if you want to include one, it will be cropped to a 1:1 aspect ratio.
+First up, the filename. It should have the same name your thumbnail file will get. Thumbnails are stored in the `Assets/Thumbnails` folder and should follow this naming scheme: `Article Filename.png` (and yes, it must be a PNG). Keep in mind that the thumbnail it will be cropped to a 1:1 aspect ratio.
 
 Here's the folder structure of everything in this section:
 
@@ -43,7 +43,6 @@ Here's the folder structure of everything in this section:
 webpage-test
 ├── Assets
 │   └── Thumbnails
-│       ├── Default.png
 │       └── Article Filename.png
 └── PHP
     └── Language code
@@ -63,6 +62,16 @@ Now you can start actually making articles! Open the PHP file you created in the
 
   include __DIR__ . "/../Parts/Part1.php";
 ?>
+      <nav>
+        <details open>
+          <summary>
+            <h1>Contents</h1>
+          </summary>
+
+          <!-- Outline -->
+
+        </details>
+      </nav>
       <!-- Article contents -->
 
       <!-- Author card and comments -->
@@ -70,9 +79,6 @@ Now you can start actually making articles! Open the PHP file you created in the
       <?php include __DIR__ . "/../Parts/Comments.html"; ?>
 
 <?php include __DIR__ . "/../Parts/Part2.html"; ?>
-      <!-- Outline -->
-
-<?php include __DIR__ . "/../Parts/Part3.html"; ?>
 ```
 
 The variables at the beginning are used to set the title, author, category and description for the articles. These are used for the homepage and for meta tags.
@@ -91,14 +97,14 @@ For the outline, use the following format:
     <hr class="divider"/>
   </summary>
   <ul>
-    <li><a class="nav-link" href="#subheading1-id">Subheading 1</a></li>
-    <li><a class="nav-link" href="#subheading2-id">Subheading 2</a></li>
+    <li><a class="list-link" href="#subheading1-id">Subheading 1</a></li>
+    <li><a class="list-link" href="#subheading2-id">Subheading 2</a></li>
   </ul>
 </details>
 
 <!-- Headings without subheadings -->
 <ul>
-  <li><a class="nav-link" href="#heading-id">Heading</a></li>
+  <li><a class="list-link" href="#heading-id">Heading</a></li>
 </ul>
 ```
 
@@ -167,27 +173,10 @@ And here's how it looks on a big screen:
 
 ![hstack-wrap-big](Files/Screenshots/hstack-wrap-big.png)
 
-On small screens (800px width or less), it wraps, and every item uses 100% of the screen width. On big screens (800px width or more), it has the same behaviour that `hstack-nw` does.
+On small screens (480px width or less), it wraps, and every item uses 100% of the screen width. On wide screens (481px width or more), it has the same behaviour that `hstack-nw` does.
 
-### Cards
-For cards, I use the `blockquote` and `details` elements. They both can give you different cards depending on your needs.
-
-#### blockquote
-These are normal cards, using `h4` for the title is recommended.
-
-```html
-<blockquote>
-  <h4>Title</h4>
-  /* Your stuff */
-</blockquote>
-```
-
-Here's how it looks:
-
-![blockquote](Files/Screenshots/blockquote.png)
-
-#### details class="card"
-These are like blockquotes, with the difference being that it's a fixed size. It reveals its contents on tap (when opening the `details` element).
+### details class="card"
+This is a card. It reveals its contents on tap (when opening the `details` element), can be expanded and collapsed, and you can choose its default status by adding the `open` attribute to the element (`<details class="card" open>`).
 
 ```html
 <details class="card">

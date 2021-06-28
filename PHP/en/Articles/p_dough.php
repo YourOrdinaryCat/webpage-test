@@ -6,6 +6,37 @@
 
   include __DIR__ . "/../Parts/Part1.php";
 ?>
+
+      <nav>
+        <details open>
+          <summary>
+            <h1>Contents</h1>
+          </summary>
+
+          <details>
+            <summary>
+              <h3><a href="#1">Bread</a></h3>
+              <hr class="divider"/>
+            </summary>
+            <ul>
+              <li><a class="list-link" href="#11">Quotes</a></li>
+              <li><a class="list-link" href="#12">Fun Facts</a></li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <h3><a href="#2">Our Plans</a></h3>
+              <hr class="divider"/>
+            </summary>
+            <ul>
+              <li><a class="list-link" href="#21">Video Plans</a></li>
+            </ul>
+          </details>
+
+        </details>
+      </nav>
+
       <!-- Intro paragraph -->
       <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves
         more recognition. It's truly a versatile food, and it stood the test of time
@@ -152,25 +183,3 @@
       <?php include __DIR__ . "/../Parts/Comments.html"; ?>
 
 <?php include __DIR__ . "/../Parts/Part2.html"; ?>
-        <details>
-          <summary>
-            <h3><a href="#1">Bread</a></h3>
-            <hr class="divider"/>
-          </summary>
-          <ul>
-            <li><a class="nav-link" href="#11">Quotes</a></li>
-            <li><a class="nav-link" href="#12">Fun Facts</a></li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>
-            <h3><a href="#2">Our Plans</a></h3>
-            <hr class="divider"/>
-          </summary>
-          <ul>
-            <li><a class="nav-link" href="#21">Video Plans</a></li>
-          </ul>
-        </details>
-
-<?php include __DIR__ . "/../Parts/Part3.html"; ?>

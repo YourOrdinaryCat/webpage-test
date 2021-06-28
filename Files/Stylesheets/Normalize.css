@@ -56,7 +56,7 @@ main {
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
+  /* box-sizing: content-box; */ /* 1 */ /* I already set everything to use border-box */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }

@@ -22,11 +22,44 @@
 
     <link rel="icon" type="image/png" href="../Files/Icon.png"/>
     <link rel="apple-touch-icon" href="../Files/PWA.png"/>
+
+    <link rel="manifest" href="../Manifest.webmanifest"/>
   </head>
 
   <body>
     <article class="content">
-      <h1>Proyecto Masa</h1>      <!-- Intro paragraph -->
+      <h1>Proyecto Masa</h1>
+      <nav>
+        <details open>
+          <summary>
+            <h1>Contenido</h1>
+          </summary>
+
+          <details>
+            <summary>
+              <h3><a href="#1">Bread</a></h3>
+              <hr class="divider"/>
+            </summary>
+            <ul>
+              <li><a class="list-link" href="#11">Quotes</a></li>
+              <li><a class="list-link" href="#12">Fun Facts</a></li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <h3><a href="#2">Our Plans</a></h3>
+              <hr class="divider"/>
+            </summary>
+            <ul>
+              <li><a class="list-link" href="#21">Video Plans</a></li>
+            </ul>
+          </details>
+
+        </details>
+      </nav>
+
+      <!-- Intro paragraph -->
       <p>Hey fellow bread lover. I think we can agree on the fact that bread deserves
         more recognition. It's truly a versatile food, and it stood the test of time
         really well. You may not like some variants, and that's okay! But bread is
@@ -186,31 +219,5 @@
         </div>
       </details>
     </article>
-
-    <aside>
-      <nav>
-        <h1>Contenidos</h1>        <details>
-          <summary>
-            <h3><a href="#1">Bread</a></h3>
-            <hr class="divider"/>
-          </summary>
-          <ul>
-            <li><a class="nav-link" href="#11">Quotes</a></li>
-            <li><a class="nav-link" href="#12">Fun Facts</a></li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>
-            <h3><a href="#2">Our Plans</a></h3>
-            <hr class="divider"/>
-          </summary>
-          <ul>
-            <li><a class="nav-link" href="#21">Video Plans</a></li>
-          </ul>
-        </details>
-
-      </nav>
-    </aside>
   </body>
 </html>

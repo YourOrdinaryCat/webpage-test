@@ -1,44 +1,40 @@
 /* Applies to every element */
 * {
-  transition: background 300ms, color 150ms, transform 300ms;
+  transition: background 300ms, color 150ms, margin 300ms, padding 300ms, transform 300ms, width 300ms;
 }
 
 *:focus {
   box-shadow: 0 0 0 2px var(--accent), var(--shadow-size);
   outline: 0;
-  transform: scale(1.01);
   transition: all 300ms;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 /* Applies to the entire body of the HTML document (except where overridden by more specific
 selectors) */
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--background);
-  box-sizing: border-box;
   color: var(--primary);
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: start;
 }
 
-/* Applies to the content */
-.content {
-  padding: 12px;
+/* Applies to the content, navigation */
+.content,
+nav {
+  padding: calc(12px + var(--radius-strong));
 }
 
-/* Navigation */
-aside {
-  padding: 12px;
-}
-
-aside h1 {
-  margin-inline-start: var(--radius-strong);
-}
-
-nav ul {
+nav ul,
+ul.nobullet {
   list-style: none;
   padding-inline-start: 0;
 }
@@ -52,28 +48,30 @@ h4 {
   margin-block-end: 12px;
 }
 
-/* Heading 1 */
 h1 {
   font-size: 2em;
   margin-block-start: 32px;
 }
 
-/* Heading 2 */
 h2 {
   font-size: 1.5em;
   margin-block-start: 24px;
 }
 
-/* Heading 3 */
 h3 {
   font-size: 1.17em;
   margin-block-start: 16px;
 }
 
-/* Heading 4 */
 h4 {
   font-size: 1em;
   margin-block-start: 8px;
+}
+
+/* Paragraphs */
+p {
+  margin-block-end: 8px;
+  margin-block-start: 0;
 }
 
 /* Links */
@@ -82,19 +80,32 @@ a {
   text-decoration: none;
 }
 
-/* Add underline on hover */
 a:hover {
   text-decoration: underline;
 }
 
+/* Captions */
+figcaption {
+  color: var(--secondary);
+  font-size: 80%;
+  padding: 0 var(--radius) 1em var(--radius);
+}
+
+figcaption a {
+  color: var(--accent);
+}
+
+/* Lists */
+ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 8px;
+}
+
+/* Details */
 details {
   margin-block-end: 12px;
   margin-block-start: 8px;
-}
-
-details h3 {
-  margin-inline-start: var(--radius-strong);
-  margin-block-end: 0.5em;
 }
 
 details h3 a {
@@ -115,7 +126,7 @@ details[open] summary ~ * {
   animation: open 300ms;
 }
 
-details[open] hr.divider {
+details[open] > summary > hr.divider {
   display: none;
 }
 
@@ -130,57 +141,13 @@ details summary::-webkit-details-marker {
   margin-inline-end: 0;
 }
 
-/* Captions */
-figcaption {
-  box-sizing: content-box;
-  color: var(--secondary);
-  font-size: 80%;
-  padding: 0 var(--radius) 1em var(--radius);
-}
-
-figcaption a {
-  color: var(--accent);
-}
-
-/* Paragraphs */
-p {
-  color: var(--primary);
-  margin-block-end: 8px;
-  margin-block-start: 0;
-}
-
-/* Lists */
-ul {
-  list-style-position: inside;
-  margin-block-end: 0;
-  margin-block-start: 0;
-  padding-inline-start: 8px;
-}
-
-/* Images */
-img {
-  background-color: var(--elevated1);
-  border: 1px solid var(--divider);
-  border-radius: var(--radius);
-  max-width: calc(100% - 2px);
-}
-
-img.thumbnail {
-  border-radius: var(--radius-strong);
-  float: left;
-  height: 6em;
-  margin-right: var(--radius-strong);
-  object-fit: cover;
-  object-position: center center;
-  width: 6em;
-}
-
-/* Videos */
+/* Images and video */
+img,
 video {
   background-color: var(--elevated1);
   border: 1px solid var(--divider);
   border-radius: var(--radius);
-  max-width: calc(100% - 2px);
+  max-width: 100%;
 }
 
 /* Dividers */
@@ -190,7 +157,7 @@ hr.divider {
   border-width: 1px 0 0 0;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
-  max-width: 100%;
+  width: 100%;
 }
 
 /* Buttons */
@@ -201,13 +168,12 @@ input[type="submit"] {
   border-radius: var(--radius);
   color: var(--onAccent);
   cursor: pointer;
-  font-weight: bold;
-  height: 2em;
-  padding-inline-end: var(--radius);
-  padding-inline-start: var(--radius);
+  min-height: 2em;
+  padding-inline-end: var(--radius-strong);
+  padding-inline-start: var(--radius-strong);
+  width: auto;
 }
 
-/* Change color on hover */
 button:hover,
 input[type="submit"]:hover {
   background-color: var(--hover-transparent);
@@ -221,7 +187,14 @@ input[type="submit"]:focus {
 }
 
 /* Forms */
-input, select {
+form {
+  margin-block-start: 8px;
+  margin-inline-start: calc(0px - var(--radius));
+}
+
+input,
+select,
+textarea {
   /* Browser specific */
   -moz-appearance: none; 
 	-webkit-appearance: none;
@@ -232,26 +205,23 @@ input, select {
   border-radius: var(--radius);
   color: var(--primary);
   height: 2em;
-  max-width: 200px;
   padding-inline-end: var(--radius);
   padding-inline-start: var(--radius);
+  width: 160px;
 }
 
-input {
-  font-weight: bold;
-}
-
-select {
-  width: 200px;
-}
-
-input:hover, select:hover {
+input:hover,
+select:hover,
+textarea:hover {
   border: 1px solid var(--secondary);
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus,
+textarea:hover {
   background-color: var(--elevated1);
   border: 0;
+  transform: scale(1.01);
 }
 
 /* Form labels */
@@ -279,38 +249,4 @@ option {
   border-radius: var(--radius);
   color: var(--primary);
   white-space: normal;
-}
-
-/* Blockquotes (old elevated section) */
-blockquote,
-details.card {
-  background-color: var(--elevated1);
-  border-radius: var(--radius-strong);
-  box-shadow: var(--shadow-size);
-  margin: var(--radius-strong);
-  max-width: 100%;
-  overflow: hidden;
-  overflow-wrap: normal;
-  padding: var(--radius-strong);
-}
-
-blockquote:hover,
-details.card:hover {
-  background-color: var(--elevated2);
-  transform: scale(1.01);
-}
-
-/* Remove padding on figcaption */
-blockquote figcaption,
-details.card figcaption {
-  padding: 0;
-}
-
-/* Customize h4 */
-blockquote h4,
-details.card h4 {
-  color: var(--accent);
-  font-weight: bold;
-  margin-block-end: 2px;
-  margin-block-start: 2px;
 }

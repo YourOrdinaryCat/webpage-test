@@ -5,86 +5,137 @@
 
   include("Parts/Part1.php");
 ?>
+
+      <nav>
+        <details open>
+          <summary>
+            <h1>Contents</h1>
+          </summary>
+
+          <ul>
+            <li><a class="list-link" href="All.html">All</a></li>
+          </ul>
+
+          <hr class="divider">
+
+          <ul>
+            <li><a class="list-link" href="#1">Articles</a></li>
+          </ul>
+
+          <details>
+            <summary>
+              <h3><a href="#2">Settings</a></h3>
+              <hr class="divider"/>
+            </summary>
+            <ul>
+              <li><a class="list-link" href="#22">Comments</a></li>
+              <li><a class="list-link" href="#23">Language</a></li>
+              <li><a class="list-link" href="#24">Theming</a></li>
+              <li><a class="list-link" href="#25">Cookies</a></li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <h3><a href="#3">About</a></h3>
+              <hr class="divider"/>
+            </summary>
+            <ul>
+              <li><a class="list-link" href="#31">Comments</a></li>
+              <li><a class="list-link" href="#32">Source Code</a></li>
+              <li><a class="list-link" href="#33">Normalize.css</a></li>
+            </ul>
+          </details>
+        </details>
+      </nav>
+
       <h2 id="1">Articles</h2>
 
       <!-- Articles -->
-      <?php
-        foreach($all as $key_a=>$value_a) {
-          if($key_a > 9) {
-            echo '<button onclick=\'location.href="All.html"\'>Load all articles</button>';
-            break;
+      <ul class="nobullet">
+        <?php
+          foreach($all as $key_a=>$value_a) {
+            if($key_a > 9) {
+              echo '<a href="All.html">Load all articles</a>';
+              break;
+            }
+
+            echo '<li>
+              <a class="list-link" href="', $filenames[$key_a], '.html" title="', $titles[$key_a], '">',
+                '<img alt="', $titles[$key_a], '" src="../Assets/Thumbnails/', $filenames[$key_a], '.png"/>
+                <div>
+                  <p>', $titles[$key_a], '</p>
+                  <figcaption>', $authors[$key_a], ', ', $categories[$key_a], '</figcaption>
+                </div>
+              </a>
+            </li>';
           }
-
-          echo '<blockquote>
-            <img alt="' . $titles[$key_a] . '" class="thumbnail" src="../Assets/Thumbnails/', $filenames[$key_a], '.png" onerror="this.src=\'../Assets/Thumbnails/Default.png\'"/>
-            <h4><a href="', $filenames[$key_a], '.html">', $titles[$key_a], '</a></h4>
-
-            <figcaption>', $authors[$key_a], ', ', $categories[$key_a], '</figcaption>
-            <figcaption>', date("Y-m-d", filemtime($value)), '</figcaption>
-          </blockquote>';
-        }
-      ?>
+        ?>
+      </ul>
 
       <!-- Settings -->
       <h2 id="2">Settings</h2>
-      <h3 id="21">PWA</h3>
-      <p>You can install this website as a PWA! You'll get redirected to the language select screen, where you should click on the "Install" button. If it doesn't show up, your browser isn't compatible.</p>
-      <button onclick="return installPWA();">Install</button>
+      <noscript><p>Enable JavaScript to use amazing settings like changing themes, selecting a language and enabling comments!</p></noscript>
 
-      <h3 id="22">Comments</h3>
-      <form onsubmit="return changeComments();">
-        <label for="comments">Comments</label>
-        <select id="comments" type="text">
-          <option value="off">Disable</option>
-          <option value="on">Enable</option>
-        </select>
+      <div id="settings">
+      </div>
 
-        <input type="submit" value="Apply" />
-      </form>
+      <script>
+        document.getElementById('settings').insertAdjacentHTML('afterbegin', `<h3 id="22">Comments</h3>
+        <form onsubmit="return changeComments();">
+          <label for="comments">Comments</label>
+          <select id="comments" type="text">
+            <option value="off">Disable</option>
+            <option value="on">Enable</option>
+          </select>
 
-      <h3 id="23">Language</h3>
-      <form onsubmit="return changeLang();">
-        <label for="lang">Language</label>
-        <select id="lang" type="text">
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-        </select>
+          <input type="submit" value="Apply" />
+        </form>
 
-        <input type="submit" value="Apply" />
-      </form>
+        <h3 id="23">Language</h3>
+        <form onsubmit="return changeLang();">
+          <label for="lang">Language</label>
+          <select id="lang" type="text">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+          </select>
 
-      <h3 id="24">Theming</h3>
-      <form onsubmit="return changeMode();">
-        <label for="mode">Select theme mode</label>
-        <select id="mode" type="text">
-          <option value="Auto">Auto</option>
-          <option value="Dark">Dark</option>
-          <option value="Light">Light</option>
-        </select>
+          <input type="submit" value="Apply" />
+        </form>
 
-        <input type="submit" value="Apply"/>
-      </form>
+        <h3 id="24">Theming</h3>
+        <form onsubmit="return changeMode();">
+          <label for="mode">Select theme mode</label>
+          <select id="mode" type="text">
+            <option value="Auto">Auto</option>
+            <option value="Dark">Dark</option>
+            <option value="Light">Light</option>
+          </select>
 
-      <form onsubmit="return changeTheme();">
-        <label for="theme">Select theme</label>
-        <select id="theme" type="text">
-          <?php
-            // For every item in the array, add an entry
-            foreach($themes as $key_t=>$value_t) {
-              echo "<option value=\"", $theme_name[$key_t], "\">", $theme_name[$key_t], "</option>";
-            }
-          ?>
-        </select>
+          <input type="submit" value="Apply"/>
+        </form>
 
-        <input type="submit" value="Apply"/>
-      </form>
+        <form onsubmit="return changeTheme();">
+          <label for="theme">Select theme</label>
+          <select id="theme" type="text">
+            <?php
+              // For every item in the array, add an entry
+              foreach($themes as $key_t=>$value_t) {
+                echo "<option value=\"", $theme_name[$key_t], "\">", $theme_name[$key_t], "</option>";
+              }
+            ?>
+          </select>
 
-      <h3 id="25">Cookies</h3>
-      <p>For settings to save correctly, cookies are needed. Here you're able to see what
-        values are stored in currently active cookies. If the website breaks, delete your
-        cookies and it should work fine again.
-      </p>
-      <button onclick="alert(document.cookie)">Check my cookies</button>
+          <input type="submit" value="Apply"/>
+        </form>
+
+        <h3 id="25">Cookies</h3>
+        <p>For settings to save correctly, cookies are needed. Here you're able to see what
+          values are stored in currently active cookies. If the website breaks, delete your
+          cookies and it should work fine again.
+        </p>
+        <button onclick="alert(document.cookie)">Check my cookies</button>`)
+      </script>
 
       <h2 id="3">About</h2>
       <h3 id="31">Comments</h3>
@@ -101,40 +152,3 @@
       <p>A modern alternative to CSS resets. <a href="https://github.com/necolas/normalize.css">Learn more...</a></p>
 
 <?php include("Parts/Part2.html"); ?>
-        <ul>
-          <li><a class="nav-link" href="All.html">All</a></li>
-        </ul>
-
-        <hr class="divider">
-
-        <ul>
-          <li><a class="nav-link" href="#1">Articles</a></li>
-        </ul>
-
-        <details>
-          <summary>
-            <h3><a href="#2">Settings</a></h3>
-            <hr class="divider"/>
-          </summary>
-          <ul>
-            <li><a class="nav-link" href="#21">PWA</a></li>
-            <li><a class="nav-link" href="#22">Comments</a></li>
-            <li><a class="nav-link" href="#23">Language</a></li>
-            <li><a class="nav-link" href="#24">Theming</a></li>
-            <li><a class="nav-link" href="#25">Cookies</a></li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>
-            <h3><a href="#3">About</a></h3>
-            <hr class="divider"/>
-          </summary>
-          <ul>
-            <li><a class="nav-link" href="#31">Comments</a></li>
-            <li><a class="nav-link" href="#32">Source Code</a></li>
-            <li><a class="nav-link" href="#33">Normalize.css</a></li>
-          </ul>
-        </details>
-
-<?php include("Parts/Part3.html"); ?>

@@ -10,7 +10,6 @@ webpage-test
 │   ├── Article Name
 │   │   └── /* Article Assets */
 │   └── Thumbnails
-│       ├── Default.png
 │       └── /* Article Thumbnails */
 ├── Language code
 │   ├── All.html
@@ -44,7 +43,6 @@ webpage-test
 │   │   │   ├── Comments.html
 │   │   │   ├── Part1.php
 │   │   │   ├── Part2.html
-│   │   │   └── Part3.html
 │   │   ├── All.php
 │   │   └── Index.php
 │   ├── Output
@@ -59,6 +57,10 @@ webpage-test
 ```
 
 TODO:
-- Add categories picker again
-- Documentation for custom themes and how everything works
+- Add blockquote and cite styling
+- Add category and author filters
+- Add creation date to articles
+- Documentation for custom themes, list-link and how everything works
 - Fix comments
+- Improve looks of nav
+- Make fallback thumbnails work without JS

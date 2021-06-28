@@ -22,32 +22,43 @@
 
     <link rel="icon" type="image/png" href="../Files/Icon.png"/>
     <link rel="apple-touch-icon" href="../Files/PWA.png"/>
+
+    <link rel="manifest" href="../Manifest.webmanifest"/>
   </head>
 
   <body>
     <article class="content">
-      <h1>Todo</h1>      <blockquote>
-            <img alt="Proyecto Masa" class="thumbnail" src="../Assets/Thumbnails/p_dough.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
-            <h4><a href="p_dough.html">Proyecto Masa</a></h4>
-
-            <figcaption>Omar, Comida</figcaption>
-            <figcaption>2021-05-10</figcaption>
-          </blockquote><blockquote>
-            <img alt="Lorem Ipsum" class="thumbnail" src="../Assets/Thumbnails/lorem.png" onerror="this.src='../Assets/Thumbnails/Default.png'"/>
-            <h4><a href="lorem.html">Lorem Ipsum</a></h4>
-
-            <figcaption>Plantilla, Plantillas</figcaption>
-            <figcaption>2021-05-10</figcaption>
-          </blockquote>
-    </article>
-
-    <aside>
+      <h1>Todo</h1>
       <nav>
-        <h1>Contenidos</h1>        <ul>
-          <li><a class="nav-link" href="Index.html">Inicio</a></li>
-        </ul>
+        <details open>
+          <summary>
+            <h1>Contenido</h1>
+          </summary>
 
+          <ul>
+            <li><a class="list-link" href="Index.html">Inicio</a></li>
+          </ul>
+
+        </details>
       </nav>
-    </aside>
+
+      <ul class="nobullet">
+        <li>
+              <a class="list-link" href="p_dough.html" title="Proyecto Masa"><img alt="Proyecto Masa" src="../Assets/Thumbnails/p_dough.png"/>
+                <div>
+                  <p>Proyecto Masa</p>
+                  <figcaption>Omar, Comida</figcaption>
+                </div>
+              </a>
+            </li><li>
+              <a class="list-link" href="lorem.html" title="Lorem Ipsum"><img alt="Lorem Ipsum" src="../Assets/Thumbnails/lorem.png"/>
+                <div>
+                  <p>Lorem Ipsum</p>
+                  <figcaption>Plantilla, Plantillas</figcaption>
+                </div>
+              </a>
+            </li>      </ul>
+
+    </article>
   </body>
 </html>

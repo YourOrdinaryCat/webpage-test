@@ -9,9 +9,10 @@
 }
 
 /* Really small screens */
-@media only screen and (max-width: 277px) {
+@media screen and (max-width: 277px) {
   input[type="submit"] {
-    margin-block-start: 2px;
+    margin-block-start: 4px;
+    width: 100%;
   }
 
   select {
@@ -20,48 +21,48 @@
 }
 
 /* Medium screens */
-@media only screen and (max-width: 799px) {
+@media screen and (max-width: 480px) {
   .hstack-wrap {
     grid-template-columns: 100%;
     row-gap: 8px;
   }
 
-  aside {
-    max-width: 100%;
-    padding: 12px;
+  button {
+    width: 100%;
   }
 
   nav {
     background-color: var(--elevated1);
     border-radius: var(--radius-strong);
-    box-shadow: var(--shadow-size);
-    margin: var(--radius-strong);
-    max-width: 100%;
-    overflow: hidden;
-    overflow-wrap: normal;
+    margin-block-end: 8px;
+    margin-inline-start: calc(0px - var(--radius));
     padding: var(--radius-strong);
+    width: calc(100% + 2 * var(--radius-strong));
   }
 
   nav h1 {
     color: var(--accent);
     font-size: 1em;
     font-weight: bold;
-    margin-block-end: 0;
-    margin-block-start: 0;
-    margin-inline-start: 0;
+    margin-block-end: 2px;
+    margin-block-start: 2px;
   }
 
-  nav:hover {
-    background-color: var(--elevated2);
-    transform: scale(1.01);
+  nav > details {
+    margin: 0;
+  }
+
+  nav .list-link {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
   }
 }
 
 /* Wide screens */
-@media only screen and (min-width: 800px) {
+@media screen and (min-width: 481px) {
   .content {
-    margin-inline-start: 291px;
-    width: 40%;
+    margin-inline-start: 40%;
+    width: 60%
   }
 
   .hstack-wrap {
@@ -70,20 +71,38 @@
     overflow-x: auto;
   }
 
-  aside {
+  nav {
     background-color: var(--sidebar);
     border-right: 1px solid var(--divider);
-    height: 100%;
-    margin-inline-end: 0;
-    margin-inline-start: 0;
+    height: 100vh;
+    left: 0;
     overflow: auto;
     position: fixed;
-    left: 0;
     top: 0;
-    width: 266px;
+    width: 40%;
   }
 
-  ul li a.nav-link {
-    background-color: var(--sidebar);
+  nav hr.divider {
+    margin-inline-start: calc(0px - var(--radius-strong));
+    width: calc(100% + 2 * var(--radius-strong));
+  }
+}
+
+/* Really wide screens */
+@media screen and (min-width: 814px) {
+  .content {
+    margin-inline-start: 291px;
+    width: 40%;
+  }
+
+  nav {
+    width: 291px;
+  }
+}
+
+/* That's a bit much */
+@media screen and (min-width: 1200px) {
+  .content {
+    width: 480px;
   }
 }
