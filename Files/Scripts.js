@@ -66,7 +66,7 @@ function changeLang() {
   lang = document.getElementById("lang").value;
   makeCookies();
 
-  location = '../' + lang + '/Index.html';
+  location = '../' + lang + '/';
   return false;
 }
 
@@ -74,7 +74,7 @@ function changeLangIndex() {
   lang = document.getElementById("lang").value;
   makeCookies();
 
-  location = lang + '/Index.html';
+  location = lang + '/';
   return false;
 }
 

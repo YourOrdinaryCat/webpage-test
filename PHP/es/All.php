@@ -13,7 +13,7 @@
           </summary>
 
           <ul>
-            <li><a class="list-link" href="Index.html">Inicio</a></li>
+            <li><a class="list-link" href="../es/">Inicio</a></li>
           </ul>
 
         </details>

@@ -13,7 +13,7 @@
           </summary>
 
           <ul>
-            <li><a class="list-link" href="Index.html">Home</a></li>
+            <li><a class="list-link" href="../en/">Home</a></li>
           </ul>
 
         </details>
