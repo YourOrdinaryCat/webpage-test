@@ -335,7 +335,7 @@ details {
  */
 
 summary {
-  display: list-item;
+  display: block; /* Change to block because of a bug */
 }
 
 /* Misc
