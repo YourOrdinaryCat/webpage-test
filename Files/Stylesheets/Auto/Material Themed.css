@@ -25,7 +25,7 @@
   
     /* Hover */
     --hover: #1F41B61A;
-    --hover-transparent: #1F41B61A;
+    --hover-accent: #1F41B61A;
   }
 }
   
@@ -55,7 +55,7 @@
   
     /* Hover */
     --hover: #89B4F81A;
-    --hover-transparent: #89B4F81A;
+    --hover-accent: #89B4F81A;
   }
 }
 

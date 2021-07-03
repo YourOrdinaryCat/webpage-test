@@ -57,6 +57,7 @@ webpage-test
 ```
 
 TODO:
+- Add arrow to details and select elements to indicate their purpose
 - Add blockquote and cite styling
 - Add category and author filters
 - Add creation date to articles

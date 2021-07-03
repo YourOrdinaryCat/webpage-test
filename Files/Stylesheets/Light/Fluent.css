@@ -2,13 +2,13 @@
 /* Light mode colors (Windows) */
 :root {
   /* Background */
-  --background: #F2F2F2;
-  --elevated1: #FFFFFF;
-  --elevated2: #F2F2F2;
+  --background: #F3F3F3;
+  --elevated1: #FBFBFB;
+  --elevated2: #F6F6F6;
 
   /* Sidebar */
-  --sidebar: #EFEFEF;
-  
+  --sidebar: #F3F3F3;
+
   /* Text */
   --primary: #000000;
   --secondary: #00000099;
@@ -16,15 +16,15 @@
   --quaternary: #00000066;
 
   /* Accent related */
-  --accent: #0078D4;
+  --accent: #0067C0;
   --onAccent: #FFFFFF;
-  
+
   /* Dividers */
   --divider: #0000001C;
-  
+
   /* Hover */
-  --hover: #D8D8D8;
-  --hover-transparent: #0000004D;
+  --hover: #EAEAEA;
+  --hover-accent: #003E92;
 
   /* General stuff */
   /* Color schemes */

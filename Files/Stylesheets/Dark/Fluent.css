@@ -2,29 +2,29 @@
 /* Dark mode colors (Windows) */
 :root {
   /* Background */
-  --background: #1F1F1F;
+  --background: #202020;
   --elevated1: #2B2B2B;
-  --elevated2: #333333;
+  --elevated2: #323232;
 
   /* Sidebar */
-  --sidebar: #2D2D2D;
-  
+  --sidebar: #202020;
+
   /* Text */
   --primary: #FFFFFF;
   --secondary: #FFFFFF99;
   --tertiary: #FFFFFF66;
   --quaternary: #FFFFFF66;
-  
+
   /* Accent related */
-  --accent: #0078D4;
-  --onAccent: #FFFFFF;
-  
+  --accent: #4CC2FF;
+  --onAccent: #000000;
+
   /* Dividers */
   --divider: #FFFFFF1C;
-  
+
   /* Hover */
-  --hover: #424242;
-  --hover-transparent: #FFFFFF4D;
+  --hover: #2D2D2D;
+  --hover-accent: #99EBFF;
 
   /* General stuff */
   /* Color schemes */

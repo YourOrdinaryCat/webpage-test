@@ -3,12 +3,12 @@
 @media (prefers-color-scheme: light) {
   :root {
     /* Background */
-    --background: #F2F2F2;
-    --elevated1: #FFFFFF;
-    --elevated2: #F2F2F2;
+    --background: #F3F3F3;
+    --elevated1: #FBFBFB;
+    --elevated2: #F6F6F6;
 
     /* Sidebar */
-    --sidebar: #EFEFEF;
+    --sidebar: #F3F3F3;
   
     /* Text */
     --primary: #000000;
@@ -17,15 +17,15 @@
     --quaternary: #00000066;
   
     /* Accent related */
-    --accent: #0078D4;
+    --accent: #0067C0;
     --onAccent: #FFFFFF;
   
     /* Dividers */
     --divider: #0000001C;
   
     /* Hover */
-    --hover: #D8D8D8;
-    --hover-transparent: #0000004D;
+    --hover: #EAEAEA;
+    --hover-accent: #003E92;
   }
 }
 
@@ -33,12 +33,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Background */
-    --background: #1F1F1F;
+    --background: #202020;
     --elevated1: #2B2B2B;
-    --elevated2: #333333;
+    --elevated2: #323232;
 
     /* Sidebar */
-    --sidebar: #2D2D2D;
+    --sidebar: #202020;
   
     /* Text */
     --primary: #FFFFFF;
@@ -47,15 +47,15 @@
     --quaternary: #FFFFFF66;
   
     /* Accent related */
-    --accent: #0078D4;
-    --onAccent: #FFFFFF;
+    --accent: #4CC2FF;
+    --onAccent: #000000;
   
     /* Dividers */
     --divider: #FFFFFF1C;
-  
+
     /* Hover */
-    --hover: #424242;
-    --hover-transparent: #FFFFFF4D;
+    --hover: #2D2D2D;
+    --hover-accent: #99EBFF;
   }
 }
 

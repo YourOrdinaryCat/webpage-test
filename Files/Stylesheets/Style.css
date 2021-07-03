@@ -61,7 +61,7 @@ nav h4 {
   display: flex;
   margin-inline-start: calc(0px - var(--radius-strong));
   margin-inline-end: calc(0px - var(--radius-strong));
-  padding: 8px;
+  padding: var(--radius-strong);
   transition: color 150ms;
 }
 
