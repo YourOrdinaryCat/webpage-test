@@ -1,27 +1,12 @@
-// Declare variables, wanna keep track of them
-// Current language
-var lang;
-
-// Array with cookies
-var cookiearray;
-
-// Cookie values
-var comments;
-var mode;
-var theme;
-
-// Date in a month
-var inMonth;
-
 // Get array of cookies
-cookiearray = document.cookie.split('; ');
+var cookiearray = document.cookie.split('; ');
 cookiearray.sort();
 
 try {
-  comments = cookiearray[0].split('=')[1];
-  lang = cookiearray[1].split('=')[1];
-  mode = cookiearray[2].split('=')[1];
-  theme = cookiearray[3].split('=')[1];
+  var comments = cookiearray[0].split('=')[1];
+  var lang = cookiearray[1].split('=')[1];
+  var mode = cookiearray[2].split('=')[1];
+  var theme = cookiearray[3].split('=')[1];
 } catch(error) {
   comments = "off";
   lang = "unset";
@@ -45,16 +30,7 @@ function addMonths(date, months) {
 }
 
 // Add one month to current date, pass to variable
-inMonth = addMonths(new Date(),1).toString();
-
-// PWA Installation
-function installPWA() {
-  lang = "unset";
-  makeCookies();
-
-  location = '../';
-  return false;
-}
+var inMonth = addMonths(new Date(),1).toString();
 
 // Form handling
 function changeComments() {
