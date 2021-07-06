@@ -21,7 +21,7 @@
 }
 
 /* Medium screens */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 567px) {
   .hstack-wrap {
     grid-template-columns: 100%;
     row-gap: 8px;
@@ -48,6 +48,10 @@
     margin-block-start: 2px;
   }
 
+  nav > details > details:last-child, nav > details > details:last-child h3 {
+    margin-block-end: 2px;
+  }
+
   nav > details {
     margin: 0;
   }
@@ -59,7 +63,7 @@
 }
 
 /* Wide screens */
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 568px) {
   .content {
     margin-inline-start: 40%;
     width: 60%
@@ -74,7 +78,7 @@
   nav {
     background-color: var(--sidebar);
     border-right: 1px solid var(--divider);
-    height: 100vh;
+    height: 100%;
     left: 0;
     overflow: auto;
     position: fixed;
@@ -103,6 +107,6 @@
 /* That's a bit much */
 @media screen and (min-width: 1200px) {
   .content {
-    width: 480px;
+    width: 568px;
   }
 }

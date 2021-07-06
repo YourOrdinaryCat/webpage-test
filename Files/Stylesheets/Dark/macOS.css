@@ -1,5 +1,3 @@
-/* iOS devices */
-/* Dark mode colors (iOS) */
 :root {
   /* Background */
   --background: #1E1E1E;
@@ -10,7 +8,7 @@
   --sidebar: #282828;
 
   /* Text */
-  --primary: #FFFFFFD9;
+  --primary: #FFFFFF;
   --secondary: #FFFFFF80;
   --tertiary: #FFFFFF40;
   --quaternary: #FFFFFF20;

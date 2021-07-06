@@ -94,7 +94,6 @@ For the outline, use the following format:
 <details>
   <summary>
     <h3><a href="#heading-id">Heading</a></h3>
-    <hr class="divider"/>
   </summary>
   <ul>
     <li><a class="list-link" href="#subheading1-id">Subheading 1</a></li>
@@ -104,7 +103,8 @@ For the outline, use the following format:
 
 <!-- Headings without subheadings -->
 <ul>
-  <li><a class="list-link" href="#heading-id">Heading</a></li>
+  <li><a class="list-link" href="#heading1-id">Heading 1</a></li>
+  <li><a class="list-link" href="#heading2-id">Heading 2</a></li>
 </ul>
 ```
 
@@ -116,7 +116,7 @@ In the `PHP/Language code/Authors` folder, add a file called `Author name.html`.
   <summary>
     <h4>Omar</h4>
   </summary>
-  <img class="thumbnail" src="../Assets/Authors/Omar.png">
+  <img alt="This is Omar's picture" class="thumbnail" src="../Assets/Authors/Omar.png">
   <p>Heya! I'm the guy who made this blog! I'm not a developer of anything meaningful, so sit back and watch nothing.</p>
 </details>
 ```

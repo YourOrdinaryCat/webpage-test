@@ -45,12 +45,15 @@ details.card figcaption {
 }
 
 /* Customize h4 */
-details.card h4,
-nav h4 {
+details.card h4 {
   color: var(--accent);
   font-weight: bold;
   margin-block-end: 2px;
   margin-block-start: 2px;
+}
+
+details.card[open] > summary > h4, nav details[open] > summary > h3 > a, nav details[open] > summary > h1 {
+  color: var(--primary);
 }
 
 /* Navigation links */

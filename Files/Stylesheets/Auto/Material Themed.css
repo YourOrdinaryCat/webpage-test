@@ -1,5 +1,4 @@
-/* Material colors */
-/* Light mode colors (default) */
+/* Light mode colors */
 @media (prefers-color-scheme: light) {
   :root {
     /* Background */
@@ -29,7 +28,7 @@
   }
 }
   
-/* Dark mode colors (default) */
+/* Dark mode colors */
 @media (prefers-color-scheme: dark) {
   :root {
     /* Background */

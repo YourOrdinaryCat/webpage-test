@@ -25,7 +25,6 @@
           <details>
             <summary>
               <h3><a href="#2">Configuración</a></h3>
-              <hr class="divider"/>
             </summary>
             <ul>
               <li><a class="list-link" href="#22">Comentarios</a></li>
@@ -38,7 +37,6 @@
           <details>
             <summary>
               <h3><a href="#3">Acerca de</a></h3>
-              <hr class="divider"/>
             </summary>
             <ul>
               <li><a class="list-link" href="#31">Comentarios</a></li>

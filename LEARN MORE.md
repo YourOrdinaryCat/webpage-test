@@ -57,11 +57,10 @@ webpage-test
 ```
 
 TODO:
-- Add arrow to details element to indicate its purpose
 - Add blockquote and cite styling
 - Add category and author filters
 - Add creation date to articles
 - Documentation for custom themes, list-link and how everything works
 - Fix comments
-- Improve looks of nav
+- Improve looks of author pic
 - Make fallback thumbnails work without JS

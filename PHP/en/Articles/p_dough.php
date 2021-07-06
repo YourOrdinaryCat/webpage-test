@@ -16,7 +16,6 @@
           <details>
             <summary>
               <h3><a href="#1">Bread</a></h3>
-              <hr class="divider"/>
             </summary>
             <ul>
               <li><a class="list-link" href="#11">Quotes</a></li>
@@ -27,7 +26,6 @@
           <details>
             <summary>
               <h3><a href="#2">Our Plans</a></h3>
-              <hr class="divider"/>
             </summary>
             <ul>
               <li><a class="list-link" href="#21">Video Plans</a></li>

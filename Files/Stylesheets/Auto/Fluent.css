@@ -1,5 +1,4 @@
-/* Windows */
-/* Light mode colors (Windows) */
+/* Light mode colors */
 @media (prefers-color-scheme: light) {
   :root {
     /* Background */
@@ -29,7 +28,7 @@
   }
 }
 
-/* Dark mode colors (Windows) */
+/* Dark mode colors */
 @media (prefers-color-scheme: dark) {
   :root {
     /* Background */
