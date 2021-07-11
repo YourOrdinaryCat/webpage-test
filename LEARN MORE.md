@@ -60,6 +60,5 @@ TODO:
 - Add blockquote and cite styling
 - Add category and author filters
 - Documentation for custom themes, list-link and how everything works
-- Fix comments
 - Improve looks of author pic
 - Make fallback thumbnails work without JS
