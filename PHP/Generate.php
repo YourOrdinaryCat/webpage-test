@@ -56,8 +56,9 @@
         $data[$key][1] = $title;
         $data[$key][2] = $author;
         $data[$key][3] = $category;
+        $data[$key][4] = $description;
 
-        $data[$key][4] = pathinfo($value, PATHINFO_FILENAME);
+        $data[$key][5] = pathinfo($value, PATHINFO_FILENAME);
 
         // Output HTML file, clean buffer
         file_put_contents('Output/' . $lang . "/" . pathinfo($value, PATHINFO_FILENAME) . '.html', ob_get_clean());

@@ -59,8 +59,8 @@
             }
 
             echo '<li>
-              <a class="list-link" href="', $data[$key_a][4], '.html" title="', $data[$key_a][1], '">',
-                '<img alt="', $data[$key_a][1], '" src="../Assets/Thumbnails/', $data[$key_a][4], '.png"/>
+              <a class="list-link" href="', $data[$key_a][5], '.html" title="', $data[$key_a][4], '">',
+                '<img alt="" src="../Assets/Thumbnails/', $data[$key_a][5], '.png"/>
                 <div>
                   <p>', $data[$key_a][1], '</p>
                   <figcaption>', $data[$key_a][2], ', ', $data[$key_a][3], ' - ', date("Y-m-d", $data[$key_a][0]),'</figcaption>
