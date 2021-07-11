@@ -1,6 +1,4 @@
 <?php
-  session_start();
-
   if(isset($_POST['generate'])) {
     $time_pre = microtime(true);
 
@@ -36,16 +34,6 @@
       // Create array with articles
       $all = glob($lang . "/Articles/*.php");
 
-      // Order array by creation date
-      usort($all, function($file1, $file2) {
-        $file1 = filemtime($file1);
-        $file2 = filemtime($file2);
-        if($file1 == $file2) {
-          return 0;
-        }
-        return $file1 < $file2 ? 1 : -1;
-      });
-
       // Theme files
       $themes = glob("../Files/Stylesheets/Auto/*.css");
 
@@ -64,16 +52,18 @@
         include($value);
 
         // Get article data
-        $titles[$key] = $title;
-        $authors[$key] = $author;
-        $categories[$key] = $category;
-        $descriptions[$key] = $description;
+        $data[$key][0] = strtotime($date);
+        $data[$key][1] = $title;
+        $data[$key][2] = $author;
+        $data[$key][3] = $category;
 
-        $filenames[$key] = pathinfo($value, PATHINFO_FILENAME);
+        $data[$key][4] = pathinfo($value, PATHINFO_FILENAME);
 
         // Output HTML file, clean buffer
         file_put_contents('Output/' . $lang . "/" . pathinfo($value, PATHINFO_FILENAME) . '.html', ob_get_clean());
       }
+
+      rsort($data);
 
       // Loop that outputs every file in main array to html
       foreach($main as $key=>$value) {
@@ -89,13 +79,14 @@
     }
 
     $time_post = microtime(true);
-    $_SESSION["exec_time"] = $time_post - $time_pre;
+    $exec_time = $time_post - $time_pre;
 
     header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
     exit();
   }
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -122,23 +113,24 @@
     <article class="content">
       <h1>Static Files Generator</h1>
       <nav>
-        <h1>Testing</h1>
-        <ul>
-          <li><a class="list-link" href="/webpage-test/">Homepage</a></li>
-        </ul>
+        <details open>
+          <summary>
+            <h1>Testing</h1>
+          </summary>
+
+          <ul>
+            <li><a class="list-link" href="/webpage-test/">Homepage</a></li>
+          </ul>
+
+        </details>
+        
+        
       </nav>
 
       <p>Welcome. Here, you can generate the static files from your PHP files. Click the button below to proceed.</p>
       <form method="post">
         <input type="submit" name="generate" value="Generate Files"/>
       </form>
-
-      <?php
-        if(isset($_SESSION["exec_time"])) {
-          echo "<hr class='divider'>";
-          echo "<p>Time elapsed in last run: ", $_SESSION["exec_time"] * 1000 , "ms</p>";
-        }
-      ?>
     </article>
   </body>
 </html>

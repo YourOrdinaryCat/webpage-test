@@ -59,11 +59,11 @@
             }
 
             echo '<li>
-              <a class="list-link" href="', $filenames[$key_a], '.html" title="', $titles[$key_a], '">',
-                '<img alt="', $titles[$key_a], '" src="../Assets/Thumbnails/', $filenames[$key_a], '.png"/>
+              <a class="list-link" href="', $data[$key_a][4], '.html" title="', $data[$key_a][1], '">',
+                '<img alt="', $data[$key_a][1], '" src="../Assets/Thumbnails/', $data[$key_a][4], '.png"/>
                 <div>
-                  <p>', $titles[$key_a], '</p>
-                  <figcaption>', $authors[$key_a], ', ', $categories[$key_a], '</figcaption>
+                  <p>', $data[$key_a][1], '</p>
+                  <figcaption>', $data[$key_a][2], ', ', $data[$key_a][3], ' - ', date("Y-m-d", $data[$key_a][0]),'</figcaption>
                 </div>
               </a>
             </li>';

@@ -1,4 +1,5 @@
 <?php
+  $date = "2020-12-23";
   $title = "Project Dough";
   $author = "Omar";
   $category = "Food";

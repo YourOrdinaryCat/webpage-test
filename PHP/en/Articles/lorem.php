@@ -1,4 +1,5 @@
 <?php
+  $date = "2021-04-14";
   $title = "Lorem Ipsum";
   $author = "Template";
   $category = "Templates";

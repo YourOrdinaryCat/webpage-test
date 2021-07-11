@@ -55,6 +55,7 @@ Now you can start actually making articles! Open the PHP file you created in the
 
 ```php
 <?php
+  $date = "Y-m-d";
   $title = "Article title";
   $author = "Author";
   $category = "Category";
@@ -81,7 +82,7 @@ Now you can start actually making articles! Open the PHP file you created in the
 <?php include __DIR__ . "/../Parts/Part2.html"; ?>
 ```
 
-The variables at the beginning are used to set the title, author, category and description for the articles. These are used for the homepage and for meta tags.
+The variables at the beginning are used to set the date (Y-m-d format), title, author, category and description for the articles. These are used for the homepage and for meta tags.
 
 If you want to remove comments, remove the `<?php include __DIR__ . "/../Parts/Comments.html"; ?>` line. If you don't want an author card, remove the `<?php include __DIR__ . "/../Authors/" . $author . ".html"; ?>` line.
 
